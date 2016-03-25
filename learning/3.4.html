@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;
+    }
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+  .contained {
+    width: 620px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>    
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Doubles</h1>
+</div>
+
+<div>
+  <h1 class="one"><font color="black">Double Data Type</font></h1>
+</div>
+div>
+  <p class="one"><font color="black">A double is used to represent a number with even more precision that a float. It often has a maximum precision of 14 decimal places so is useful for when you need to work with fractional parts of numbers. When initialising a double variable we have to put an 'd' after the double number to show it is a double.</font></p>
+<p class="one"><font color="black">Here is how you could initialise a double data type:</font></p>
+</div>
+</br>
+
+<pre class="contained">
+<font color="blue">double</font> a = <font color="green">17.4d</font>; //initialising a double point number, notice the d after the 17.4
+</pre>
+</br>
+
+<p class="one"><font color="black">Here is a sample code of how doubles can be used in Java. Copy and paste this into your IDE and play around with the numbers and perhaps initialise and add more floats and see what you can do with them.</font></p>
+
+<p class="one"><font color="black">Imagine you have to work with numbers where they have a high number of decimal places. The "double" data type will allow you to do this and in the example below we are simply going to add two numbers together and print the output.</font></p>
+
+</br>
+
+<pre class="contained">
+<font color="orange">public class</font> Floats {
+    <font color="orange">public static void</font><font color="gold"> main</font>(String[] args) {
+
+        <font color="orange">double</font> number1 = <font color="blue">3.2152353d</font>;
+        <font color="orange">double</font> number2 = <font color="blue">17.35756d</font>;
+        <font color="orange">double</font> number3;
+
+        System.<font color="purple">out</font>.println(<font color="green">"The number is: "</font> + number3);
+    }
+}
+</pre>
+
+<p class="one"><font color="black">This is what your terminal should output:</font></p>
+
+<pre class="contained">
+The sum is 20.5727953
+</pre>
+
+<p class="one"><font color="black">Make sure you try change the numbers around and see how the output differs.</font></p>
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="3.3.html">Previous</a></li>
+    <li class="next"><a href="3.6.html">Next</a></li>
+  </ul>
+</div>
+
+<footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

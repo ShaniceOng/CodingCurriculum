@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="quizconfig.js">
+</script>
+
+<script>
+
+var actualchoices=new Array()
+document.cookie="ready=yes"
+</script>
+
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;
+    color: black}
+  p.tab {
+    font-size: 25px;
+    padding-top: 15px;
+    padding-right: 300px;
+    padding-left: 300px;
+  }
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  .b {
+    display: inline-block;
+    position: relative;
+    margin: 1%;
+    float: left;
+    width: 23%;
+    height: 400px;
+    background-color: #2E64FE;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 400px; 
+
+}
+
+.b:hover { -moz-box-shadow: 0 0 100px #ccc; -webkit-box-shadow: 0 0 100px #ccc; box-shadow: 0 0 100px #ccc; } 
+
+a.hover {
+    color: white;
+}
+
+div{padding-left:100px;}
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="learning.html">Learn</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="pdf.html">Downloads</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>    
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Results!</h1>
+  <div>
+  </div>
+</div>
+
+
+<div align="center"><big><font color="black">Final score</font></big></font></strong></p><center>
+
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><form method="POST" name="result"><table border="0" width="100%" cellpadding="0" height="116">
+        <tr>
+          <td height="25" ><strong><font face="Arial" color="black"># of questions you got right:</font></strong></td>
+          <td height="25"><p><input type="text" name="p" size="24"></td>
+        </tr>
+        <tr>
+          <td height="17" ><strong><font face="Arial" color="black">The questions you got wrong:</font></strong></td>
+          <td height="17"><p><textarea name="T2" rows="3" cols="24" wrap="virtual"></textarea></td>
+        </tr>
+        <tr>
+          <td height="25" ><strong><font face="Arial" color="black">Grade in percentage:</font></strong></td>
+          <td height="25"><input type="text" name="q" size="8"></td>
+        </tr>
+      </table>
+    </form>
+    </td>
+  </tr>
+</table>
+</center></div>
+</br>
+<form method="POST"><div
+  align="center"><center><p>
+
+<script>
+var wrong=0
+for (e=0;e<=2;e++)
+document.result[e].value=""
+
+var results=document.cookie.split(";")
+for (n=0;n<=results.length-1;n++){
+if (results[n].charAt(1)=='q')
+parse=n
+
+}
+
+var incorrect=results[parse].split("=")
+incorrect=incorrect[1].split("/")
+if (incorrect[incorrect.length-1]=='b')
+incorrect=""
+document.result[0].value=totalquestions-incorrect.length+" out of "+totalquestions
+document.result[2].value=(totalquestions-incorrect.length)/totalquestions*100+"%"
+for (temp=0;temp<incorrect.length;temp++)
+document.result[1].value+=incorrect[temp]+", "
+
+
+</script>
+
+<font color="black"><input type="button" value="Take the quiz again" name="B1"
+  onClick="history.go(-1)"> <input type="button" value="View solution" name="B2"
+  onClick="showsolution()"></font>
+  </center></div>
+</form>
+
+<!--<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="#">Previous</a></li>
+    <li class="next"><a href="#">Next</a></li>
+  </ul>
+</div>-->
+
+
+</div>
+</br>
+</body>
+</html>

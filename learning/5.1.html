@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+  .contained {
+    width: 580px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>       
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Branching</h1>
+</div>
+
+<div> 
+  <p class="one"><font color="black">Branching is used for executing a statement(s) or the other depending on a condition(s).</font></p>
+
+  <div class="table-responsive">          
+  <table class="table table-hover table-striped" >
+
+    <thead>
+      <tr`>
+        <th><font color="black"><center>if</center></font></th>
+        <th><font color="black"><center>switch</center></font></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+      <font color="black">
+        <td><font color="black"><pre class = "contained">Syntax:
+if (condition)
+    Statement1;
+else if (condition)
+    Statement2;
+    :
+else
+    StatementN
+    </pre></font></td>
+        <td><font color="black"><pre class = "contained">Syntax:
+switch(Variable)
+{
+    case <Value1>: <Statement1>;
+    case <Value2>: <Statement2>;
+    :
+    case <ValueN>: <StatementN>;
+    default: <Statement>;
+}</pre></td>
+
+
+
+      <tr>
+      <font color="black">
+        <td><font color="black"><pre class = "contained">Allows
+ - conditions with all relational operators
+ - conditions with all logical operators
+ - conditions of all data types
+ </pre></font></td>
+        <td><font color="black"><pre class = "contained">Allows
+ - conditions with equal to/not equal to
+ - conditions catering to or operator
+ - conditions with char and int variables only (Java 7+ switch on Strings to used as well)
+Note: Conditions with <, >, <=, >= will not be possible on switchpre></td>
+      </tr>
+
+       <tr>
+      <font color="black">
+        <td><font color="black"><pre class = "contained"><b>Example1:</b> To display a message "Eligible for Class 1" if Age entered by user is equal to/more than 5 and "Not  Eligible for Crass 1" otherwise.
+
+int Age;                       
+System.out.print(”Enter Age:”);
+Age = s.nextInt();
+if (Age>=5)   
+    System.out.print(”Eligible for Class 1”);
+else
+    System.out.print(”Not Eligible for Class 1”);
+
+
+ </pre></font></td>
+        <td><font color="black"><pre class = "contained"><b>Example1:</b> To display a message “Director”, “Manager”, “Accountant” as per the Designation codes ‘D’, ‘M’, ‘A’ entered by the user.
+
+char Design;
+System.out.print(“Enter Designation Code:”);
+Design = s.next().charAt(0);
+switch (Desig)
+{
+   case ‘D’ :System.out.print(“Director”);break;
+   case ‘M’ :System.out.print(“Director”);break;
+   case ‘A’ :System.out.print(“Director”);break;
+   default :System.out.print(“Assistant”);
+}</pre></td>
+      </tr>
+
+
+       <tr>
+      <font color="black">
+        <td><font color="black"><pre class = "contained">Note: In if statement, if you want to execute more than one statement with a condition, we need to enclose them inside a set of curly braces { }. Same follows in else too. </pre></font></td>
+        <td><font color="black"><pre class = "contained">Note: In the above example, just note the keyword break - it terminates the switch case after executing the statement before it.
+</pre></td>
+      </tr>
+
+
+       <tr>
+      <font color="black">
+        <td><font color="black"><pre class = "contained"><b>Example2:</b>  To display "Upgrade Permissible" message, if user enters Trips>=10 and Month as 7 or 8.
+
+int Trips, Month;
+System.out.print(“Trips: ”);
+Trips = s.nextInt();
+System.out.print(“Month(1..12): ”);
+Month = s.nextInt();
+if (Trips>=10 && (Month==7 || Month==8))
+    System.out.println(“Upgrade Permissible”);
+else
+    System.out.println(“Sorry”);
+
+
+
+    </pre></font></td>
+        <td><font color="black"><pre class = "contained"><b>Example2:</b> To display words corresponding to alphabets.
+
+char Alpha; 
+System.out.print(“Alphabets: ”);
+Alpha = s.next().charAt(0);
+switch(Alpha)
+{
+    case ‘a’:
+    case ‘A’:System.out.println(“Apple”); break;
+    case ‘b’:
+    case ‘B’:System.out.println(“Ball”); break;
+    default: System.out.println(“Not known”);
+}
+
+Note: In this program, we take care of uppercase as well as lowercase alphabets.</pre></td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+
+
+  
+</div>
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="4.1.html">Previous</a></li>
+    <li class="next"><a href="5.2.html">Next</a></li>
+  </ul>
+</div>
+<footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

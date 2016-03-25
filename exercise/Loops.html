@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>JavaJava Website</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <style>
+         body {
+         font: 20px Montserrat, sans-serif;
+         line-height: 1.8;
+         color: #f5f6f7;
+         }
+         p {font-size: 16px;}
+         .margin {margin-bottom: 45px;}
+         .bg-1 { 
+         background-color: #F5F5F5; /* White */
+         color: #ffffff;
+         }
+         .bg-2 { 
+         background-color: #008B8B; /* Red */
+         color: #ffffff;
+         }
+         .bg-3 { 
+         background-color: #ffffff; /* White */
+         color: #555555;
+         }
+         .bg-4 { 
+         background-color: #8B0000; /* Black Gray */
+         color: #fff;
+         }
+         .container-fluid {
+         padding-top: 70px;
+         padding-bottom: 70px;
+         }
+         .navbar {
+         padding-top: 15px;
+         padding-bottom: 15px;
+         border: 0;
+         border-radius: 0;
+         margin-bottom: 0;
+         font-size: 12px;
+         letter-spacing: 5px;
+         }
+         .navbar-nav  li a:hover {
+         color: #1abc9c !important;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Navbar -->
+      <nav class="navbar navbar-default">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+               </button>
+               <a class="navbar-brand" href="Home.html">JavaJava</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li><a href="learning.html">Learn</a></li>
+                  <li><a href="exercises.html">Exercises</a></li>
+                  <li><a href="project.html">Project</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- Second Container -->
+      <div class="container-fluid bg-2 text-center">
+         <h1 class="margin">Control Structure Questions!</h1>
+         <div>
+         </div>
+      </div>
+      <div class="container">
+         <font color = "black">
+            <h4>
+               <!-- is this heading needed --> 
+            </h4>
+            <ol>
+            <li>
+               <p class = "one">Check if a number N is prime (a number, which is divisible by 1 and self only) or not.</br>
+               <div class="toMiddleButton">
+                  <button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal1">
+                  View Solution
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel"><font color="black">Solution and Output</font></h4>
+                           </div>
+                           <div class="modal-body">
+                              <pre class="contained"><font color="black"><font color = "blue">int</font> N;
+<font color = "blue">boolean</font> IsPrime = true;                                     
+System.out.print("Enter N:");
+N = s.nextInt();
+for(<font color = "blue">int</font> I=2; IsPrime && I<=N/2; I++)
+    if (N%I==0)
+        IsPrime=false;
+    if (N>1 && IsPrime)
+        System.out.println(N + " is a Prime Number”);
+
+// Number is prime if it is not divisible by any number between 2 and half of the number
+</pre>
+                              </font></pre>
+                              <br>
+                              <pre class="contained"><font color="black">
+Enter N:5
+5 is a Prime Number
+        </font></pre>
+                           </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </p>
+            </li>
+            <br>
+            <li>
+              
+<p class = "one">Write a code that accepts the first and last letter and then display a range of alphabets from the entered starting to the last letter.<br>(eg: CDEFG)
+
+<br>
+<div class="toMiddleButton">
+<button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal2">
+  View Solution
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Solution and Output</font></h4>
+      </div>
+      <div class="modal-body">
+        <pre class="contained"><font color="black">
+<font color = "blue">char</font> Alpha1, Alpha2;
+System.out.print("Alphabet from: ");
+Alpha1 = s.next().charAt(0);
+System.out.print("Alphabet to: ");
+Alpha2 = s.next().charAt(0);
+for(<font color = "blue">char</font> Ch = Alpha1; Ch <= Alpha2; Ch++)
+    System.out.print(Ch);
+</pre>
+        </font></pre>
+<br>
+
+
+
+<pre class="contained"><font color="black">Alphabet from: A
+Alphabet to: D
+ABCD</font></pre>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div><br>
+
+            </li>
+            <li>
+               <p class = "one">To check if a number entered by the user is a palindrome or not.</br>
+               <div class="toMiddleButton">
+                  <button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal3">
+                  View Solution
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel"><font color="black">Solution and Output</font></h4>
+                           </div>
+                           <div class="modal-body">
+                              <pre class="contained"><font color="black"><font color = "blue">int</font> N, TN, Rev = 0;
+System.out.print("N: ");
+N = s.nextInt();
+TN = N;
+while(TN > 0)
+{
+  Rev = Rev * 10 + TN % 10;
+  TN /= 10;
+}
+if(N == Rev)
+  System.out.println("Palindrome");
+else
+  System.out.println("Not Palindrome");
+</pre>
+                              </font></pre>
+                              <br>
+                              <pre class="contained"><font color="black">
+N: 1223221
+Palindrome
+        </font></pre>
+                           </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </p>
+            </li>
+            <br>
+            <li>
+               <p class = "one">Write code for calculating LCM of two numbers.</br>
+               <div class="toMiddleButton">
+                  <button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal4">
+                  View Solution
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel"><font color="black">Solution and Output</font></h4>
+                           </div>
+                           <div class="modal-body">
+                              <pre class="contained"><font color="black">System.out.print("N1: ");
+N1 = s.nextInt();
+System.out.print("N2: ");
+N2 = s.nextInt();
+Big = (N1 > N2)?N1:N2;
+while(Big % N1 != 0 || Big%N2 != 0)
+  Big++;
+System.out.println("LCM: " + Big);
+</pre>
+                              </font></pre>
+                              <br>
+                              <pre class="contained"><font color="black">
+N1: 4
+N2: 6
+LCM: 12
+        </font></pre>
+                           </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </p>
+               </li>
+                <br>
+            <li>
+               <p class = "one">Write a code for ensuring the valid Age and Gender as input from the user.</br>
+               <div class="toMiddleButton">
+                  <button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal5">
+                  View Solution
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel"><font color="black">Solution and Output</font></h4>
+                           </div>
+                           <div class="modal-body">
+                              <pre class="contained"><font color="black"><font color = "blue">int</font> Age;
+do
+{
+  System.out.print("Enter age: ");
+  Age = s.nextInt();
+} while (Age < 1 || Age > 150);
+    
+<font color = "blue">char</font> Gender;
+do
+{
+  System.out.print("Gender: ");
+  Gender = s.next().charAt(0);
+} while (Gender != 'F' && Gender != 'M');
+System.out.println("Age: " + Age + " Gender: " + Gender);
+</pre>
+</pre>
+                              </font></pre>
+                              <br>
+                              <pre class="contained"><font color="black">Enter age: -32
+Enter age: 23
+Gender: A
+Gender: F
+Age: 23 Gender: F
+</font></pre>
+                           </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </p>
+               </li>
+                   <br>
+            <li>
+               <p class = "one">Write code to display the following pattern:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1111<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2222<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3333<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4444</p>
+               <div class="toMiddleButton">
+                  <button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal6">
+                  View Solution
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel"><font color="black">Solution and Output</font></h4>
+                           </div>
+                           <div class="modal-body">
+                              <pre class="contained"><font color="black"><font color = "blue">int</font> N;
+System.out.print("Enter N: ");
+N = s.nextInt();
+for(<font color = "blue">int</font> i = 1; i <= N; i++)
+{
+  for(<font color = "blue">int</font> j = 1; j <= N; j++)
+    System.out.print(i);
+  System.out.println();
+}
+</pre>
+                              </font></pre>
+                              <pre class="contained"><font color="black">Enter N: 4
+1111
+2222
+3333
+4444
+</font></pre>
+                           </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </p>
+               </li>
+      
+    <br>
+            <li>
+               <p class = "one">Write a program to display the following pattern:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+22<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+333<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4444</p>
+</p>
+               <div class="toMiddleButton">
+                  <button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal7">
+                  View Solution
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel"><font color="black">Solution and Output</font></h4>
+                           </div>
+                           <div class="modal-body">
+                              <pre class="contained"><font color="black"><font color = "blue">int</font> N;
+System.out.print("Enter N: ");
+N = s.nextInt();
+for(<font color = "blue">int</font> i = 1; i <= N; i++)
+{
+  for(<font color = "blue">int</font> j = 1; j <= i; j++)
+    System.out.print(i);
+  System.out.println();
+}</pre>
+                              </font></pre>
+                              <pre class="contained"><font color="black">Enter N: 4
+1
+22
+333
+4444</font></pre>
+                           </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </p>
+               </li>
+
+
+
+                   <br>
+            <li>
+               <p class = "one">Write the code to display the following pattern:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;*&nbsp;*&nbsp;*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*&nbsp;*&nbsp;*&nbsp;*</p>
+</p>
+               <div class="toMiddleButton">
+                  <button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal8">
+                  View Solution
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel"><font color="black">Solution and Output</font></h4>
+                           </div>
+                           <div class="modal-body">
+                              <pre class="contained"><font color="black"><font color = "blue">int</font> N;
+System.out.print("Enter N: ");
+N = s.nextInt();
+for(<font color = "blue">int</font> i = 1; i <= N; i++)
+{
+  for(<font color = "blue">int</font> j = 1; j <= N - i; j++)
+    System.out.print(" ");
+  for(<font color = "blue">int</font> j = 1; j <= i; j++)
+    System.out.print("*");
+  System.out.println();
+}</pre>
+                              </font></pre>
+                              <pre class="contained"><font color="black">Enter N: 4
+   *
+  **
+ ***
+****</font></pre>
+                           </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </p>
+               </li>
+
+                   <br>
+            <li>
+               <p class = "one">&nbsp;Write a program to display the following pattern:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;1&nbsp;2&nbsp;3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp;2&nbsp;3&nbsp;4</p>
+</p>
+               <div class="toMiddleButton">
+                  <button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal9">
+                  View Solution
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel"><font color="black">Solution and Output</font></h4>
+                           </div>
+                           <div class="modal-body">
+                              <pre class="contained"><font color="black"><font color = "blue">int</font> N;
+System.out.print("Enter N: ");
+N = s.nextInt();
+for(<font color = "blue">int</font> i = 1; i <= N; i++)
+{
+  for(<font color = "blue">int</font> j = 1; j <= N - i; j++)
+    System.out.print(" ");
+  for(<font color = "blue">int</font> j = 1; j <= i; j++)
+    System.out.print(j);
+  System.out.println();
+}</pre>
+                              </font></pre>
+                              <pre class="contained"><font color="black">Enter N: 4
+   1
+  12
+ 123
+1234
+</font></pre>
+                           </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </p>
+               </li>
+
+               <br>
+                <li>
+               <p class = "one"> Write a program to display the following: <br>
+*****<br>
+&nbsp;&nbsp;*****<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*****<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*****<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*****<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*****<br>
+&nbsp;&nbsp;&nbsp;&nbsp;*****<br>
+&nbsp;&nbsp;*****<br>
+*****</p>
+</p>
+               <div class="toMiddleButton">
+                  <button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal10">
+                  View Solution
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel"><font color="black">Solution and Output</font></h4>
+                           </div>
+                           <div class="modal-body">
+                              <pre class="contained"><font color="black"><font color = "blue">int</font> spaces = 0;
+<font color = "blue">int</font> row, column;
+
+for (row = 0 ; row < 9 ; row++)
+{
+  for (column = 0 ; column < spaces ; column++) 
+    System.out.print(" ");
+  for (column = 0 ; column < 5 ; column++) 
+    System.out.print("*");
+  System.out.println();
+  <font color = "blue">int</font> step = ( row == 0 || row == 7 ) ? 2 : 1;
+  spaces = ( row < 4 ) ? spaces + step : spaces - step;
+}</pre>
+                              </font></pre>
+                              <pre class="contained"><font color="black">*****
+ *****
+  *****
+   *****
+    *****
+   *****
+  *****
+ *****
+*****
+</font></pre>
+                           </div>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </p>
+               </li>
+
+      </ol>
+      </div>
+      
+      <div class="container">             
+      <ul class="pager">
+      <li class="previous"><a href="../../AshuExercise.html">Previous</a></li>
+      <li class="next"><a href="../../JavaJavaExerciseSheet.pdf">Next</a></li>
+      </ul>
+      </div>
+      <footer class="container-fluid bg-4 text-center">
+      <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+      </footer>
+   </body>
+</html>

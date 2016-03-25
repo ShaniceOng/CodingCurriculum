@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 18px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p { font: 18px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: black;
+  }
+  p {
+    text-align: justify;
+   }
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+   padding-right: 250px;
+    padding-left: 250px;
+}
+
+ul{
+  padding-top: 15px;
+    padding-right: 250px;
+    padding-left: 250px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 250px;
+    padding-left: 250px;
+    color: black;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+.contained {
+    width: 480px;
+    overflow: auto;
+    margin: 0 auto;
+    color:black; 
+}
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>    
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Basic Converting App</h1>
+  <div>
+  
+  </div>
+</div>
+
+<div>
+  <h1 class="one">Buidling up our program a little more</h1>
+  <p class="one">Using NetBeans IDE, we are now going to build up what we can do with Swing. Simply printing strings won't get us very far, we need to do something more interesting. So let's make an example program where you can input a number and convert it to something else you may need!</p>
+
+  <p class="one">First let's make a new project in NetBeans, open up NetBeans and in the top-left corner click "file" then select "New Project..." Then select "general" and then select "Java Application" in the left hand pane. You can now choose the project name, set this as "ConvertingApp" and deselect the "Create Main Class" option. Finally, click "Finish" </p>
+
+  <center><img src="pictures/1.png"></center>
+  </br>
+  <center><img src="pictures/2.png"></center>
+  </br>
+  <center><img src="pictures/3.png"></center>
+  </br>
+
+  <p class="one">Now first we need an area within which we will work, the physical area where our components will go. To do this, we add a JFrame Form, go to the ConverterApp name and then right-click and then choose New -> JFrame Form. This is the main frame of your application as previously stated. In the Class Name section write in "ConverterAppGUI" and the package name as "MyApp" (this can actually be whatever you want it to be, but this is our own convention for our lessons). Now click "Finish". You will notice a frame has been drawn onscreen, this is where we will drag and drop our components.</p>
+
+  <center><img src="pictures/4.png" width="1200"></center>
+  </br>
+  <center><img src="pictures/5.png"></center>
+  </br>
+  <center><img src="pictures/6.png"></center>
+  </br>
+  <center><img src="pictures/7.png" width="1200"></center>
+</br>
+
+  <p class="one">NetBeans makes designing a GUI much easier via it's drag and drop mechanism. The GUI is shown in the "Design" tab and the auto-generated source code is shown in the "Source" tab. For now we are going to work using the design tab.</p>
+
+  <p class="one">First we are going to set the application title by setting JFrame to "ConverterApp". To do this click on JFrame in the inspector and then in the properties tab change the title to "ConverterApp". </p>
+
+  </br>
+  <center><img src="pictures/8.png" width="1200"></center>
+  </br>
+
+  <p class="one">Next, add a JTextField from the palette into the JFrame. The GUI builder will give you guidelines as to how the field will fit into the frame. Then add a JLabel to the right of the JTextField, again using the guidelines to decide on spacing. Next, add a JButton below the JTextField and then add another JLabel to the right of the JButton.</p>
+
+  </br>
+  <center><img src="pictures/9.png"></center>
+  </br>
+
+  <p class="one">Right now our GUI does not look very interesting so we will adjust sizes, IDs and the text. Right click on the components and select "Edit Text" in order to change what the text says. Change the button text to "Convert", change the text field to nothing, i.e. delete the current text. For the top label change it to grams and then for the bottom label change it to kilograms.</p>
+
+  </br>
+  <center><img src="pictures/10.png"></center>
+  </br>
+
+  <p class="one">We now need to make the size of the button the same as the text field, so shift-click on both the button and the text field, then right-click and select "Same size -> same width". This makes the width of both the components the same. At this stage you can remove any extra space around the app by resizing you frame, to do this just go to the corners or edges and resize as needed. Well done, you now have a GUI! Except it doesn't actually do anything right now, so the next part is adding the program logic.</p>
+
+  </br>
+  <center><img src="pictures/11.png"></center>
+  </br>
+  <center><img src="pictures/12.png"></center>
+
+  <p class="one">We need to change the defualt variable names in the inspector first, to do this right-click on each component within the JFrame and click "Change Variable name". </br></br> Change the names from this: </br> </br> <center><img src="pictures/13.png"></center> <p class="one">to this:</p> </br></br> <center><img src="pictures/14.png"></center>
+  </p>
+
+  <p class="one">When a user will interact with a Swing GUI component, in our case clicking the button, the component will generate a new object, an event object that broadcasts to objects that have registered themselves as listeners to that event. Right-click on the convert button, click "Events -> Action -> ActionPerformed". This will have now generated event-handling code, with an empty body for your to add in your own code. </p>
+
+  </br>
+  <center><img src="pictures/15.png"></center>
+  </br>
+  <center><img src="pictures/16.png"></center>
+
+  <p class="one">For now just copy and paste the following code in, the commenting in the code explains what the code does. </p>
+
+  <pre class="contained">
+
+    double g = (Double.parseDouble(userInput.getText())/1000);
+    kilograms.setText(g + "kg");
+  </pre>
+
+  <p class="one">Congratulations, you have now built your first application with Java that uses a GUI! To run the project, just click "Run -> Run Project".</p>
+
+  </br>
+  <center><img src="pictures/17.png"></center>
+
+
+
+</div>
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="Lesson2.html">Previous</a></li>
+    <li class="next"><a href="Collision.html">Next</a></li>
+  </ul>
+</div>
+
+
+</div><!--
+--><footer class="container-fluid bg-4 text-center">
+  Website made by Sachchit Shanice Keshav Ashu 
+</footer>
+
+</body>
+</html>

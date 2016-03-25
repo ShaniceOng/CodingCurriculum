@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Recursion Questions!</h1>
+  <div>
+  
+  </div>
+</div>
+
+
+<div class="container">   
+<font color = "black">
+  <h4> <!-- is this heading needed --> </h4> 
+  <ol>
+    <li>
+      <p>Today’s problem will be focusing on mathematics. I’m sure you’ve done basic addition. Problems like 3 + 4, 20 + 30, or even 100+1490 should be pretty easy right now. Today we’re going to program a special pattern of numbers using addition called the Fibonacci Series. The way this sequence works is that the next number is the sum of the previous two numbers. Still confused? Take a look at the Wikipedia page: https://en.wikipedia.org/wiki/Fibonacci_number. Your task is to write a program that finds the nth number of the Fibonacci series using recursion.
+     </p>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
+      Show Answer
+      </button>
+    </li>
+
+    <li> 
+      <p class="text-left"> I’m sure you’ve all realized how important mathematics is, so we’re going to do another math’s related question: This time will be tackling a very important division problem. Let’s start with some basic terms: a number is a divisor of another if it divides the other number evenly (without a remainder). The greatest common divisor(GCD) of a pair of numbers is the largest number that divides both those numbers evenly. For example, the GCD of (40,50) is 10. Write a program that uses recursion to calculate the greatest common divisor. A look at this page may help: https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
+
+      </p>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+      Show Answer
+      </button>
+
+    </li>
+
+
+</div>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel2"><font color="black">Answer To Question 1 </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <h4> The Code For The Program </h4>
+                    <pre class="text-left"><br>
+public static int Fibonacci(int n)
+{
+  if(n == 0)
+    return 0;
+  else if(n == 1)
+    return 1;
+  else
+  return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+                    </pre>
+                    <h4> How the program works </h4>
+                    <p class="text-left"><br>
+                      As you can see, the code above uses recursion. If you followed up on the Wikipedia page, or understood how the Fibonacci sequence works, it starts like 0,1,1,2 and etc. As you can see above, the base case is anything less than 1 because the sequence will not progress if a number larger than 1 isn't input. If a number such as 3 is input, it will be Fibonacci(2) + Fibonacci(1). Recursion will call the function again and it will produce 2.
+                   
+                    <br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel2"><font color="black">Answer To Question 2 </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <h4> The Code For The Program </h4>
+                    <pre class="text-left"> <br>
+public static int gcd(int num1, int num2)
+{
+  if(num2 == 0)
+  { 
+    return num1;
+  }
+
+  else
+  { 
+    return gcd(num2, num1%num2);
+  }
+}
+                        
+                    </pre>
+                    <br>
+                    <h4> How the program works </h4>
+                    <p class = "text-left"><br>
+                      If you've understood the concept of GCD, or followed up with link in the question, you'll notice that the program uses recursion to divide the first number and the second number. It then calls the method again using the second number, and the remainder of the division of the first and second number. It continues this process until the remainder is 0. 
+                    </p>
+
+                    <p class = "text-left"><br>
+                      Let's take an example of 10 and 12. Since the second number isn't 0, the method will be called with 12 and the remainder of when 10 is divided by 12. So it is called with 12 and 2. When 12 is divided by 2 the the remainder is 0. Therefore, 2 will be returned by the method.
+
+
+                    </p>
+                    <br>
+                    <br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel3"><font color="black">Answer To Question 3 </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <h4> The Code For The Program </h4>
+                    <pre class="text-left"> <br>
+import java.util.Scanner;
+
+public class exercise3 {
+
+  public static void main(String[] args) 
+  {
+    String gold;
+    String carbon; 
+    String sodium;
+    
+    Scanner in = new Scanner(System.in);
+    
+    
+    System.out.println("enter the chemical symbol for sodium");
+    sodium = in.nextLine();
+    boolean s = sodium.equals("Na");
+    
+    if(s == true)
+    {
+      System.out.println("this is the correct symbol for sodium");
+      
+    }
+    
+    else
+    {
+      for(int i = 0; i < 4; i++)
+      {
+        System.out.println("this is the incorrect answer");
+      }
+    }
+    
+    System.out.println("enter the chemical symbol for carbon");
+    carbon = in.nextLine();
+    boolean c = carbon.equals("C");
+    
+    if(c != true)
+    {
+      for(int i = 0; i < 4; i++)
+      {
+        System.out.println("this is the incorrect answer");
+      }
+    }
+    
+    else
+    {
+      System.out.println("this is the correct symbol for carbon");
+    }
+    
+    System.out.println("enter the chemical symbol for gold");
+    gold = in.nextLine();
+    boolean g = gold.equals("Au");
+    
+    if(g != true)
+    {
+      for(int i = 0; i < 4; i++)
+      {
+        System.out.println("this is the incorrect answer");
+      }
+    }
+    
+    else
+    {
+      System.out.println("this is the correct symbol for gold");
+    }
+    
+    in.close();
+    
+    
+    
+
+  }
+
+}
+                        
+                    </pre>
+                    <br>
+                    <h4> How the program works </h4>
+                    <p class = "text-left"><br>
+                      This program has similar elements to the previous programs. The same import statement is used to ensure that we are allowed to use the scanner class to get input from the user. Additionally, a new variable in of the type scanner is created. This is used to store the users input. Other than that, the first three variables are used to store the symbols entered by the user.
+                    </p>
+
+                    <p class = "text-left"><br>
+                      After the user enters the symbol of the chemical formula, a special function is used to compare it to the correct answer. The equals function compares the original string to the string in brackets, in this case if it is carbon.equals("C") means it compares the string entered by the user to the string in the brackets. If they are the same, it returns true, and if it is different, it returns false. This is the reason is it stored in a boolean(can only store two values i.e. either true or false, yes or no, etc). After which, there are multiple if statements that are used to display the right answer depending on what the user enters. 
+
+                    </p>
+                    <br>
+                    <br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel4"><font color="black">Answer To Question 4 </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <h4> The Code For The Program </h4>
+                    <pre class="text-left"> <br>
+import java.util.Scanner;
+    double distance = 0; 
+    double time = 0; 
+    double avgSpeed = 0;
+    double[] speed = new double[5];
+    Scanner in = new Scanner(System.in);
+    
+    System.out.println("enter 5 different average speeds");
+    for(int i = 0; i < 5; i++)
+    {
+      speed[i] = in.nextDouble();
+    }
+    
+    for(int i = 0; i < speed.length; i++)
+    {
+      avgSpeed += speed[i];
+    }
+    
+    avgSpeed = avgSpeed / speed.length;
+    
+    System.out.println("enter distance taken to fly to destination");
+    distance = in.nextDouble();
+    
+    time = distance / avgSpeed;
+    
+    System.out.println("the time taken to get to your holiday is:" + time);
+        
+                        
+                    </pre>
+                    <br>
+                    <h4> How the program works </h4>
+                    <p class = "text-left"><br>
+                      Yet again, this has similar elements to the previour programs because the scanner class is required. The first few variables are declared normally, however any array is created to store the averages speeds. After the in variable of the scanner class is created, a for loop is used to add input values to the array. The for loop after that is used to add up all the speeds, after which the speed is divided by the number of elements in the array. The next lines just involve calculations and print statements. 
+                    </p>
+                    <br>
+                    <br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</font>
+</div>
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="jquery/ClassExercises.html">Previous</a></li>
+    <!-- <li class="next"><a href="Exercise/jquery/ClassExercises.html">Next</a></li> -->
+  </ul>
+</div>
+<footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

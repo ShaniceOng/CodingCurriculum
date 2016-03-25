@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="quizconfig.js">
+</script>
+
+<script>
+
+var actualchoices=new Array()
+document.cookie="ready=yes"
+</script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  p.tab {
+    font-size: 25px;
+    padding-top: 15px;
+    padding-right: 300px;
+    padding-left: 300px;
+  }
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  .b {
+    display: inline-block;
+    position: relative;
+    margin: 1%;
+    float: left;
+    width: 23%;
+    height: 400px;
+    background-color: #2E64FE;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 400px; 
+
+}
+
+.b:hover { -moz-box-shadow: 0 0 100px #ccc; -webkit-box-shadow: 0 0 100px #ccc; box-shadow: 0 0 100px #ccc; } 
+
+a.hover {
+    color: white;
+}
+
+div{padding-left:100px; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>    
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Quiz Time!</h1>
+  <div>
+  <p>Have a go at each of the quizzes and work your way up!</p>
+  </div>
+</div>
+
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Have a go!</a></li>
+   
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="home"><font color="black"><p class="tab">
+
+      <form method="POST" name="myquiz">
+
+<div class="qheader">
+1) What data type should you use for '1'? </div>
+<div class="qselections">
+<input type="radio" value="a" name="question1">a) Char<br>
+<input type="radio" value="b" name="question1">b) Bool<br>
+<input type="radio" value="c" name="question1">c) String<br>
+<input type="radio" value="d" name="question1">d) Int<br>
+</div>
+
+<br>
+
+<div class="qheader">
+2) What data type should you use for 9?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question2">a) Char<br>
+<input type="radio" value="b" name="question2">b) Bool<br>
+<input type="radio" value="c" name="question2">c) String<br>
+<input type="radio" value="d" name="question2">d) Int<br>
+</div>
+
+<br>
+
+<div class="qheader">
+3) What data type should you use for TRUE?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question3">a) Bool<br>
+<input type="radio" value="b" name="question3">b) Char<br>
+<input type="radio" value="c" name="question3">c) String<br>
+<input type="radio" value="d" name="question3">d) Int<br>
+</div>
+
+<br>
+
+<div class="qheader">
+4) What data type should you use for "FALSE"?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question4">a) Bool<br>
+<input type="radio" value="b" name="question4">b) Char<br>
+<input type="radio" value="c" name="question4">c) String<br>
+<input type="radio" value="d" name="question4">d) Int<br>
+</div>
+
+<br>
+
+<div class="qheader">
+5) What data type should you use for constantType = 'E'</div>
+<div class="qselections">
+<input type="radio" value="a" name="question5">a) Char<br>
+<input type="radio" value="b" name="question5">b) Int<br>
+<input type="radio" value="c" name="question5">c) Bool<br>
+<input type="radio" value="d" name="question5">d) String<br>
+</div>
+
+<br>
+
+<div class="qheader">
+6) What data type should you use for constant Status='true'</div>
+<div class="qselections">
+<input type="radio" value="a" name="question6">a) Char<br>
+<input type="radio" value="b" name="question6">b) Int<br>
+<input type="radio" value="c" name="question6">c) Bool<br>
+<input type="radio" value="d" name="question6">d) String<br>
+</div>
+
+<br>
+
+<div class="qheader">
+7) What data type should you use for constant Status=true</div>
+<div class="qselections">
+<input type="radio" value="a" name="question7">a) Char<br>
+<input type="radio" value="b" name="question7">b) Int<br>
+<input type="radio" value="c" name="question7">c) Bool<br>
+<input type="radio" value="d" name="question7">d) String<br>
+</div>
+
+
+<br>
+
+<div class="qheader">
+8) What data type should be used for -5?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question8">a) Char<br>
+<input type="radio" value="b" name="question8">b) Int<br>
+<input type="radio" value="c" name="question8">c) Bool<br>
+<input type="radio" value="d" name="question8">d) String<br>
+</div>
+
+<br>
+
+</form>
+
+<form>
+<div align="center">
+<input type="button" value="Grade Me!" name="B1" onClick="gradeit()"> <input type="button" value="Reset" name="B2" onClick="document.myquiz.reset()"></div>
+</form>
+
+
+    </font></div>
+
+
+
+
+</div>
+
+
+<!--<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="#">Previous</a></li>
+    <li class="next"><a href="#">Next</a></li>
+  </ul>
+</div>-->
+
+
+</div>
+</br>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="learning.html">Learn</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="pdf.html">Downloads</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>    
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Learn how to make your own applications!</h1>
+  <div>
+  
+  </div>
+</div>
+
+
+<div id="accordion" role="tablist" aria-multiselectable="true">
+
+<div id="colour" class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+  
+    <h2 class="list-group-item-heading">
+      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Project 1 - Warm Up Projects
+      </a>
+    </h2>
+
+    </div>
+  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+     <a href="Project/ProjectGCD.html" class="list-group-item" >
+      <h3 class="list-group-item-heading">Introduction</h3>
+    </a>
+
+    <a href="Project/GCDIntroVideo.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Video on GCD</h3>
+    </a>
+
+    <a href="Project/ExampleCode.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Example Code &amp; Explanation</h3>
+    </a>
+
+    <a href="Project/Hanoi.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Tower of Hanoi</h3>
+    </a>
+
+  </div>
+</div>
+
+  <div id="colour" class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+  
+    <h2 class="list-group-item-heading">
+      <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Project 2 - Converter App
+      </a>
+    </h2>
+
+    </div>
+  <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+
+    <a href="Project/ProjectWelcome.html" class="list-group-item" >
+      <h3 class="list-group-item-heading">Introduction</h3>
+    </a>
+
+     <a href="Project/Lesson1.html" class="list-group-item" >
+      <h3 class="list-group-item-heading">Lesson 1</h3>
+    </a>
+
+    <a href="Project/Lesson2.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Lesson 2</h3>
+    </a>
+
+    <a href="Project/Lesson3.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Lesson 3</h3>
+    </a>
+
+  </div>
+</div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+  
+    <h2 class="list-group-item-heading"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Project 3- Collisions</a></h2>
+    </div>
+  <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <a href="Project/Collision.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Collisions Lesson</h3>
+    </a>
+    <a href="Project/CollisionKeyBoardPictures.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Keyboard Input</h3>
+    </a>
+  </div>
+</div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour">
+  
+    <h2 class="list-group-item-heading"><a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Project 4- Make your own calculator</a></h2>
+    </div>
+  <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <a href="swingAshu/swingProject.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Calculator app lesson</h3>
+    </a>
+  </div>
+</div>
+
+ <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour">
+  
+    <h2 class="list-group-item-heading"><a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Project 5- Bonus Processing Project</a></h2>
+    </div>
+  <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <a href="Project/downloadingProcessing.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Downloading Processing</h3>
+    </a>
+    <a href="Project/processingGame.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Processing game</h3>
+    </a>
+  </div>
+</div>
+
+
+
+</div>
+
+</div><!--
+--><footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>
+

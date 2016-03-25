@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;
+  }
+  .margin {margin-bottom: 45px;
+    }
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+  .contained {
+    width: 680px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+
+h3 {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+.image {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  height: 20%;
+  margin-top: 30px;
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+       <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>     
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Writing Your First Program!</h1>
+  </div>
+
+
+  <div><font color="black">
+  <p class="one">With any programming language, every beginner starts their journey with a hello world program. This is displayed below    </p>
+</font></div>
+  <br>
+  <div>
+  <pre class="contained"><font color="black">
+    public class HelloWorld
+    {
+      public static void main(String[] args)
+      {
+        System.out.println("Hello World");
+      }
+    }
+  </font></pre>
+</div>
+  
+  <div class="one">
+  <h3><font color="black">How the program works</font></h3>
+</div>
+
+<div>
+  <p class="one"><font color="black">The standard Java program will have an anatomy similar to the hello world program. Each java program has a class. This will be covered in more advanced lectures, but for this case, a class is template that allows a program to perform a certain behaviour. The basic convention of naming a class uses an upper case letters to name every new word.The class name also has to start with the upper case letter. Each class has methods within it. In this case, methods allow the class to carry out a certain behaviour mentioned above.</font></p>
+</div>
+
+<div>
+<p class="one"><font color="black">Depening on your program, there can be many classes, and each class will have many methods that allow it to perform many different things. However, every class requires a main method. All the other methods are called through the main method, therefore a program needs a main method to work.</font></p>
+</div>
+
+<div>
+<p class="one"><font color="black">The main method is titled "public static void main(Strings[] args)." The key word "public" means that the method is accessible from outside the class; it can be used by other classes. For now, the keyword "static" is not important and will be referred to in other lectures. The key word void means that the method does not have a return type; this means that once it is called, it does not output any of the specified data types mentioned before. The keywords in the brackets mean that the method takes a string as a parameter; this means that for the method to work, it needs a certain set of values to work, and in this case, these values are strings. </font></p>
+</div>
+
+<div>
+<p class="one"><font color="black">Looking within the main method, The statement used to print the words "Hello World" is called a function. The System.out.println is a function that allows a user to display some information on the screen. Usually, this information is placed within brackets and if it is a set of words, it is surrounded by double quotes " " because the system will not understand words such as hello world. Additionally, the function ends in a semi-colon(;). This is necessary because it tells the system when to stop. The System.out.println("Hello World") is an example of a statement and every statement in java ends with a semi colon. A statement is the Java code you write to tell the computer what to do. It is like a sentence in a language. </font></p>
+</div>
+  
+<img class="image" src="../MemesCollection/simplyJava.jpg">
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="3.7.html">Previous</a></li>
+    <li class="next"><a href="4.2.html">Next</a></li>
+  </ul>
+</div>
+
+</div><!--
+--><footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;
+    text-align: justify;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 300px;
+    padding-left: 300px;
+}
+
+ul{
+  padding-top: 15px;
+    padding-right: 300px;
+    padding-left: 300px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 300px;
+    padding-left: 300px;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+  .contained {
+    width: 480px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+
+.social {
+    position: relative;
+    height: 3em;
+    width: 13.5em;
+    margin: 150px 450px;
+}
+
+.social li {
+    display: block;
+    height: 4.2em;
+    line-height: 4em;
+    margin: -2.2em;
+    position: absolute;
+    -webkit-transition: -webkit-transform .7s;
+    -moz-transition: -moz-transform .7s;
+    -ms-transition: -ms-transform .7s;
+    -o-transition: -o-transform .7s;
+    transition: transform .7s;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    text-align: center;
+    width: 4.2em;
+
+}
+
+.social a {
+    color: #fffdf0;
+    display: block;
+    height: 3.4em;
+    line-height: 5em;
+    text-align: center;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 3em; 
+  
+}
+
+.social li:hover {
+  -webkit-transform: scale(1.3,1.3) rotate(45deg);
+    -moz-transform: scale(1.3,1.3) rotate(45deg);
+  -ms-transform: scale(1.3,1.3) rotate(45deg);
+    -o-transform: scale(1.3,1.3) rotate(45deg);
+  transform: scale(1.3,1.3) rotate(45deg);
+}
+
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}
+
+.carousel-inner {
+  width: 100%;
+  min-height: 400px;
+}
+
+#carousel-example-generic .carousel-caption {
+  max-width: 500px;
+  top: auto;
+  text-align: center;
+  left: auto;
+  color: #F8F8F8;
+}
+
+#carousel-example-generic {
+  height: 100vh;
+}
+
+.facebook {
+    background: #155b9d;
+    left: 0;
+    top: 0%;
+}
+
+.twitter {
+    background: #1a9ec4;
+    bottom: 0;
+    left: 25%;
+}
+
+.pinterest {
+    background: #e11a30;
+    left: 50%;
+    top: 0%;
+}
+.behance {
+    background: #3f7aa3;
+    bottom: 0;
+    left: 75%;
+}
+.image {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: 40%;
+}
+.carousel-indicators li {
+  visibility: hidden;
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="learning.html">Learn</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="pdf.html">Downloads</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>    
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">A bit more about us!</h1>
+</div>
+
+
+<div>
+  <h1 class="one"><font color="black">What is this website for?</font></h1>
+</div>
+<div> 
+  <p class="one"><font color="black">The purpose of this website is to give you an insight into Java. We assume none or little prior programming experience, so you can pick up our lessons no matter what stage you are at and we try to explain everything as clearly as we can while using examples so that at every stage you will feel confident and excited to learn more. We also follow a STEM theme so that we can link what you learn in Java with real world applications and show you why Java is so useful.</font></p>
+</div>
+
+<div>
+  <h1 class="one"><font color="black">Theme</font></h1>
+</div>
+<div> 
+  <p class="one"><font color="black">We follow a general STEM theme for our project. We do not simply stick with one subject but explore a variety of different areas such as Physics, Chemistry, Biology, Arts and Engineering. The theme will be obvious from the exercise or the lesson, however do not be worried if you have not studied the subject matter before since we will make sure to explain everything right from the beginning so that you are able to apply your newly learnt Java skills to that field.</font></p>
+</div>
+
+<div>
+  <h1 class="one"><font color="black">Scope</font></h1>
+</div>
+<div> 
+  <p class="one"><font color="black">The project is broken down into:</font></p>
+  <p class="one"><font color="black"><font size="4px"><b>19 Lessons:</b></font> You can learn the basic buidling blocks you need to start getting a grasp of Java and it's concepts, make sure to go through all of these.</font></p>
+  <p class="one"><font color="black"><font size="4px"><b>Exercises:</b></font> Here you can test what you have learnt, we provide easy, medium and difficult challenges so that you can slowly work up your skills and confidence and then perhaps try stretch yourself a little toward the end. We will provide answers for all the core questions.</font></p>
+  <p class="one"><font color="black"><font size="4px"><b>Final projects:</b></font> Having tried out the exercises, it is then time to try something exciting! Projects are a great way to take your newly acquired skills and use them to produce something really interesting. In our projects section, we start off with a warm-up project, a simple program to calculate the greatest common divisor of as many numbers as you want in seconds! After that, have a look at our Tower of Hanoi Project, challenge yourself and try to solve this famous puzzle with... Java! Then, we move on to our main projects, make your own converter application, make a simple calculator application and learn about collisions in Swing; these are skills that will start you off on building your own Java game!</font></p>
+
+</div>
+
+<div>
+  <h1 class="one"><font color="black">Learning Outcomes</font></h1>
+</div>
+<div> 
+  <p class="one"><font color="black">Understand the basic syntax of Java</font></p>
+  <p class="one"><font color="black">Be comfortable using an IDE</font></p>
+  <p class="one"><font color="black">Use simple programming techniques to build simple programmes</font></p>
+  <p class="one"><font color="black">Use your knowledge to build something substantial</font></p>
+</div>
+
+<div>
+  <h1 class="one"><font color="black">What you need</font></h1>
+</div>
+<div>
+  <p class="one"><font color="black">A laptop/computer</font></p>
+  <p class="one"><font color="black">An IDE for Java installed, preferably the one we use in tutorials</font></p>
+  <p class="one"><font color="black">Latest version of Java installed</font></p>
+</div>
+<div>
+  <h1 class="one"><font color="black">Why should you care about Java?</font></h1>
+</div>
+
+<!-- START OF CAROUSEL -->
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://jaxenter.com/wp-content/uploads/2014/09/nsabey.png" alt="NetBeans running NASA Mission software">
+      <div class="carousel-caption">
+        Java, JavaFX and NetBeans play an important role in NASA's space missions
+      </div>
+    </div>
+    <div class="item">
+      <img src="http://www.wired.com/images_blogs/underwire/2009/08/ironman-2.jpg" alt="Iron Man 2">
+      <div class="carousel-caption">
+        Industrial Light and Magic uses Java to bring visual effects to the big screen
+      </div>
+    </div>
+    <div class="item">
+      <img src="pictures/twitter.jpg" alt="Team Jefferson and Tommy Junior">
+      <div class="carousel-caption">
+        Twitter uses a Java-based language, Scala to allow the functionality that it offers now
+      </div>
+    </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- END OF CAROUSEL -->
+
+<div> 
+  <p class="one"><font color="black">Java is one of the most popular programming languages that are used to create web apps and platforms. It is a very flexible language and you can run it on almost any machine. Over 1 billion computers and 3 billion mobile phones run on Java.</font></p>
+</div>
+
+<img src="MemesCollection/I-SEE-JAVA.jpg" class="image">
+
+<div>
+  <h1 class="one"><font color="black">Meet the team</font></h1>
+</div>
+<div> 
+  <p class="one"><font color="black">This project and website has been designed and created by 5 Computer Science undergraduates at University College London. We have all come from different places and all have our own unique reasons for studying computer science. If you are not sure why computer science is for you, then take a look at our profiles below! </font></p>
+</div></br>
+
+<div>
+
+
+
+<center>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-success btn-lg " data-toggle="modal" data-target="#myModal1">
+  Sachchit
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel1"><font color="black">Sachchit P </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <img src="pictures/sachchit.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                    <h3 class="media-heading">Sachchit Prasad <small>UK</small></h3>
+                    <span><strong>Skills: </strong></span>
+                        <span class="label label-warning">HTML5/CSS</span>
+                        <span class="label label-info">Javascript</span>
+                        <span class="label label-info">Python</span>
+                        <span class="label label-success">Java</span>
+                        <span class="label label-success">C</span>
+                        <span class="label label-success">Ruby</span>
+                        <span class="label label-success">Haskell</span>
+                    </center>
+                    <hr>
+                    <center>
+                    <p class="text-left"><strong>About Me </strong><br>
+                    I am a first-year UCL undergraduate studying for a Masters in Engineering in the field of computer science. I've always been interested in computers and how they work and all the weird and wonderful things that you can do with them, I really do feel the only thing really limiting me is my imagination!</br></br>Outside of CS I really enjoy novel writing and teaching myself the guitar. I also do a lot of voluntary work and help other people learn how to code, it is always satisfying to see how far someone comes from not knowing how to code! I also love to read to books whenever I am free, althought free time is very hard to come by once you are in university. So far it has been a great subject and you are always learning something new and interesting :)
+                    </p>
+                    <br>
+                    <p class="text-left"><strong>Why CS? </strong><br>
+                    First of all I would like to say that you do not have had to always been interested in computers from a young age. Some people feel initmidated by how to code because they think that it is spending hours on end writing lines and lines of code and might not find it particularly exciting. However it is quite the opposite! If you like to solve problems and make cool and interesting things then CS is right you your alley. Choose something you like, do you want to make a website? Learn HTML. Do you want to learn how to make programs? Learn Python. Do you want to learn how to make apps? Learn Java. CS gives you the tools to be able to make whatever you have in mind come to fruition so it is always best to find the area you are most interested and work from there.
+                    </p>
+                    <br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+  Shanice
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel2"><font color="black">Shanice O </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <img src="pictures/shanice.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                    <h3 class="media-heading">Shanice Ong Sheue Nie <small>Singapore</small></h3>
+                    <span><strong>Skills: </strong></span>
+                        <span class="label label-warning">HTML5/CSS</span>
+                        <span class="label label-info">Javascript</span>
+                        <span class="label label-info">Python</span>
+                        <span class="label label-success">Java</span>
+                        <span class="label label-success">C</span>
+                        <span class="label label-success">Haskell</span>
+                    </center>
+                    <hr>
+                    <center>
+                    <p class="text-left"><strong>About me</strong><br>
+                    I am a first year Computer Science undergraduate student at UCL. The topics in Computer Science that intrigue me most are Machine Learning and Augmented Reality. Being able to invent something that is beneficial to society has always been my dream. I am a fervent fan of innovation and crazy ideas. During my spare time, I enjoy playing netball and playing the guitar.
+                    </p>
+                    <br>
+                    <p class="text-left"><strong>Why CS?</strong><br>
+                    Why did I choose Computer Science? I wanted to change the world, to play my part in its growth, through our universal language, programming languages! Before this I did not know a thing about programming languages, and ever since I’ve started, I can’t get enough of them. Is CS everything I expected it would be? It definitely is! The power to actually communicate with our computers is an amazing one that everybody should explore.
+                    </p>
+                    <br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">
+  Keshav
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel3"><font color="black">Keshav A </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <img src="pictures/keshav.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                    <h3 class="media-heading">Keshav Aggarwal <small>India</small></h3>
+                    <span><strong>Skills: </strong></span>
+                        <span class="label label-warning">HTML5/CSS</span>
+                        <span class="label label-info">Javascript</span>
+                        <span class="label label-info">Python</span>
+                        <span class="label label-success">Java</span>
+                        <span class="label label-success">C</span>
+                        <span class="label label-success">Haskell</span>
+                    </center>
+                    <hr>
+                    <center>
+                    <p class="text-left"><strong>About Me and CS</strong><br>
+                    My major in Computer Science is a well -thought and informed one. I am captivated by the breadth of subject domains offered under CS that range from Applied Physics & Devices to Artificial Intelligence. The provisions of a flexible curriculum under CS, with labs and hands-on coursework offering a holistic view of the field-are the driving factors for choosing CS. I owe my strength and abiding passion in Computer Science to my mathematical acumen, exceptional reasoning capabilities, an ever-questioning mind and an exhaustive exploration of the choice spectrum offered under the major. Choosing CS I can chisel my analytical abilities and explore new frontiers of technology and myself. 
+                    </p>
+                    <br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal4">
+  Ashu
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel4"><font color="black">Ashu S </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <img src="pictures/ashu.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                    <h3 class="media-heading">Ashu Savani <small>Kenya</small></h3>
+                    <span><strong>Skills: </strong></span>
+                        <span class="label label-warning">HTML5/CSS</span>
+                        <span class="label label-info">Javascript</span>
+                        <span class="label label-info">Python</span>
+                        <span class="label label-success">Java</span>
+                        <span class="label label-success">C</span>
+                        <span class="label label-success">Haskell</span>
+                    </center>
+                    <hr>
+                    <center>
+                    <p class="text-left"><strong>About Me and CS </strong><br>
+                    Since childhood, I have witnessed the transformation technology has brought about in society around me; the ground breaking MPESA mobile money platform of Kenya is just one example of this renovation. In a charity visit, I saw how disabled children were able to use computers to learn. Then I realized, many people, especially in underdeveloped counties like Kenya, are deprived exposure to technology. I believe technology inclusion is as important a mission as poverty reduction and financial inclusion that governments are pursing. At this point, I fully understand my goal in life. I want to be part of a bigger cause of Technology Inclusion while producing meaningful technology to solve simple real life problems.
+                    </p>
+                    <br>
+            
+                    </center>
+                </font></div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal5">
+  Danish
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel5"><font color="black">Danish A </font></h1>
+      </div>
+       <div class="modal-body"><font color="black">
+                    <center>
+                    <img src="pictures/danish.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                    <h3 class="media-heading">Danish Amjad Alvi <small>Pakistan</small></h3>
+                    <span><strong>Skills: </strong></span>
+                        <span class="label label-warning">HTML5/CSS</span>
+                        <span class="label label-info">Javascript</span>
+                        <span class="label label-info">Python</span>
+                        <span class="label label-success">Java</span>
+                        <span class="label label-success">C</span>
+                        <span class="label label-success">Haskell</span>
+                    </center>
+                    <hr>
+                    <center>
+                    <p class="text-left"><strong>About Me and CS </strong><br>
+                    Born in Singapore, brought up in Pakistan, and studying in the United Kingdom. A passionate problem solver and rationalist, I have always enjoyed the life of solving real world problems using STEM. Pervez Hoodbhoy and Alan Turing are my idols, and I am their worshipper.
+                    </p>
+                    <br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</center>
+</br>
+
+<div>
+  <h1 class="one"><font color="black">Want to learn some other languages?</font></h1>
+</div>
+<div> 
+  <p class="one"><font color="black">Java is just one of many programming and scripting languages that are out there to learn. Once you can get your head around the logic and rules of a programming language. You will find it easier to pick up other languages. HTML, CSS and Javascript will all allow you to make responsive websites. Python is another langauge which you may be interested in learning. Click on the links below to have a look at each!</font></p>
+</div>
+<center>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+                          <div class="col-md-6 .col-md-offset-3">
+                                 <ul class="social">
+                                  <li class="facebook"><a href="http://www.w3schools.com/html/">HTML</a></li>
+                                  <li class="twitter"><a href="http://www.w3schools.com/css/default.asp ">CSS</a></li>
+                                  <li class="pinterest"><a href="http://www.w3schools.com/js/default.asp">JS</a></li>
+                                  <li class="behance"><a href="https://www.codecademy.com/learn/python">Python</a></li>
+                                </ul>
+                          </div>
+    </div>
+    </div>
+</div>
+</center>
+
+<footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

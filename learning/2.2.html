@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;
+    }
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+.contained {
+    width: 480px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+       <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>    
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Scope</h1>
+</div>
+
+<div>
+  <p class="one"><font color="black">Scope is a very important idea in programming, it is the idea of where and how you can access different parts of a program from. For beginners you may look at piece of code and see variables declared in different places however they all have different values and it can be confusing as to how it works. </br></br> For example you might see a i = 0 in one part of the program and a i = 1 somewhere else but both have different values and are used differently. So how does this work? To understand this you need to understand the different kind of scopes.</font></p>
+</div>
+
+<div>
+  
+  <h1 class="one"><font color="black">Class Level Scope</h1>
+    <p class="one">Class level scope means that a variable or a method is limited to a specific class.When a variable is created within a class, the scope of the variable is said to be "local" to the specific class. This means that the variable is created when the specific class is activated in a program, and when the class is no longer used, the variable is no longer valid, therefore it does not take up any memory space. This variable is usually declared at the top of the class as a convention.Take the short program below as an example: </p><br></br> 
+
+<div>
+<pre class="contained">
+public class Car
+{
+  String name;
+}
+</pre>
+</div>
+
+<br>
+ <div>
+<pre class="contained">
+public class cycle
+{
+  string name;
+}
+</pre>
+</div>
+<br>
+
+<p class="one">here even though the two variable names are the same, they can be used at the same time because their variables are local to their own specific classes. So they have seperate memory addresses once each class is called, and they can be used at the same time.</p>
+
+</p>
+</div>
+
+<div>
+  <h1 class="one"><font color="black">Method Scope</font></h1>
+    <p class="one"> Just like a variable is specific, a variable can also be specific to a method. When a variable is created inside a method, that variable is said to be "local" to the method. So when the method is called by the program, the variable is created and assigned some memory. When the method is no longer needed, the variable isn't needed as well, and there is no way to access that certain variable. Again, similar to variables created within a class, the variables are declared at the top of a method. Take an example below:</p><br></br>
+</div>
+<div>
+<pre class="contained">
+public int getName()
+{
+  Int length;
+}
+
+<br>
+
+public double getAddress()
+{
+  Int length;
+}
+</pre>
+</div>
+
+<br>
+
+<div>
+<p class="one">
+In both these methods, the variables are declared at the top of the method, and they have the same name. However, both can be used at the same time because when each method is called, they are allocated seperate memory spaces, and they can only accessed by their specific method. So the getName can access it's own length variable and the getAddress can access its own length variable. But when the method is no longer called, the variable is not valid, and other methods cannot access these variables.   
+</p>
+</div>
+
+<div>
+  <h1 class="one"><font color="black">Loop Scope</font></h1>
+</div>
+</br>
+<div>
+    <p class="one"> Variables are usually created within loops. Amongst a few othere reasons, these variables help keep track of how many times the loop is run. When the variable is created within the loop, it is said to be "local" to the loop: What this means is that the variable can only be accessed by the loop, and it is created when the loop is called on. Thus, when the loop is no longer running, the variable does not exist, and it is not assigned computer memory space. For example:
+    </p>
+</div>
+
+  <br>
+
+<div>
+<pre class="contained">
+for(int i = 0; i < 10; i++)
+{
+  System.out.println("hello");
+}
+</pre>
+</div>
+<br>
+
+<div>
+  <p class="one">
+The variable i is created in the loop above. Therefore, only the loop can access this variable, and it is created when the loop is called. When the loop is not running, the variable i for this certain loop, does not exist, therefor it cannot be accessed by the loop and any other method.
+</p>
+</div>
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="2.1.html">Previous</a></li>
+    <li class="next"><a href="2.4.html">Next</a></li>
+  </ul>
+</div>
+
+
+</div>
+<footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

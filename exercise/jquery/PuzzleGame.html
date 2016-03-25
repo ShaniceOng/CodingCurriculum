@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">>
+    <head>
+        <meta charset="utf-8">
+  <title>jQuery UI Draggable - Constrain movement</title>
+  <link rel="stylesheet" href="jquery-ui.min.css">
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.min.js"></script>
+        <style>
+            .toInsert{
+                height: 50px;
+                width: 90px;
+                border: 1px solid black;
+                display: inline-block;
+            }
+
+            .inserted {
+                background-color: green;
+                border: 2px solid green;
+            }
+            .toDrag1, .toDrag2, .toDrag3{
+                height: 35px;
+                width: 90px;
+                /*border: 1px solid black;*/
+                display: inline-block;
+                text-align: center;
+                padding-top: 15px;
+            }
+            .toDrag1{
+                background-color:LightPink;
+            }
+            .toDrag2{
+                background-color: LightSalmon;
+            }
+            .toDrag3{
+                background-color: MistyRose;
+            }
+            .highlighted{
+                border: 10px solid green;
+            }
+            
+        </style>
+  <!-- //       <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  // <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+        <script>
+        $(function(){
+            var a = 1;
+            var b = 1;
+            var c = 1;
+            var displayA = document.getElementById("display1");
+            var displayB = document.getElementById("display2");
+            var displayC = document.getElementById("display3");
+
+            $(".toDrag1").draggable({ stop: function(){
+                $("#div1").droppable({
+                    accept: ".toDrag1",
+                    drop: function() {
+                        a = a*(-1);
+                        displayA.innerHTML = a;
+                        ("toDrag1").toggleClass("inserted");
+                    }
+                });
+
+            }
+            });
+            $(".toDrag2").draggable({ stop: function(){
+                $("#div2").droppable({
+                    accept: ".toDrag2",
+                    drop: function() {
+                        b = b*(-1);
+                        displayB.innerHTML = b;
+                        ("toDrag2").toggleClass("inserted");
+                    }
+                });
+
+            }
+            });
+            $(".toDrag3").draggable({ stop: function(){
+                $("#div3").droppable({
+                    accept: ".toDrag3",
+                    drop: function() {
+                        c = c*(-1);
+                        displayC.innerHTML = c;
+                        ("toDrag3").toggleClass("inserted");
+                    }
+                });
+
+            }
+            });
+        // $("#div1").droppable({
+        //     accept: ".toDrag1",
+        //     drop: function() {
+        //         a = a*(-1);
+        //         displayA.innerHTML = a;
+        //     }
+        // });
+
+        // $("#div2").droppable({
+        //     accept: ".toDrag2",
+        //     drop: function() {
+        //         b = b*(-1);
+        //         displayB.innerHTML = b;
+        //     }
+        // });
+
+        // $("#div3").droppable({
+        //     accept: ".toDrag3",
+        //     drop: function() {
+        //         c = c*(-1);
+        //         displayC.innerHTML = c;
+        //     }
+        // });
+            
+        });
+        </script>
+        
+    </head>
+    <body>
+    
+        <div id="div1" class="toInsert"></div>
+        <div id="div2" class="toInsert"></div>
+        <div id="div3" class="toInsert"></div>
+        <div class="toDrag1">Hello</div>
+        <div class="toDrag2">From</div>
+        <div class="toDrag3">ADELE</div>
+
+        <p>Hello box: <span id="display1">0</span> From box: <span id="display2">0</span> Adele box: <span id="display3">0</span>
+        </p>
+
+    </body>
+</html>

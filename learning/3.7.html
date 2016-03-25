@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+       font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+ .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+
+  table, th, td {
+  border: 2px solid gray;
+  border-collapse: collapse;
+  /*width: 20%;*/
+}
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+h3.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h4.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+  .contained {
+    width: 550px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+ 
+  .contained2 {
+    width: 800px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+
+.alternate1 {
+  color: black;
+  background-color: #d0d4e4;
+}
+
+.alternate2 {
+  color: black;
+  background-color: #bec3da;
+}
+
+.abstractClassHead, .abstractMethodHead {
+  color: black;
+  background-color: #857db1;
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>      
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Automatic Type Conversion and Type Casting</h1>
+  </div>
+  
+  <div>
+
+
+
+
+
+<br>
+
+
+
+  <p class="one"> <font color="black">Java allows automatic (implicit) type conversion as well as explicit type conversion (type casting) for changing the data type from one to another.<br><br>
+
+  <b>Note:</b> Conversions from char to int and vice-versa is done by making use of ASCII (American Standard Code for Information Exchange) values.
+</font></p><br>
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+  <col width="120">
+  <col width="120">
+ <thead>
+
+      <th  class="abstractClassHead"><font color="black">
+       
+      </font></th>
+      <th  class="abstractClassHead"><font color="black">
+     ASCII Values
+      </font></th>
+    </thead>
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+         0 - 9
+        </td>
+        <td class="alternate1">
+          48 - 57
+        </td>
+      </tr>
+
+      <tr>
+        <td class="alternate2">
+          A - Z
+        </td>
+        <td class="alternate2">
+          65 - 90
+        </td>
+      </tr>
+
+      <tr>
+        <td class="alternate1">
+          a - z
+        </td>
+        <td class="alternate1">
+          97 - 122
+        </td>
+      </tr>
+
+     
+    </font></tbody>
+  </font></table>
+</font></div>
+
+
+
+
+
+<br>
+
+<h3 class="one"><font color="black"><u>Automatic Type Conversion</u></font></h3>
+
+
+<p class="one"> <font color="black">Java has implicit way of converting one data type to another. The same is done by any of the two ways:<br>
+• By assigning a variable of one datatype to another variable of another datatype<br>
+• By performing arithmetic operation on two operands of different datatypes, in such case data type of result is automatically in the higher datatype out of the two.<br><br>
+<b>Implicit Conversion Table</b>
+
+</font></p>
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+  <col width="120">
+  <col width="120">
+  <col width="120">
+ <thead>
+
+      <th  class="abstractClassHead"><font color="black">
+       Operand1
+      </font></th>
+      <th  class="abstractClassHead"><font color="black">
+     Operand2
+      </font></th>
+       <th  class="abstractClassHead"><font color="black">
+     Result
+      </font></th>
+    </thead>
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+         char
+        </td>
+        <td class="alternate1">
+          char
+        </td>
+        <td class="alternate1">
+          char
+        </td>
+      </tr>
+
+      <tr>
+        <td class="alternate2">
+         char
+        </td>
+        <td class="alternate2">
+          int
+        </td>
+        <td class="alternate2">
+          int
+        </td>
+      </tr>
+
+      <tr>
+        <td class="alternate1">
+         int
+        </td>
+        <td class="alternate1">
+          int
+        </td>
+        <td class="alternate1">
+          int
+        </td>
+      </tr>
+
+       <tr>
+        <td class="alternate1">
+         int
+        </td>
+        <td class="alternate1">
+          float
+        </td>
+        <td class="alternate1">
+          float
+        </td>
+      </tr>
+
+       <tr>
+        <td class="alternate1">
+         float
+        </td>
+        <td class="alternate1">
+          float
+        </td>
+        <td class="alternate1">
+          float
+        </td>
+      </tr>
+
+       <tr>
+        <td class="alternate1">
+         float
+        </td>
+        <td class="alternate1">
+          double
+        </td>
+        <td class="alternate1">
+          double
+        </td>
+      </tr>
+
+       <tr>
+        <td class="alternate1">
+         double
+        </td>
+        <td class="alternate1">
+          double
+        </td>
+        <td class="alternate1">
+          double
+        </td>
+      </tr>
+     
+    </font></tbody>
+  </font></table>
+</font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+<p class="one"> <font color="black">
+<b>Automatic Type Conversion Examples</b>
+
+</font></p>
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+  <col width="120">
+  <col width="120">
+  <col width="120">
+ 
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+         <pre class="contained">char CH = 'A';
+int Number = CH;
+System.out.println(Number);
+System.out.println(CH);
+Number += CH;
+System.out.println(Number);</pre>
+        </td>
+        <td class="alternate1">
+         <pre class="contained">int A = 1, B = 2;
+float C = A / B;
+System.out.println(C);
+System.out.println(A / B);
+System.out.println(1.0 / B);
+System.out.println(A / 2.0);</pre>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="alternate2">
+         OUTPUT<br>
+65<br>
+A<br>
+130
+        </td>
+        <td class="alternate2">
+          OUTPUT<br>
+0.0<br>
+0<br>
+0.5<br>
+0.5
+        </td>
+      </tr>
+     
+    </font></tbody>
+  </font></table>
+</font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 class="one"><font color="black"><u>Type Casting</u></font></h3>
+
+
+<p class="one"> <font color="black">JIt is a way to convert one datatype to another explicitly by mentioning the data type in braces in front of the operand (Variable/Expression).
+
+
+</font></p>
+
+
+
+
+
+
+
+<p class="one"> <font color="black">
+<b>Type Casting Examples</b>
+
+</font></p>
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+  <col width="120">
+  <col width="120">
+  <col width="120">
+ 
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+         <pre class="contained">char CH = 'A';
+int Number;
+Number = CH;
+System.out.println((char)Number);
+System.out.println((int)CH);</pre>
+        </td>
+        <td class="alternate1">
+         <pre class="contained">int A = 1, B = 2;
+float C;
+C = (float)A / B;
+System.out.println(C);
+C = A / (float)B;
+System.out.println(C);</pre>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="alternate2">
+         OUTPUT<br>
+A<br>
+65
+        </td>
+        <td class="alternate2">
+          OUTPUT<br>
+0.5<br>
+0.5
+        </td>
+      </tr>
+     
+    </font></tbody>
+  </font></table>
+</font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="3.6.html">Previous</a></li>
+    <li class="next"><a href="4.1.html">Next</a></li>
+  </ul>
+</div>
+
+
+
+
+</div><!--
+--><footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

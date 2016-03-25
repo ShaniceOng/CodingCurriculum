@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p { font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: black;
+  }
+  p {
+    text-align: justify;
+   }
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 300px;
+    padding-left: 300px;
+}
+
+ul{
+  padding-top: 15px;
+    padding-right: 300px;
+    padding-left: 300px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 300px;
+    padding-left: 300px;
+    color: black;
+}
+
+h2.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 300px;
+    padding-left: 300px;
+    color: black;
+}
+
+h3.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 300px;
+    padding-left: 300px;
+    color: black;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+.contained {
+    width: 570px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Key Listener</h1>
+  <div>
+  
+  </div>
+</div>
+
+<div>
+  <h2 class="one" align="justify">  We've known a lot about collisions already, what can we do to learn more about how it takes input from the Keyboard? </h2>
+  <p class="one"> <i> Key Events </i> are used to interface the keyboard's interaction with the user. Key events notify the program when the user is typing at the keyboard. Specifically, key events are sent by the component with the keyboard focus when the user either presses or releases keyboard keys. These inputs are then amalgamated with the collision game in order to make an interactive game for the player. </p>
+
+ <h2 class="one">How can we detect the key events and incooperate them to interact the Collisions program?</h2>
+
+<p class="one"> In order to sucessfully detect key events, we will first have to import the classes which have the methods for interaction and interfacing with the keyboard. </br> </br> We will make use of the <b>intersects</b> method in <b> java.awt.event.KeyListener </b> and <b>  java.awt.event.KeyEvent </b> class, which executes a the code of block written under it, and since it has the data type <i> void </i>, it will not return a value. We will be overriding the <b> keyPressed </b> method of the class which implements the interface <b> KeyListener </b>. </br></br>
+
+<b>public void keyPressed(KeyEvent e) </b> </br></br>
+
+In order to use this method for our particilar application, also we need to devise a method to differentiate between the keys, the key press, and key release. </p>
+
+<h2 class="one" align="justify"> At the moment, the method can only detect the press of a key, how will we incorporate in it method(s) which would identify which key has been pressed? </h2>
+
+</div>
+
+<pre class="contained">
+
+        public void keyPressed(KeyEvent e) 
+          {
+                if(e.getKeyCode() == KeyEvent.VK_RIGHT)  
+                {
+
+                }
+                else if(e.getKeyCode() == KeyEvent.VK_LEFT) 
+                {
+
+                }
+                else if(e.getKeyCode() == KeyEvent.VK_UP) 
+                {
+
+                }
+                else if(e.getKeyCode() == KeyEvent.VK_DOWN) 
+                {
+
+                }
+          }
+   
+</pre>
+
+<p class="one">We also have to ensure that the class is using itself as the <b>KeyListener</b>, so we will have to use the <i> this </i>  keyword in the Paint() constructor where it would be calling itself to act as its own <b> KeyListener. </b> </p>
+
+<pre class="contained">
+
+         public Paint() 
+            {
+                this.addKeyListener(this);
+                rect1 = new rect(0, 0);
+                rect2 = new rect(700, 150);
+                time = new Timer(10, this);
+                time.start();
+                
+             }
+</pre>
+
+<div>
+  <p class="one"> Now why don't we try to incorporate some statements in these methods so that we can improve the Collisions program to include and make use of those methods to allow making a more user friendly and interactive game using keyboard controls? We have to now understand that pressing the <i> arrows </i> of the keyboard should change the <b>direction</b> of the Collision Boxes, which in turn is reguled by the <b>rect1.xa</b> and   <b>rect1.xa</b> </br></br>
+
+  It makes use of the same two  files, 'Draw.java' and 'rect.java' as in Collisions, but are a modified to include the code of the <b>KeyListener</b>. </p>
+</div>
+
+<h3 class="one">Draw.java</h3>
+
+<pre class="contained">
+
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.applet.Applet;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.awt.Rectangle;
+ 
+public class Draw {
+    
+        public static void main(String[] args)
+        {
+                JFrame frame = new JFrame("Collision Detection");
+                frame.setVisible(true);
+                frame.setSize(800, 250);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.add(new Paint());
+             
+        }
+}
+ 
+class Paint extends Applet implements ActionListener, KeyListener {
+        rect rect1;
+        rect rect2;
+        Timer time;
+        int xa, ya;
+        
+        public Paint() 
+        {
+                this.addKeyListener(this);
+                rect1 = new rect(0, 0);
+                rect2 = new rect(700, 150);
+                time = new Timer(10, this);
+                time.start();
+                
+        }
+         
+        
+ 
+        @Override
+        public void actionPerformed(ActionEvent e) 
+        {
+                rect1.move();
+                rect2.move();
+                checkCollision();
+                repaint();
+        }
+ 
+        @Override
+        public void paint(Graphics g) 
+        {
+
+                super.paint(g);
+                Graphics2D g2d = (Graphics2D) g;
+                g2d.setColor(Color.BLUE);
+                g2d.fillRect(rect1.x, rect1.y, 100, 50);
+                g2d.setColor(Color.ORANGE);
+                g2d.fillRect(rect2.x, rect2.y, 100, 50);
+                
+        }
+ 
+        public void checkCollision() {
+                Rectangle rectangle1 = rect1.getBounds();
+                Rectangle rectangle2 = rect2.getBounds();
+                
+                if (rectangle1.intersects(rectangle2)) 
+                {
+                   
+                        if(Math.abs(rect1.y - rect2.y) >= 44) 
+                        {
+                                rect1.ya*=-1;
+                                rect2.ya*=-1;
+                        }
+                        if(Math.abs(rect1.x - rect2.x) >= 94) 
+                       {
+                                rect1.xa*=-1;
+                                rect2.xa*=-1;
+                       }
+                }
+        }
+
+    @Override
+    public void keyTyped(KeyEvent e) 
+    {
+         
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) 
+    {
+        xa = rect1.xa;
+        ya = rect1.ya;
+        checkCollision();
+        if(e.getKeyCode() == KeyEvent.VK_RIGHT)
+        {
+            rect1.xa = 2;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_LEFT)
+        {
+            rect1.xa = -2;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_UP)
+        {
+           rect1.ya =  -2;
+        }
+        if(e.getKeyCode() == KeyEvent.VK_DOWN)
+        {
+           rect1.ya = 2;
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) 
+    {
+  
+    }
+}
+
+</pre> <br><br>
+</br>
+  <center><img src="CollisionKeyBoardPictures/1.png" width="1200"></center>
+<br>
+
+<h3 class="one">rect.java</h3>
+
+<pre class="contained">
+
+import java.awt.Rectangle;
+
+class rect {
+    int x;
+    int y;
+    int xa = 1;
+    int ya = 1;
+
+    public rect(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    
+    void move() {
+        if (x + xa < 0)
+            xa = 1;
+        if (x + xa > 700)
+            xa = -1;
+        if (y + ya < 0)
+            ya = 1;
+        if (y + ya > 185)
+            ya = -1;
+        x = x + xa;
+        y = y + ya;
+    }
+
+    public Rectangle getBounds() {
+        return (new Rectangle (x, y, 100, 50));
+    }
+}
+
+</pre> 
+
+</br>
+  <center><img src="CollisionKeyBoardPictures/2.png" width="1200"></center>
+<br>
+
+</br>
+  <center><img src="CollisionKeyBoardPictures/3.png" width="1000"></center>
+<br>
+
+<div>
+  <p class="one"> Now that we have modified the code, once you run it you should the the desired output screen which should look similar to what was in the Collisions program however you should be now able to control one block with your keyboard arrows. </p>
+</div>
+
+
+
+</br>
+  <center><img src="CollisionKeyBoardPictures/4.png" width="1000"></center>
+<br>
+
+<div>
+  <p class="one"> Congratulations! With this you have learnt the fundamentals of making a Simple Interactive Java game, all by yourself. There is a lot more you can with this. You can search about it if you are interested and start making your own projects using collisions. Go celebrate and party, as you deserve it and should feel proud of yourself! </p>
+</div>
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="Lesson1.html">Previous</a></li>
+    <li class="next"><a href="Lesson3.html">Next</a></li>
+  </ul>
+</div>
+
+
+</div><!--
+--><footer class="container-fluid bg-4 text-center">
+  Website made by Sachchit Shanice Keshav Ashu 
+</footer>
+
+</body>
+</html>

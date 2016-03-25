@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  p.tab {
+    font-size: 25px;
+    padding-top: 15px;
+    padding-right: 300px;
+    padding-left: 300px;
+  }
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  .b {
+    display: inline-block;
+    position: relative;
+    margin: 1%;
+    float: left;
+    width: 23%;
+    height: 400px;
+    background-image: url("box.jpg");
+    text-align: center;
+    vertical-align: middle;
+    line-height: 400px; 
+
+}
+
+.b:hover { -moz-box-shadow: 0 0 100px #ccc; -webkit-box-shadow: 0 0 100px #ccc; box-shadow: 0 0 100px #ccc; } 
+
+a.hover {
+    color: white;
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="learning.html">Learn</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="pdf.html">Downloads</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>    
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Download Learning, exercise and project files here!</h1>
+  <div>
+  <p>You might want a copy of all of the material that we teach for yourselves to download, keep or print out. Here we have all of the files we think you may want to download to review.
+  </div>
+</div>
+
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Lesson sheets</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Exercise Sheets</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Project files</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Other useful files</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="home"><font color="black"><p class="tab">Here are all the lesson plans that were used in our learning pages- they are already in the order that you should learn them, so we suggest if you want to learn from this part, you print them all out and start reviewing from the start.</br></br> If you are confident or happy with most of the lessons, then it might be better to print out only the lessons you need.</p>
+
+    <div class="b" data-toggle="modal" data-target="#myModal"><font size="6">Basic Rules</font></div>
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Basic Rules</center></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Comments</button>
+        </br>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Scope</button>
+        </br>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Case Sensitvity</button>
+      </br>
+        <a class="hover" href="pdf/operators.pdf"><button type="button" class="btn btn-primary btn-lg btn-block">Operators</button></a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="b" data-toggle="modal" data-target="#myModal2"><font size="6">Data Types</font></div>
+
+     <!-- Modal2 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Data Types</center></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Characters</button>
+        </br>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Integers</button>
+        </br>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Floats and Doubles</button>
+        </br>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Booleans</button>
+        </br>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Type Conversions</button>
+               
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="b" data-toggle="modal" data-target="#myModal3"><font size="6">Hello World</font></div>
+
+     <!-- Modal2 -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Hello World Program</center></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Hello World Program</button>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="b" data-toggle="modal" data-target="#myModal4"><font size="6">Methods</font></div>
+
+     <!-- Modal4 -->
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Methods</center></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Methods</button>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="b" data-toggle="modal" data-target="#myModal5"><font size="6">Control Structures</font></div>
+
+         <!-- Modal5 -->
+<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Control Structures</center></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary btn-lg btn-block">If, for, while Loops</button>
+      </br>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Switch statements</button>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="b" data-toggle="modal" data-target="#myModal6"><font size="6">Objects and Classes</font></div>
+
+    <!-- Modal6 -->
+<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Objects and Classes</center></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Classes</button>
+      </br>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Objects</button>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="b" data-toggle="modal" data-target="#myModal7"><font size="6">Data Structres</font></div>
+
+      <!-- Modal7 -->
+<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Data Structures</center></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Arrays</button>
+      </br>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Stacks</button>
+      </br>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Heaps</button>
+      </br>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Trees</button>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="b" data-toggle="modal" data-target="#myModal8"><font size="6">Other</font></div>
+
+    <!-- Modal8 -->
+<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Other</center></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary btn-lg btn-block">File 1 </button>
+      </br>
+      <button type="button" class="btn btn-primary btn-lg btn-block">File 2 </button>
+      </br>
+      <button type="button" class="btn btn-primary btn-lg btn-block">File 3 </button>
+      </br>
+      <button type="button" class="btn btn-primary btn-lg btn-block">File 4 </button>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+   
+
+    </font></div>
+
+    <div role="tabpanel" class="tab-pane fade" id="profile"><font color="black"><p class="tab">These are all of the exercise files, they include the questions we have asked in the exercises section but also include some extra questions of each type and we also have some scored tests so that you can test yourself and give yourself a mark afterwards while using our markschemes.</p>
+
+      <div class="b" data-toggle="modal" data-target="#myModal9"><font size="6">Exercises</font></div>
+
+    <!-- Modal9 -->
+<div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Exercises</center></h4>
+      </div>
+      <div class="modal-body">
+        <a href="JavaJavaExerciseSheet.pdf"><button type="button" class="btn btn-primary btn-lg btn-block">Starter Exercises </button></a
+>      </br>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Exercise 2 </button>
+      </br>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Exercise 3 </button>
+      </br>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Exercise 4 </button>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </font></div>
+
+
+    <div role="tabpanel" class="tab-pane fade" id="messages"><font color="black"><p class="tab">This section will include all of the source material you will need in order to be able to complete the projects on this website.</p>
+
+      <div class="b" data-toggle="modal" data-target="#myModal10"><font size="6">GCD</font></div>
+
+    <!-- Modal10 -->
+<div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>GCD</center></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Source Code </button>
+      </br>
+      
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="b" data-toggle="modal" data-target="#myModal11"><font size="6">Converter App</font></div>
+
+    <!-- Modal11 -->
+<div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Converter App</center></h4>
+      </div>
+      <div class="modal-body">
+        <a href="project/sourcecode.txt"><button type="button" class="btn btn-primary btn-lg btn-block">Source Code </button></a>
+      </br>
+      
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="b" data-toggle="modal" data-target="#myModal12"><font size="6">Collisions</font></div>
+
+    <!-- Modal12 -->
+<div class="modal fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Collisions</center></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Source Code </button>
+      </br>
+      
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="b" data-toggle="modal" data-target="#myModal13"><font size="6">Buttons</font></div>
+
+    <!-- Modal13 -->
+<div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Buttons</center></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Source Code </button>
+      </br>
+      
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </font></div>
+
+  
+
+
+
+  
+
+    <div role="tabpanel" class="tab-pane fade" id="settings"><font color="black"><p class="tab">Here we have put all of the file and documents which aren't actually on our website but those which we feel are interesting and worth taking a look at if you are starting to get a hang of Java. There are interesting articles and hot topics that you may want to read into. Some files are just herw might help you figure out what you want to do next with Java or perhaps what other programming languages you could learn.</p>
+
+       <div class="b" data-toggle="modal" data-target="#myModal100"><font size="6">Learn Java</font></div>
+
+    <!-- Modal100 -->
+<div class="modal fade" id="myModal100" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><center>Learn Java from...</center></h4>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Website 1  </button>
+      </br>
+       <button type="button" class="btn btn-primary btn-lg btn-block">Website 2  </button>
+      </br>
+       <button type="button" class="btn btn-primary btn-lg btn-block">Website 3  </button>
+      </br>
+       <button type="button" class="btn btn-primary btn-lg btn-block">Website 4  </button>
+      </br>
+      
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </font></div>
+
+     
+
+
+    </font></div>
+  </div>
+
+</div>
+
+
+<!--<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="#">Previous</a></li>
+    <li class="next"><a href="#">Next</a></li>
+  </ul>
+</div>-->
+
+
+</div>
+</body>
+</html>

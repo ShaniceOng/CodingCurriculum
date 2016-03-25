@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 18px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p { font: 18px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: black;
+  }
+  p {
+    text-align: justify;
+   }
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 250px;
+    padding-left: 250px;
+}
+
+ul{
+  padding-top: 15px;
+    padding-right: 250px;
+    padding-left: 250px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 250px;
+    padding-left: 250px;
+    color: black;
+}
+
+h2.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 250px;
+    padding-left: 250px;
+    color: black;
+}
+
+h3.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 250px;
+    padding-left: 250px;
+    color: black;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+.contained {
+    width: 570px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Collisions</h1>
+  <div>
+  
+  </div>
+</div>
+
+<div>
+  <h2 class="one">Let's get started by getting to know what is a collision</h2>
+  <p class="one">Collision, like the name suggests, takes place when 2 sprites collide into each other. SImply, we need to detect when two sprites/object collide on screen. The concept of collision handling is used in many games, especially arcade games. It is often used to represent bouncing of back of an object, or representing crash of two objects and so on. 
+</p>
+
+ <h2 class="one">But how do we detect the objects and their collision...</h2>
+
+<p class="one">To detect collision between 2 sprites/objects, we will make use of rectangles to denote the object boundary.</br></br>
+We will make use of the <b>intersects</b> method in <b>java.awt.Rectangle</b> class, which returns a true value, when two rectangles occupy the same area or space on the screen. We will use the intersects method something like this,</br></br>
+if (rectangle1.intersects(rectangle2))</br></br>
+In order to use rectangle, first we need to use <b>getBounds()</b> method to get the bounds in collision detection. The getBounds() method returns the bounding rectangle of the object (even if the object is not a rectangle).</p>
+</div>
+
+<pre class="contained">
+
+        public Rectangle getBounds() {
+            return new Rectangle(x, y, width, height);
+        }
+   
+</pre>
+
+<div>
+  <p class="one"> Now why don't we try and make our own small program that makes use of collisions? In the code example below, we have two objects in the form of rectangles. The two objects move across the screen continuously and  bounce off each other if collision is detected and they come in contact. </br></br>
+
+  It makes use of 2 files. You can name them anything but I have named them as 'Draw.java' and 'rect.java'. They are as following: </p>
+</div>
+
+<h3 class="one">Draw.java</h3>
+
+<pre class="contained">
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.awt.Rectangle;
+ 
+public class Draw {
+    
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Collision Detection");
+        frame.setVisible(true);
+        frame.setSize(800, 250);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(new Paint());
+    }
+}
+ 
+class Paint extends JPanel implements ActionListener {
+    rect rect1;
+    rect rect2;
+    Timer time;
+ 
+    public Paint() {
+        rect1 = new rect(0, 0);
+        rect2 = new rect(700, 150);
+        time = new Timer(5, this);
+        time.start();
+    }
+ 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        rect1.move();
+        rect2.move();
+        checkCollision();
+        repaint();
+    }
+ 
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setColor(Color.BLUE);
+        g2d.fillRect(rect1.x, rect1.y, 100, 50);
+        g2d.setColor(Color.ORANGE);
+        g2d.fillRect(rect2.x, rect2.y, 100, 50);
+    }
+ 
+    public void checkCollision() {
+        Rectangle rectangle1 = rect1.getBounds();
+        Rectangle rectangle2 = rect2.getBounds();
+                
+        if (rectangle1.intersects(rectangle2)) {
+                    
+            if((rect1.y >= rect2.y + 45) || rect2.y >= rect1.y + 45) {
+                rect1.ya*=-1;
+                rect2.ya*=-1;
+            }
+            if((rect1.x >= rect2.x + 95) || rect2.x >= rect1.x + 95) {
+                rect1.xa*=-1;
+                rect2.xa*=-1;
+            }
+        }
+    }
+}
+
+</pre> <br><br>
+</br>
+  <center><img src="collisionPictures/1.png" width="1200"></center>
+<br>
+
+<h3 class="one">rect.java</h3>
+
+<pre class="contained">
+
+import java.awt.Rectangle;
+
+class rect {
+    int x;
+    int y;
+    int xa = 1;
+    int ya = 1;
+
+    public rect(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    
+    void move() {
+        if (x + xa < 0)
+            xa = 1;
+        if (x + xa > 700)
+            xa = -1;
+        if (y + ya < 0)
+            ya = 1;
+        if (y + ya > 185)
+            ya = -1;
+        x = x + xa;
+        y = y + ya;
+    }
+
+    public Rectangle getBounds() {
+        return (new Rectangle (x, y, 100, 50));
+    }
+}
+
+</pre> 
+
+</br>
+  <center><img src="collisionPictures/2.png" width="1200"></center>
+<br>
+
+<div>
+  <p class="one"> Now that we have written the code, once you run it you should the the desired output screen which should look like these  </p>
+</div>
+
+</br>
+  <center><img src="collisionPictures/3.png" width="1000"></center>
+<br>
+
+</br>
+  <center><img src="collisionPictures/4.png" width="1000"></center>
+<br>
+
+<div>
+  <p class="one"> Congrats! With this you have learnt the basics of collisions. There is a lot more you can with this. You can search about it if you are interested and start making your own projects using collisions. </p>
+</div>
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="Lesson3.html">Previous</a></li>
+    <li class="next"><a href="../swingAshu/swingProject.html">Next</a></li>
+  </ul>
+</div>
+
+
+</div><!--
+--><footer class="container-fluid bg-4 text-center">
+  Website made by Sachchit Shanice Keshav Ashu 
+</footer>
+
+</body>
+</html>

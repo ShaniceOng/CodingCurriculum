@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="utf-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+
+<script>
+      $(function(){
+        $(".rAnswer1").click(function() {
+            $(".wrong1").hide();
+            $(".correct1").show();
+
+        });
+        $(".wAnswer1").click(function() {
+            $(".correct1").hide();
+            $(".wrong1").show();
+        });
+
+        $(".rAnswer2").click(function() {
+            $(".wrong2").hide();
+            $(".correct2").show();
+
+        });
+        $(".wAnswer2").click(function() {
+            $(".correct2").hide();
+            $(".wrong2").show();
+        });
+
+        $(".rAnswer3").click(function() {
+            $(".wrong3").hide();
+            $(".correct3").show();
+
+        });
+        $(".wAnswer3").click(function() {
+            $(".correct3").hide();
+            $(".wrong3").show();
+        });
+
+        $(".rAnswer4").click(function() {
+            $(".wrong4").hide();
+            $(".correct4").show();
+
+        });
+        $(".wAnswer4").click(function() {
+            $(".correct4").hide();
+            $(".wrong4").show();
+        });
+
+        $(".rAnswer5").click(function() {
+            $(".wrong5").hide();
+            $(".correct5").show();
+
+        });
+        $(".wAnswer5").click(function() {
+            $(".correct5").hide();
+            $(".wrong5").show();
+        });
+    });
+  $(function() {
+    $( "#accordion" ).accordion();
+    $(".modal #accordion").accordion();
+  });
+  $(function() {
+    $( "#accordion2" ).accordion();
+    $(".modal #accordion2").accordion();
+  });
+  $(function() {
+    $( "#accordion3" ).accordion();
+    $(".modal #accordion3").accordion();
+  });
+  $(function() {
+    $( "#accordion4" ).accordion();
+    $(".modal #accordion4").accordion();
+  });
+  $(function() {
+    $( "#accordion5" ).accordion();
+    $(".modal #accordion5").accordion();
+  });
+  $(function() {
+    $( "#accordion6" ).accordion();
+    $(".modal #accordion6").accordion();
+  });
+  $(function () {
+  $('[data-toggle="popover"]').popover();
+});
+
+  </script>
+
+  
+ <!--  $(function () {
+  $('[data-toggle="popover"]').popover()
+}) -->
+  
+
+<style>
+
+.carousel {
+  padding-top: 25px;
+  height: 600px;
+  width: 80%;
+  margin: 0 auto;
+}
+.carousel-inner > .item > p,
+.carousel-inner > .questions,
+  .carousel-inner > .item > a > p {
+      width: 70%;
+      margin: auto;
+  }
+
+  .question {
+        width: 75%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    .wAnswer1, .wAnswer2, .wAnswer3, .wAnswer4, .wAnswer5 {
+        /*border: 2px solid black;*/
+        margin: 0 auto;
+        height: 50px;
+        padding-top: 10px;
+    }
+
+    .rAnswer1, .rAnswer2, .rAnswer3, .rAnswer4, .rAnswer5 {
+        /*border: 2px solid black;*/
+        margin: 0 auto;
+        height: 50px;
+        padding-top: 10px;
+    }
+
+    .carousel-inner > button {
+      font-size: 13px;
+      border-radius: 5px;
+      height: 35px;
+      background-color: #e5f2ff;
+    }
+
+    .answerOne {
+        /*background-color: #e5ffff;*/
+        width: 75%;
+        color: black;
+    }
+
+    .answerTwo {
+        /*background-color: #b3ffff;*/
+        width: 75%;
+        color: black;
+    }
+
+    .answerThree {
+        /*background-color: #e5ffff;*/
+        width: 75%;
+        color: black;
+    }
+
+    .correct1, .correct2, .correct3, .correct4, .correct5 {
+        background-color: #a0ff80;
+        width: 15%;
+        height: 25px;
+        text-align: center;
+        font-size: 15px;
+        margin: 0 auto;
+        color: black;
+        display: none;
+    }
+
+    .wrong1, .wrong2, .wrong3, .wrong4, .wrong5 {
+        background-color: #ff8080;
+        width: 15%;
+        height: 25px;
+        text-align: center;
+        font-size: 15px;
+        margin: 0 auto;
+        color: black;
+        display: none;
+    }
+
+    .questions {
+        margin: 0 auto;
+    }
+
+    p {
+    text-align: justify;
+  }
+  .opening {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #accordion, #accordion2, #accordion3, #accordion4, #accordion5, #accordion6 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .modal #accordion, .modal #accordion3, .modal #accordion5, .modal #accordion4, .modal #accordion6 {
+    height: 600px;
+  }
+  .modal #accordion div,  .modal #accordion3 div, .modal #accordion5 div, .modal #accordion4, .modal #accordion6 div{
+    height: 350px;
+  }
+  .toMiddleButton {
+    width: 20%;
+    margin: 0 auto;
+  }
+
+ 
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  ol {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 90px;
+    font-size: 14px;
+  }
+
+  ul {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 90px;
+    font-size: 14px;
+  }
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h2.one {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h3.one {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+  .contained {
+    width: 480px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+
+.containbtn {
+  margin: 0 auto;
+}
+
+.toMiddleButton {
+  width: 20%;
+    margin: 0 auto;
+}
+
+.buttonMiddle {
+  width: 20%;
+  margin: auto;
+}
+.popover-title, .popover-content {
+  color: black;
+}
+.image {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 40%;
+  height: 30%;
+}
+
+  </style>
+
+   
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../../learning.html">Learn</a></li>
+        <li><a href="../../exercises.html">Exercises</a></li>
+        <li><a href="../../project.html">Project</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Exercises</h1>
+</div>
+<div>
+  <h1 class="one"><font color="black">Classes and Objects Exercises</font></h1>
+</div>
+</br>
+
+<div>
+  <p class="opening"><font color="black">
+    1. This is a simple five-question quiz
+  </font></p>
+</div>
+
+    <div id="myCarousel" class="carousel" data-interval="false">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div class="questions">
+        <div class="question">
+            <p><pre>
+public class testClass {
+  private int x;
+  private String string;
+  public testClass (int y, String s)
+  {
+    x = y;
+    string = s;
+  }
+  public int addition ()
+  {
+    int z = 5;
+    return (this.x + z);
+  } 
+}
+</pre></p>
+<p><font color="black">1. What is “x” in this class?</font></p>
+        </div>
+
+        <div class="rAnswer1 answerOne">
+            <button type="button">a. An instance variable</button>
+        </div>
+
+        <div class="wAnswer1 answerTwo">
+            <button type="button">b. A parameter</button>
+        </div>
+
+        <div class="wAnswer1 answerThree">
+            <button type="button">c. A local variable</button>
+        </div>
+    </div>
+        </br>
+        <div class="correct1">
+            <p><strong>CORRECT!</strong></p>
+        </div>
+
+        <div class="wrong1">
+            <p><strong>TRY AGAIN!</strong></p>
+        </div>
+    </div>
+
+    <div class="item">
+      <div class="questions">
+        <div class="question">
+            <p><pre>
+public class testClass {
+  private int x;
+  private String string;
+  public testClass (int y, String s)
+  {
+    x = y;
+    string = s;
+  }
+  public int addition ()
+  {
+    int z = 5;
+    return (this.x + z);
+  } 
+}
+</pre></p>
+            <p><font color="black">2. What is “z” in this class?</font></p>
+        </div>
+
+        <div class="wAnswer2 answerOne">
+            <button type="button">a. A class variable</button>
+        </div>
+
+        <div class="wAnswer2 answerTwo">
+            <button type="button">b. A parameter variable</button>
+        </div>
+
+        <div class="rAnswer2 answerThree">
+            <button type="button">c. A local variable</button>
+        </div>
+      </div>
+        </br>
+        <div class="correct2">
+            <p><strong>CORRECT!</strong></p>
+        </div>
+
+        <div class="wrong2">
+            <p><strong>TRY AGAIN!</strong></p>
+        </div>
+    </div>
+
+    <div class="item">
+      <div class="questions">
+        <div class="question">
+            <p><font color="black">3. What are the keywords used for inheriting a class and an interface, respectively?</font></p>
+        </div>
+
+        <div class="wAnswer3 answerOne">
+            <button type="button">a. implements and extends</button>
+        </div>
+
+        <div class="wAnswer3 answerTwo">
+            <button type="button">b. inherits and implements</button>
+        </div>
+
+        <div class="rAnswer3 answerThree">
+            <button type="button">c. extends and implements</button>
+        </div>
+      </div>
+        </br>
+        <div class="correct3">
+            <p><strong>CORRECT!</strong></p>
+        </div>
+
+        <div class="wrong3">
+            <p><strong>TRY AGAIN!</strong></p>
+        </div>
+    </div>
+
+    <div class="item">
+      <div class="questions">
+        <div class="question">
+            <p><font color="black">4. Which of the following is not true about the use of Inheritance?</font></p>
+        </div>
+
+        <div class="wAnswer4 answerOne">
+            <button type="button">a. Reduces data redundancy</button>
+        </div>
+
+        <div class="rAnswer4 answerTwo">
+            <button type="button">b. Makes code require fewer classes</button>
+        </div>
+
+        <div class="wAnswer4 answerThree">
+            <button type="button">c. Makes code neater</button>
+        </div>
+      </div>
+        </br>
+        <div class="correct4">
+            <p><strong>CORRECT!</strong></p>
+        </div>
+
+        <div class="wrong4">
+            <p><strong>TRY AGAIN!</strong></p>
+        </div>
+    </div>
+
+    <div class="item">
+      <div class="questions">
+        <div class="question">
+            <p><font color="black">5. An overloaded constructor should have either</font></p>
+            <p><font color="black">
+I.    A different number of parameters
+II.   Parameters of different types
+III.  Parameters listed in different orders
+</font></p>
+        </div>
+
+        <div class="wAnswer5 answerOne">
+            <button type="button">a. II</button>
+        </div>
+
+        <div class="rAnswer5 answerTwo">
+            <button type="button">b. I and II</button>
+        </div>
+
+        <div class="wAnswer5 answerThree">
+            <button type="button">c. I, II and III</button>
+        </div>
+      </div>
+        </br>
+        <div class="correct5">
+            <p><strong>CORRECT!</strong></p>
+        </div>
+
+        <div class="wrong5">
+            <p><strong>TRY AGAIN!</strong></p>
+        </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+</br>
+
+<div class="opening">
+ <p><font color="black">2. Oh no! Dr Java has just traveled back in time to witness the invention of one of the first mobile phones but is stuck there because the bugs have taken over his machine again! Help him eliminate the bugs to get him back to the present! Take a look at this program and fix it!</font></p>
+  <p><font color="black">This exercise will improve your understanding of objects and classes, your debugging skills and your ability to read another person’s program (very important when working in teams or continuing someone else’s project).</font></p>
+</div>
+</br>
+<div>
+  <pre class="contained"><font color="black">
+    class Phone {
+    private String model;
+    protected String brand;
+
+    public Phone (String model, String brand)
+    {
+        this.model = model;
+        this.brand = brand;
+    }
+
+    public void callSomeone ()
+    {
+        System.out.print("This " + this.brand + " phone can make phone-calls!");
+    }
+}
+
+class IPhone extends Phone {
+    
+    private String iOS
+
+    public IPhone (String model, String brand, String iOS)
+    {
+        this.model = model;
+        this.brand = brand;
+        this.iOS = iOS;
+    }
+
+    public void callSomeone ()
+    {
+        System.out.print("This " + this.brand + " phone can FaceTime!");
+    }
+
+    public void checkUpdate ()
+    {
+        System.out.print("This iPhone is on iOS " + this.iOS + ", it is up to date");
+    }
+}
+
+class TestInheritance
+{
+    public static void main(String[] args)
+    {
+        IPhone iPhone1 = new IPhone("6", "Apple", "9.1");
+        iPhone1.callSomeone();
+        iPhone1.checkUpdate();
+
+        Phone iPhone2 = new IPhone("6s", "Apple", "9.2");
+        iPhone2.callSomeone();
+        iPhone2.checkUpdate();
+
+        Phone mobilePhone = new Phone("DynaTAC 8000X", "Motorolla");
+        mobilePhone.callSomeone();
+    }
+}
+  </font></pre>
+</div>
+
+<div class="opening">
+  <p><font color="black">There are many ways to get rid of those bugs and make the code compile without errors. Copy this to your editor and try it yourself! Your aim is to get an output similar to this:</font></p>
+</div>
+</br>
+
+<div class="opening">
+  <pre class="contained"><font color="black">
+    This Apple phone can FaceTime!
+    This iPhone is on iOS 9.1, it is up to date
+    This Apple phone can FaceTime!
+    This Motorolla phone can make phone-calls!
+  </font></pre>
+</div>
+
+</br>
+
+<div class="toMiddleButton">
+<button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal">
+  Check Answer
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Example Answer</font></h4>
+      </div>
+      <div class="modal-body">
+        <div><p>Didn't get that quite right? Have a look at this example solution to gain a better understanding of class inheritance. (errors were at line 19, line 23 and line 49)
+        </p></div>
+
+        <div id="accordion3">
+
+          <h3>Answer</h3>
+          <div>
+            <pre><font color="black">
+  class Phone {
+    private String model;
+    protected String brand;
+
+    public Phone (String model, String brand)
+    {
+        this.model = model;
+        this.brand = brand;
+    }
+
+    public void callSomeone ()
+    {
+        System.out.print("This " + this.brand + " phone can make phone-calls!");
+    }
+}
+
+class IPhone extends Phone {
+    
+    private String iOS; /*semicolon added here! although this is a very small mistake, it occurs fequently and is very important!*/
+    
+    public IPhone (String model, String brand, String iOS)
+    {
+        super (model,brand); /*this is how we should declare attributes in the constructor that are also present in the superclass*/
+        this.iOS = iOS;
+    }
+
+    public void callSomeone ()
+    {
+        System.out.print("This " + this.brand + " phone can FaceTime!");
+    }
+
+    public void checkUpdate ()
+    {
+        System.out.print("This iPhone is on iOS " + this.iOS + ", it is up to date");
+    }
+}
+
+class TestInheritance
+{
+    public static void main(String[] args)
+    {
+        IPhone iPhone1 = new IPhone("6", "Apple", "9.1");
+        iPhone1.callSomeone();
+        iPhone1.checkUpdate();
+
+        Phone iPhone2 = new IPhone("6s", "Apple", "9.2");
+        iPhone2.callSomeone();
+        /*iPhone2 cannot call the checkUpdate() method because it is of type reference Phone, not IPhone!*/
+
+        Phone mobilePhone = new Phone("DynaTAC 8000X", "Motorolla");
+        mobilePhone.callSomeone();
+    }
+}
+</font></pre>
+</div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</br>
+
+<div>
+<div class="opening">
+  <p><font color="black">
+  3. Dr Java is now exploring the 1930s and he has come across the Curta calculator, developed by Curt Herzstark in Vienna. The device was considered very useful then; it was portable and sped up calculations. However, since the modern day computer is much faster, Dr Java is eager to show him what Java can do on the computer.
+</font></p>
+
+<p><font color="black">
+  Write a simple two-class program that allows a user to input two values, a lower bound value and an upper bound value, and uses these values to generate a range of numbers.
+</font></p>
+</div>
+
+</br>
+
+<div id="accordion5">
+  <h3>NumberLimitExercise</h3>
+  <div>
+    <p>
+      Includes the main method and carries out all the input and output
+    </p>
+  </div>
+
+  <h3>NumbersRange</h3>
+  <div>
+    <p>
+      <ul>
+      <li>A constructor: NumbersRange(int lower, int upper)</li>
+      <li>A getLower method to get the lower limit</li>
+      <li>A getUpper method to get the upper limit</li>
+      <li>A method that returns an array list of values in the range, in ascending order, inclusive of the upper and lower limits: ArrayList&lt;Integer&gt; getValues()</li>
+      <li>A method that checks if a number is in the range: boolean contains(int n)</li>
+      <li>A method to get the sum of all the numbers in the range: int sumRange()</li>
+    </ul>
+
+    </p>
+  </div>
+</div>
+  <div class="toMiddleButton">
+<button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal3">
+  Check Answer
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Example Answer</font></h4>
+      </div>
+      <div class="modal-body">
+        <div><p>Again, there are many ways to answer this question. This is one way to answer it. Go ahead, copy it into your editor, test it and try to understand how it works!
+        </p></div>
+
+        <div id="accordion6">
+
+        <h3>NumbersRange</h3>
+        <div>
+          <pre><font color="black">
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class NumbersRange {
+  private int lower;
+  private int upper;
+  private int difference;
+
+  public NumbersRange (int lower, int upper)
+  {
+    this.lower = lower;
+    this.upper = upper;
+    difference = upper - lower;
+
+  }
+
+  private int getLower()
+  {
+    return this.lower;
+  }
+
+  private int getUpper()
+  {
+    return this.upper;
+  }
+
+  private ArrayList&lt;Integer&gt; getValues()
+  {
+    ArrayList&lt;Integer&gt; range = new ArrayList&lt;&gt;();
+    for (int i=this.getLower(); i&lt;=this.getUpper(); i++) {
+        range.add(i);
+    }
+    return range;
+  }
+
+  public boolean contains (int n)
+  {
+    for (ListIterator &lt;Integer&gt; iter = this.getValues().listIterator(); iter.hasNext();)
+    {
+        int currentNum = iter.next();
+        if (n==currentNum)
+        {
+            return true;
+        }
+    }
+    return false;
+  }
+
+  public int sumRange ()
+  {
+    int sum = 0;
+
+    for (int i : getValues())
+    {
+        sum += i;
+    }
+    return sum;
+  }
+}
+
+</font></pre>
+</div>
+
+<h3>NumberLimitExercise</h3>
+<div>
+<pre><font color="black">
+import java.util.Scanner;
+
+public class NumberLimitExercise {
+  private int getInput(String whichNum)
+  {
+    Scanner in = new Scanner(System.in);
+    System.out.println("Enter the " + whichNum + " number");
+    return in.nextInt();
+  }
+
+  public static void main (String[] args)
+  {
+    NumberLimitExercise question = new NumberLimitExercise();
+    NumbersRange numRange = new NumbersRange(question.getInput("first"), question.getInput("second"));
+
+    System.out.println("1. Search for a number in the given range");
+    System.out.println("2. Find the sum of all numbers in the given range");
+
+    int userInput = question.getInput("option");
+
+    if (userInput==1)
+    {
+        int number = question.getInput("search");
+        if (numRange.contains(number)) {
+            System.out.println("The number " + number + " is in the given range");
+        } else {
+            System.out.println("The number " + number + " is not in the given range");
+        }
+    }
+    else if (userInput==2)
+    {
+        int rangeSum = numRange.sumRange();
+        System.out.println("Sum of the numbers in the given range is " + rangeSum);
+    }
+    else
+    {
+        System.out.println("Invalid option");
+    }
+  }
+}
+
+</font></pre>
+</div>
+
+
+
+</div>
+        
+        </br>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- <div class="buttonMiddle">
+<a type="button" role="button" tabindex="0" class="btn btn-lg btn-danger" data-toggle="popover" title="Chemistry Development Kit (CDK)" data-content="The CDK is an open-source Java library for Chemoinformatics and Bioinformatics. It gives access to all things Chemistry through our favorite programming language!">Did you know? <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> </a>
+</div> -->
+
+<img src="../../MemesCollection/cat.jpg" class="image">
+<div class="opening">
+<p><font size="2px" color="gray">You are halfway through the exercises! If you find yourself frustrated with the bugs and errors in your code, don't worry! Everybody feels that way when they first start, but with every bug you fix, your Java programming skills are improving! The ability to debug is an essential skill. It is also important to make these mistakes now so you won't make them later on.</font></p>
+</div>
+</br>
+
+<div class="opening">
+    <p><strong>Medium Question</strong>
+</p>
+</div>
+
+<div>
+  <p class="opening"><font color="black">
+    4. Dr Java has been exploring Ancient Indus Valley, specifically the Harappan Mathematics, in which Mathematicians have made several discoveries in plane geometry, like the proof of the Pythagoras Theorem and the rational approximation of the sine function. This trip has given Dr Java a new project idea, making a program to further explore the many properties of shapes
+  </font></p>
+
+
+</br>
+
+<div id="accordion">
+
+<h3>Shape Interface</h3>
+  <div>
+    <p>
+    States the common methods that all classes implementing this interface must have. Recall that, if another class implements Shape but doesn't call all its methods, the program won't compile.
+
+    Hint: Use this interface as a general type with access to all the different shapes.
+    </p>
+  </div>
+
+<h3>Circle Class</h3>
+<div>
+  <p>
+    Circle has a contructor, attributes (eg. radius) and methods (findArea, scaleShape, etc.)
+
+  </p>
+</div>
+
+<h3>Square Class</h3>
+  <div>
+    <p>
+    Square has a contructor, attributes (eg. length) and methods (findArea, scaleShape, etc.)
+    </p>
+  </div>
+
+<h3>Triangle Class</h3>
+<div>
+  <p>
+    Triangle has a contructor (one or more), attributes (eg. length, angle) and methods (findArea, scaleShape, etc.)
+
+  </p>
+</div>
+
+<h3>ShapesExercise Class</h3>
+<div>
+  <p>
+    This class has the main method and handles the user input and  prints output.
+
+  </p>
+</div>
+
+
+</div>
+
+</br>
+
+<div class="toMiddleButton">
+<button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal5">
+  Check Answer
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Example Answer</font></h4>
+      </div>
+      <div class="modal-body">
+        <div><p>Again, there are many ways to answer this question. This is one way to answer it. Go ahead, copy it into your editor, test it and try to understand how it works!
+        </p></div>
+
+<div id="accordion">
+
+<h3>Shape Interface</h3>
+  <div>
+    <pre><font color="black">
+public interface Shape 
+{
+  public void drawShape();
+  public void scaleShape(int scale);
+  public void printInformation();
+}
+</font></pre>
+  </div>
+
+<h3>Circle Class</h3>
+<div>
+  <pre><font color="black">
+public class Circle implements Shape
+{
+  int radius;
+  double area;
+
+  public Circle (int r)
+  {
+    radius = r;
+    findArea();
+  }
+
+  public void drawShape ()
+  {
+    System.out.println("This is a circle of radius " + radius);
+  }
+
+  private void findArea ()
+  {
+    this.area = Math.PI*Math.pow(radius, 2.0);
+  }
+
+  public void scaleShape (int scale)
+  {
+    if (scale>0)
+    {
+        this.radius = radius*scale;
+    }
+    else
+    {
+        System.out.println("invalid scale option");
+    }
+  }
+
+  public void printInformation ()
+  {
+    System.out.println("Shape: Circle");
+
+    System.out.println("Radius = " + radius);
+    System.out.println("Area = " + area);
+  }
+}
+</font></pre>
+</div>
+
+<h3>Square Class</h3>
+  <div>
+    <pre><font color="black">
+public class Square implements Shape {
+  int length;
+  int width;
+  int area;
+
+  public Square (int x, int y)
+  {
+    length = x;
+    width = y;
+    findArea();
+  }
+
+  public void drawShape()
+  {
+    System.out.println("A square of length " + length + " and width " + width);
+  }
+
+  public void scaleShape(int scale)
+  {
+    <!-- if (0<scale) -->
+    {
+        length = length*scale;
+        width = width*scale;
+    }
+    <!-- else if (scale<0) -->
+    {
+        System.out.println("invalid scale option");
+    }
+  }
+
+  private void findArea ()
+  {
+    int area = (length*width);
+    this.area = area;
+  }
+
+  public boolean checkShape()
+  {
+    if (length==width)
+    {
+        return true;
+    }
+    return false;
+  }
+
+  public void printInformation()
+  {
+    System.out.println("Shape: Square");
+    System.out.println("Lengths = " + length + " and " + width);
+    System.out.println("Area = " + area);
+  }
+}
+</font></pre>
+</div>
+
+<h3>Triangle Class</h3>
+<div>
+  <pre><font color="black">
+public class Triangle implements Shape{
+  int a;
+  int b;
+  int c;
+  double angle;
+  int area;
+
+  public Triangle(int a, int b, int c, double angle)
+  {
+    this.a = a;
+    this.b = b;
+    this.c = c;
+    this.angle = angle;
+    findArea();
+  }
+
+  public Triangle(int a, int b, double angle)
+  {
+    this.a = a;
+    this.b = b;
+    this.angle = angle;
+    pythagorasTheorem();
+    findArea();
+  }
+
+  public void drawShape ()
+  {
+    System.out.println("A triangle with sides of lengths " + a + ", " + b + " and " + c);
+  }
+
+  public void scaleShape(int scale)
+  {
+    if (scale>0)
+    {
+        a = a*scale;
+        b = b*scale;
+        c = c*scale;
+    }
+    else
+    {
+        System.out.println("invalid scale option");
+    }
+  }
+
+  public void pythagorasTheorem ()
+  {
+    if (this.angle == 90)
+    {
+        double sum = Math.pow(a, 2.0) + Math.pow(b, 2.0);
+        c = (int) Math.sqrt(sum);
+    }
+
+    else
+    {
+        double length = Math.sqrt(Math.pow(a,2.0) + Math.pow(b, 2.0) + (a*b*Math.cos(Math.toRadians(angle))));
+        c = (int) length;
+    }
+  }
+
+  private void findArea()
+  {
+    double length = (double) c;
+    double area = 0.5*(a*b*Math.sin(Math.toRadians(angle)));
+    this.area = (int) area;
+
+  }
+
+  public boolean checkShape()
+  {
+    if ((a+b)>c &amp;&amp; (b+c)>a &amp;&amp; (a+c)>b)
+    {
+        return true;
+    }
+    return false;
+  }
+
+  public void printInformation()
+  {
+    System.out.println("Shape: Triangle");
+    System.out.println("Lengths = " + a + ", " + b + " and " + c);
+    System.out.println("Area = " + area);
+  }
+}
+</font></pre>
+</div>
+
+<h3>ShapesExercise Class</h3>
+<div>
+  <pre><font color="black">
+import java.util.Scanner;
+
+public class ShapesExercise {
+  private String getStringInput (String question)
+  {
+    System.out.println(question);
+    Scanner scan = new Scanner(System.in);
+    return scan.nextLine();
+  }
+
+  private int getIntInput(String question)
+  {
+    System.out.println(question);
+    Scanner in = new Scanner(System.in);
+    return in.nextInt();
+  }
+
+  private int shapeMainMenu ()
+  {
+    System.out.println("1. Create a shape");
+    System.out.println("2. Create and scale a shape");
+    System.out.println("3. Quit");
+    return getIntInput("Enter Option:");
+  }
+
+  private void userOption (int n)
+  {
+    switch (n)
+    {
+        case 1:
+            createShape(shapeMenu()).printInformation();
+            break;
+        case 2:
+            createAndScale(shapeMenu()).printInformation();
+            break;
+        default:
+            break;
+    }
+  }
+  private int shapeMenu ()
+  {
+    System.out.print("Choose a shape: ");
+    System.out.println("1. Square");
+    System.out.println("2. Triangle");
+    System.out.println("3. Circle");
+    int choice = getIntInput("Enter Option:");
+    return choice;
+  }
+
+  private Shape createShape(int choice)
+  {
+    if (choice == 1)
+    {
+        int x = getIntInput("Square length:");
+        int y = getIntInput("Square width:");
+        Square square = new Square(x,y);
+        return square;
+    }
+    else if (choice==2)
+    {
+        System.out.println("Two known lengths or three known lengths?");
+        int input = getIntInput("Enter 2 or 3:");
+        if (input==2) {
+            int a = getIntInput("Length a:");
+            int b = getIntInput("Length b:");
+            int angle = getIntInput("Angle between a and b:");
+            Triangle triangle = new Triangle(a,b,angle);
+            return triangle;
+        }
+        else if (input == 3)
+        {
+            int a = getIntInput("Length a:");
+            int b = getIntInput("Length b:");
+            int c = getIntInput("Length c:");
+            int angle = getIntInput("Angle opposite c:");
+            Triangle triangle2 = new Triangle(a,b,c,angle);
+            return triangle2;
+        }
+    }
+
+    int radius = getIntInput("Radius:");
+    Circle circle = new Circle(radius);
+    return circle;
+  }
+
+  private Shape createAndScale (int choice)
+  {
+    Shape shape = createShape(choice);
+    int scale = getIntInput("Enter scale factor: ");
+    shape.scaleShape(scale);
+    return shape;
+  }
+
+  public static void main (String[] args)
+  {
+    ShapesExercise shapes = new ShapesExercise();
+    shapes.userOption(shapes.shapeMainMenu());
+  }
+}
+</font></pre>
+</div>
+
+</div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</br>
+
+<div class="opening">
+<p><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><font size="2px" color="red"> Challenge Yourself!</font> <font size="2px" color="gray">Here, we have created a program to allow us to scale and find the areas of different shapes. Expand the functionality of this program by including more functions for more shapes! Remember that anything you want to calculate can be done quickly and efficiently in Java! Take a look at the </font><font size="2px"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html">Math Class in the JavaDocs</a></font><font size="2px" color="gray"> to learn about the basic math functions that Java offers!</font></p>
+</div>
+
+</br>
+
+<div>
+<p class="opening"><strong>Hard Question</strong></h3>
+</div>
+</br>
+<div class="opening"><font color="black">
+    <p>5. Dr Java has just shown chemist Antoine Lavoisier our Periodic Table of Elements and he was very impressed! He is exploring new ways to store the data of each element and Dr Java thinks you could help him by using classes and objects (and a few other tricks) to create a Chemical Elements Record in Java!
+    </br>
+    Make a program that would allow Lavoisier to enter each element's name, mass number and category (metal, metalloid, non-metal). This program should also update the atomic number of each element whenever another element is added to the record.
+</p>
+</font></div>
+
+<div id="accordion2">
+
+<h3>ChemicalElement</h3>
+  <div>
+    <p>
+    This class has the attributes of an element and setter and getter methods to give other classes access to this information. Use constructor overloading to allow the user to put an element into the record without knowing its category.
+
+    </p>
+  </div>
+
+<h3>ChemicalElementsExercise</h3>
+<div>
+  <p>
+    This class will hold the main method and carry out the input and output methods.  It calls the methods of the other classes and determines the flow between them.
+
+  </p>
+</div>
+
+<h3>ChemicalElementRecord</h3>
+  <div>
+    <p>
+    The record class stores the current collection of elements and handles the addition and removal of elements.
+    </p>
+  </div>
+
+<h3>ElementProperty</h3>
+<div>
+  <p>
+    ElementProperty has instance variables for Chemical Properties and a method to print these attributes.  This class is created to be inherited by the property classes. 
+
+  </p>
+</div>
+
+<h3>ElementSorter</h3>
+<div>
+  <p>
+    Dr Java wants this program to sort the elements according to mass number then assign atomic numbers. This would update the list every time a newly-discovered element is added.  Use this a method to sort the elements according to mass number then assign atomic numbers according to this arrangement.
+
+  </p>
+</div>
+
+<h3>MetalloidProperty</h3>
+<div>
+  <p>
+    This class inherits the ElementProperty class and has attributes specific to metalloids.
+
+  </p>
+</div>
+
+<h3>MetalProperty</h3>
+<div>
+  <p>
+    This class inherits the ElementProperty class and has attributes specific to metals.
+
+  </p>
+</div>
+
+<h3>NonMetalProperty</h3>
+<div>
+  <p>
+    This class inherits the ElementProperty class and has attributes specific to non-metals.
+
+  </p>
+</div>
+
+</div>
+
+</br>
+
+<div class="toMiddleButton">
+<button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal2">
+  Check Answer
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Example Answer</font></h4>
+      </div>
+      <div class="modal-body">
+        <div><p>Again, there are many ways to answer this question. This is one way to answer it. Go ahead, copy it into your editor, test it and try to understand how it works!
+        </p></div>
+
+<div id="accordion">
+
+<h3>ChemicalElement</h3>
+  <div>
+    <pre><font color="black">
+public class ChemicalElement
+{
+  private String name;
+  private int massNumber;
+  private int atomicNumber;
+  private ElementProperty category;
+
+  public ChemicalElement (String name, int massNumber)
+  {
+      this.name = name;
+      this.massNumber = massNumber;
+      this.category = new ElementProperty();
+  }
+
+  public ChemicalElement (String name, int massNumber, String category)
+  {
+      this.name = name;
+      this.massNumber = massNumber;
+
+      if (category.compareToIgnoreCase("metal")==0)
+      {
+          this.category = new MetalProperty();
+      }
+
+      else if (category.compareToIgnoreCase("metalloid")==0)
+      {
+          this.category = new MetalloidProperty();
+      }
+
+      else if (category.compareToIgnoreCase("non-metal")==0)
+      {
+          this.category = new NonMetalProperty();
+      }
+  }
+
+  public void setAtomicNumber(int atomNum)
+  {
+      atomicNumber = atomNum;
+  }
+
+  public String getName()
+  {
+      return this.name;
+  }
+
+  public int getMassNumber()
+  {
+      return massNumber;
+  }
+
+  public int getAtomicNumber()
+  {
+      return atomicNumber;
+  }
+
+  public ElementProperty getCategory()
+  {
+      return category;
+  }
+}
+
+        </font></pre>
+  </div>
+
+<h3>ChemicalElementsExercise</h3>
+<div>
+  <pre><font color="black">
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ChemicalElementsExample {
+
+  private static final int ADD_NEW_ELEMENT = 1;
+  private static final int REMOVE_ELEMENT = 2;
+  private static final int VIEW_ALL_ELEMENTS = 3;
+  private static final int SEARCH_AN_ELEMENT = 4;
+  private static final int QUIT = 5;
+
+  private int getNumInput (String question)
+  {
+      System.out.print(question);
+      Scanner scan = new Scanner(System.in);
+      return scan.nextInt();
+  }
+
+  private String getStringInput (String question)
+  {
+      System.out.print(question);
+      Scanner in = new Scanner(System.in);
+      return in.nextLine();
+  }
+
+  private void printMenu ()
+  {
+      System.out.println("Choose an option: ");
+      System.out.println(ADD_NEW_ELEMENT + ". Add a new Chemical Element");
+      System.out.println(REMOVE_ELEMENT + ". Remove a Chemical Element");
+      System.out.println(VIEW_ALL_ELEMENTS + ". View All Elements");
+      System.out.println(SEARCH_AN_ELEMENT + ". Search an Element");
+      System.out.println(QUIT + ". Quit");
+
+  }
+
+  private ChemicalElementsRecord createNewRecord ()
+  {
+      return new ChemicalElementsRecord();
+  }
+
+  private void sortAtomicNumber (ChemicalElementsRecord elementsRecord)
+  {
+      ElementSorter sorter = new ElementSorter(elementsRecord.getElementList());
+      elementsRecord.setElementsList(sorter.getSortedElements());
+  }
+
+  private void userResponse (int option, ChemicalElementsRecord elementsRecord)
+  {
+      switch (option)
+      {
+          case ADD_NEW_ELEMENT:
+              addAnElement(elementsRecord);
+              sortAtomicNumber(elementsRecord);
+              break;
+          case REMOVE_ELEMENT:
+              removeAnElement(elementsRecord);
+              sortAtomicNumber(elementsRecord);
+              break;
+          case VIEW_ALL_ELEMENTS:
+              printAllElements(elementsRecord);
+              break;
+          case SEARCH_AN_ELEMENT:
+              searchAnElement(elementsRecord);
+              break;
+          default:
+              System.out.println("Invalid option. Please try again.");
+      }
+  }
+
+  private void getUserOption (ChemicalElementsRecord elementsRecord)
+  {
+      while (true)
+      {
+          printMenu();
+          int option = getNumInput("Enter option: ");
+          if (option==QUIT)
+          {
+              break;
+          }
+          userResponse(option, elementsRecord);
+      }
+  }
+
+  private ChemicalElement createAnElement ()
+  {
+      String elementName = getElementName();
+      int massNumber = getMassNumber();
+      String category = getCategory();
+      System.out.println(category);
+
+      if (category.compareToIgnoreCase("unknown")!=0)
+      {
+          ChemicalElement element = new ChemicalElement(elementName, massNumber, category);
+          return element;
+      }
+      else
+      {
+          ChemicalElement element = new ChemicalElement(elementName, massNumber);
+
+          return element;
+      }
+  }
+
+  private void addAnElement (ChemicalElementsRecord elementsRecord)
+  {
+      elementsRecord.addElement(createAnElement());
+      System.out.println("Element has been added");
+  }
+
+  private String getElementName ()
+  {
+      return getStringInput("Enter the element's name: ");
+  }
+
+  private int getMassNumber ()
+  {
+      return getNumInput("Enter the element's mass number: ");
+  }
+
+  private String getCategory ()
+  {
+      System.out.println("Enter the element's category");
+      System.out.println("1. Metal");
+      System.out.println("2. Metalloid");
+      System.out.println("3. Non-Metal");
+
+      int userOption = getNumInput("Enter category option: ");
+
+      switch (userOption)
+      {
+          case 1:
+              return "metal";
+          case 2:
+              return "metalloid";
+          case 3:
+              return "non-metal";
+          default:
+              return "unknown";
+      }
+  }
+
+  private void removeAnElement (ChemicalElementsRecord elementsRecord)
+  {
+      elementsRecord.removeElement(getElementName());
+  }
+
+  private void printAllElements (ChemicalElementsRecord elementsRecord)
+  {
+      ArrayList &lt;ChemicalElement&gt; elementsList = elementsRecord.getElementList();
+
+      for (ChemicalElement element: elementsList)
+      {
+        System.out.println("Chemical Element: " + element.getName());
+        System.out.println("\tAtomic Number: " + element.getAtomicNumber());
+        System.out.println("\tMass Number: " + element.getMassNumber());
+      }
+  }
+
+  private void searchAnElement (ChemicalElementsRecord elementsRecord)
+  {
+      if (elementsRecord.getElement(getElementName())!=null) {
+          ChemicalElement searchElement = elementsRecord.getElement(getElementName());
+          System.out.println(searchElement.getName());
+          System.out.println("\tAtomic Number: " + searchElement.getAtomicNumber());
+          System.out.println("\tMass Number: " + searchElement.getMassNumber());
+          searchElement.getCategory().properties();
+      }
+      else
+      {
+          System.out.println("Element not found!");
+      }
+  }
+
+  public static void main(String[] args)
+  {
+      ChemicalElementsExample challenge = new ChemicalElementsExample();
+      ChemicalElementsRecord elementsRecord = challenge.createNewRecord();
+      challenge.getUserOption(elementsRecord);
+
+  }
+}
+  </font></pre>
+</div>
+
+<h3>ChemicalElementsRecord</h3>
+  <div>
+    <pre><font color="black">
+import java.util.ArrayList;
+
+public class ChemicalElementsRecord {
+  private ArrayList<ChemicalElement> elementsList;
+
+  public ChemicalElementsRecord ()
+  {
+      this.elementsList = new ArrayList<ChemicalElement>();
+  }
+  private ChemicalElement searchElement (String elementName)
+  {
+      for (ChemicalElement element : elementsList)
+      {
+          if (elementName.compareToIgnoreCase(element.getName())==0)
+          {
+              return element;
+          }
+      }
+      return null;
+  }
+
+  public ChemicalElement getElement (String name)
+  {
+      return searchElement(name);
+  }
+
+  public ArrayList &lt;ChemicalElement&gt; getElementList ()
+  {
+      return elementsList;
+  }
+
+  public void setElementsList(ArrayList &lt;ChemicalElement&gt; newList)
+  {
+      this.elementsList = newList;
+  }
+
+  public void removeElement (String elementName)
+  {
+      elementsList.remove(this.searchElement(elementName));
+  }
+
+  public void addElement (ChemicalElement newElement)
+  {
+      elementsList.add(newElement);
+  }
+}
+    </font></pre>
+  </div>
+
+<h3>ElementProperty</h3>
+<div>
+  <pre><font color="black">
+public class ElementProperty {
+  private String category = "Category: Metal/Metalloid/Non-Metal";
+  private String appearance = "unknown";
+  private String conductor = "unknown";
+  private String meltingPoint = "unknown";
+  private String changeShape = "unknown";
+
+  public void properties ()
+  {
+    System.out.println("\tProperties: ");
+    System.out.println("\t" + category);
+    System.out.println("\t" + appearance);
+    System.out.println("\t" + conductor);
+    System.out.println("\t" + meltingPoint);
+    System.out.println("\t" + changeShape);
+  }
+} 
+
+    </font></pre>
+</div>
+
+<h3>ElementSorter</h3>
+<div>
+  <pre><font color="black">
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class ElementSorter {
+  private ArrayList &lt;ChemicalElement&gt; listOfElements;
+
+  public ElementSorter (ArrayList &lt;ChemicalElement&gt; inputList)
+  {
+      listOfElements = new ArrayList<>();
+      this.listOfElements = inputList;
+      sortElements();
+  }
+
+  public void sortElements ()
+  {
+      for (int i=1; i &lt;listOfElements.size(); i++)
+      {
+          ChemicalElement tempElement = listOfElements.get(i);
+          int massNumTemp = tempElement.getMassNumber();
+          int j = i-1;
+          while (massNumTemp &lt;listOfElements.get(j).getMassNumber() && j &gt;=0)
+          {
+              listOfElements.set(j+1, listOfElements.get(j));
+              j--;
+          }
+          listOfElements.set(j+1, tempElement);
+
+      }
+
+      int atomNum = 1;
+
+      for (ChemicalElement element: listOfElements)
+      {
+          element.setAtomicNumber(atomNum);
+          atomNum++;
+      }
+}
+
+public ArrayList &lt;ChemicalElement&lt; getSortedElements ()
+{
+    return listOfElements;
+}
+}
+    </font></pre>
+</div>
+
+<h3>MetalloidProperty</h3>
+<div>
+  <pre><font color="black">
+public class MetalloidProperty extends ElementProperty {
+
+  private String category = "Category: Metalloid";
+  private String appearance = "Appearance: dull or shiny";
+  private String conductor = "Good semiconductors";
+  private String meltingPoint = "Melting Point: High";
+  private String changeShape = "Often ductile and malleable";
+
+  private String getCategory()
+  {
+      return category;
+  }
+
+  private String appearance ()
+  {
+      return appearance;
+  }
+
+  private String conduct ()
+  {
+      return conductor;
+  }
+
+  private String meltingPoint ()
+  {
+      return meltingPoint;
+  }
+
+  private String changeShape()
+  {
+      return changeShape;
+  }
+
+  public void properties ()
+  {
+      System.out.println(this.appearance());
+      System.out.println(this.conduct());
+      System.out.println(this.meltingPoint());
+      System.out.println(this.changeShape());
+  }
+}
+    </font></pre>
+</div>
+
+  <h3>MetalProperty</h3>
+<div>
+  <pre><font color="black">
+public class MetalProperty extends ElementProperty {
+
+  private String category = "Category: Metal";
+  private String appearance = "Appearance: shiny";
+  private String conductor = "Good conductors of heat and electricity";
+  private String meltingPoint = "Melting Point: High";
+  private String changeShape = "Ductile and Malleable";
+
+  private String getCategory()
+  {
+      return category;
+  }
+
+  private String appearance ()
+  {
+      return appearance;
+  }
+
+  private String conduct ()
+  {
+      return conductor;
+  }
+
+  private String meltingPoint ()
+  {
+      return meltingPoint;
+  }
+
+  private String changeShape()
+  {
+      return changeShape;
+  }
+
+  public void properties ()
+  {
+      System.out.println(this.appearance());
+      System.out.println(this.conduct());
+      System.out.println(this.meltingPoint());
+      System.out.println(this.changeShape());
+  }
+}
+    </font></pre>
+</div>
+
+     <h3>NonMetalProperty</h3>
+<div>
+  <pre><font color="black">
+public class NonMetalProperty extends ElementProperty{
+
+  private String category = "Category: Non-Metal";
+  private String appearance = "Appearance: dull";
+  private String conductor= "Poor conductors of heat and electricity";
+  private String meltingPoint = "Melthing point: low";
+  private String changeShape = "Usually brittle";
+
+  private String getCategory()
+  {
+      return category;
+  }
+
+  private String appearance ()
+  {
+      return appearance;
+  }
+
+  private String conduct ()
+  {
+      return conductor;
+  }
+
+  private String meltingPoint ()
+  {
+      return meltingPoint;
+  }
+
+  private String changeShape()
+  {
+      return changeShape;
+  }
+
+  public void properties ()
+  {
+      System.out.println(this.appearance());
+      System.out.println(this.conduct());
+      System.out.println(this.meltingPoint());
+      System.out.println(this.changeShape());
+  }
+}
+    </font></pre>
+</div>
+  </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</br>
+<div class="opening">
+<p><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span><font size="2px" color="red"> Challenge Yourself!</font> <font size="2px" color="gray"> Our Chemical Elements program allows us to create a record of our chemical elements, but how do we save these onto a file or take this information back from the file, so we won't have to insert every element each time we start the program? We can do this using reader and writer classes as shown in </font><font size="2px"><a href="http://www.tutorialspoint.com/java/java_files_io.htm">this online tutorial</a></font><font size="2px" color="gray">.</font></p>
+</div>
+</body>
+</html>
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="../../AshuExercise.html">Previous</a></li>
+    <li class="next"><a href="../../JavaJavaExerciseSheet.pdf">Next</a></li>
+  </ul>
+</div>
+
+<footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Data Input/Output Questions!</h1>
+  <div>
+  
+  </div>
+</div>
+
+
+<div class="container">   
+<font color = "black">
+  <h4> <!-- is this heading needed --> </h4> 
+  <ol>
+    <li>
+      <p> Implement a method which takes an array of integers as an argument and sorts the array in ascending (increasing) order using the <b>insertion sort</b> algorithm. Below is a psuedo-code of a <i>zero-based array</i> to help you as a reference: </p>
+      <pre>
+  for i ← 1 to length(A) - 1
+      j ← i
+      while j > 0 and A[j-1] > A[j]
+          swap A[j] and A[j-1]
+          j ← j - 1
+       end while
+  end for    
+      </pre>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
+      Show Answer
+      </button>
+    </li>
+
+    <li> 
+      <p> 
+        Implement a method which takes two integral parameters, A and N, and prints the multiplication table of A upto N.
+      </p>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+      Show Answer
+      </button>
+
+      <script>
+        $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+      </script>
+
+    </li>
+
+    <li>
+      <p> Implement a method which takes an array of integers as a parameter and returns the greatest number in the array.
+      </p>
+
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3">
+      Show Answer
+      </button>
+    </li>
+
+    <li> 
+      <p> <b>Challenge Exercise: </b> Implement a method which takes an integer N as a parameter and prints the prime numbers upto inclusive N (from 2):
+      </p>
+
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal4">
+      Show Answer
+      </button>
+
+</div>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel2"><font color="black">Answer To Question 1 </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+    <pre>
+  public static void InsertionSort( int [ ] array)
+    {
+          int i;                   // the number of items sorted so far
+          int j;
+          int key;                // the item to be inserted
+            
+
+          for (j = 1; j < array.length; j++)    // Start with 1 (not 0)
+            {
+                key = array[ j ];
+                for(i = j - 1; (i >= 0) && (array[ i ] < key); i--)   // Smaller values are moving up
+                  {
+                      array[ i+1 ] = array[ i ];
+                  }
+                 array[ i+1 ] = key;    // Put the key in its proper location
+             }
+        } 
+      </pre>
+
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel2"><font color="black">Answer To Question 2 </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <h4> The Code For The Program </h4>
+                    <pre class="text-left">   
+import java.util.Scanner;
+ 
+class MultiplicationTable
+{
+   public static void main(String args[])
+   {
+      Scanner in = new Scanner(System.in);
+      int A, N;
+      System.out.println("Enter A: ");
+      A = in.nextInt();
+
+      System.out.println("Enter N: ");
+      N = in.nextInt();
+
+      System.out.println("Multiplication table of "+N+" is :-");
+ 
+      for (int i = 1 ; i <= N ; i++ )
+         System.out.println(N+"*"+i+" = "+(i*A));
+   }
+}
+                    </pre>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel3"><font color="black">Answer To Question 3 </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <h4> The Code For The Program </h4>
+                    <pre class="text-left"> <br>
+
+public static int maxValue(int[] array) 
+{
+  int max = array[0];
+  for (int i = 0; i < array.length; i++) 
+  {
+    if (array[i] > max) {
+      max = array[i]; 
+    }
+  }
+  return max;
+}
+</pre>
+<h4> How the program works </h4>
+<p class = "text-left">
+The program first declares the method maxValue which takes an array as a parameter and returns an integer. The program begins by instantiating an integer max with the first element in the array. In the for loop which terminates at the end of array, each element in the array is compared to max. If there is a value greater than max, then max is assigned that value. By the time the array has been traversed at the end, we would have ensured that the value of max is the largest value in the array, which would be later returned.
+</p>
+
+
+<br>
+<br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel4"><font color="black">Answer To Question 4 </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <h4> The Code For The Program </h4>
+                    <pre class="text-left"> 
+import java.util.Scanner;
+
+public class PrimeNumbers
+{
+   public static void main (String[] args)
+   {    
+      Scanner input = new Scanner(System.in);
+      //Empty String
+      String  primeNumbers = "";
+      System.out.println("Enter the value of N:");
+      int N = input.nextInt();
+      for (int i = 1; i <= N; i++)       
+      {           
+         int count = 0;       
+         for(int num = i; num >= 1; num--)
+         {
+      if(i % num == 0)
+      {
+    count = count + 1;
+      }
+   }
+   if (count == 2)
+   {
+      //Appended the Prime number to the String
+      primeNumbers = primeNumbers + i + " ";
+   }  
+      } 
+      System.out.println("Prime numbers from 1 to N are :");
+      System.out.println(primeNumbers);
+   }
+}
+                        
+                    </pre>
+                    <br>
+                    <h4> How the program works </h4>
+                    <p class = "text-left"><br>
+                    The program begins by importing the Scanner class in order to read input from the user. After the declaration of class and the main method declaration the program, the object 'input' of class Scanner was instantiated. After that, a String 'primeNumbers' was declared as an empty string. 
+
+                    The user was then prompted of an input by printing "Enter the value of N:" on the screen, after which the input was read by input.nextInt() and then assigned to a newly declared and immediately instantiated, int N.
+
+                    After that, a loop which began at 1 and terminated at N was began to iterate through every number between 1 and N.
+
+                    In order to determine weather the number a number X prime or compisite, we have to check how many numbers from 1 to X divide it. In order to determine the quantity, we need to declare an external counter variable count, and then created another 'num' loop (nested in previous 'i' loop) to check the divisbility of numbers from 1 to X. If the modulo is zero (i.e. the number is divisible), the counter is incremented by one. Therefore, for a prime number, the counter should always be 2 (as it has only two divisors: one and itself).
+
+                    A string is instantiated which concatenates the primeNumbers string, the number, if the count = 2 (i.e. the number is prime). The loop is terminated here, and the numbers are printed as a collective string separated by spaces after being outputed under the output line 'Prime numbers from 1 to N are :'. For example, if the user had inputted 'N' as 10, the output would be:
+
+                    Prime numbers from 1 to N are : 
+
+                    2 3 5 7 
+
+                    </p>
+                    <br>
+                    <br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</font>
+</div>
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="../JavaJavaExerciseSheet.pdf">Previous</a></li>
+    <li class="next"><a href="recursionExercises.html">Next</a></li>
+  </ul>
+</div>
+<footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu Danish</p> 
+</footer>
+
+</body>
+</html>

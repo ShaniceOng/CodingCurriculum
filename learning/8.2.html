@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+ .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+
+  table, th, td {
+  border: 2px solid gray;
+  border-collapse: collapse;
+  /*width: 20%;*/
+}
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+h3.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h4.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+  .contained {
+    width: 550px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+ 
+  .contained2 {
+    width: 800px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+
+.alternate1 {
+  color: black;
+  background-color: #d0d4e4;
+}
+
+.alternate2 {
+  color: black;
+  background-color: #bec3da;
+}
+
+.abstractClassHead, .abstractMethodHead {
+  color: black;
+  background-color: #857db1;
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>    
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Searching, Sorting and Merging</h1>
+
+  </div>
+  
+
+
+<div>
+  <h1 class="one"><font color="black">Search Algorithms</font></h1>
+    <p class="one"><font color="black">A <b>Search Algorithm</b>, like the name suggests is, an algorith for locating a particular item among a collection of items.
+</font></p>
+</div>
+<br>
+<div>
+  <h3 class="one"><font color="black"><u>Linear Search</u></font></h3>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    It is a logic to search for a value from an array by checking the elements one after the other starting from the very first element of the array.
+  </font></p>
+</div>
+<br>
+<font color="black">
+<p class="one"><b>Example:</b> To search for a particular employee code from an array containing codes of all the employees in a company.</p>
+
+<p class="one"><b>Solution:</b></p>
+<pre class="contained">public class Linear {
+  Scanner s = new Scanner(System.in);
+  
+  // Method to enter the content of an array
+  public void Register(long E[])
+  {
+    for(int i = 0; i < E.length; i++)
+    {
+      System.out.print("[" + i + "] Eno?");
+      E[i] = s.nextLong();
+    }
+  }
+  
+  // Method to search for a particular eno (employee number)
+  public void Search(long E[], long Eno)
+  {
+    int Found = 0;
+    for(int i = 0; i < E.length && Found == 0; i++)
+      if(E[i] == Eno)
+        Found = 1;
+    if(Found == 1)
+      System.out.println(Eno + " is Found");
+    else 
+      System.out.println(Eno + " is not Found");
+  }
+  
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    Linear obj = new Linear();
+    long Eno[] = new long[6];
+    long Enos;
+    System.out.println("Enter all the Emp. Nos:");
+    obj.Register(Eno);
+    System.out.print("Eno to be searched: ");
+    Enos = obj.s.nextLong();
+    obj.Search(Eno, Enos);
+  }
+}
+</pre>
+
+<br>
+<p class = "one"> <b>Note:</b> In the above example, Search( ) method is to find whether a particular Eno is present in the array or not and so as soon as it is found, value of Found variable is changed to 1, and the loop terminates.<br>
+Look at the condition in the loop i < E.length && Found == 0the loop terminates either when the value of i becomes E.length or Found becomes 1.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+<font color="black">
+<p class="one"><b>Exercise:</b> To count the presence of a particular citycode from an array containing citycodes in an array.</p>
+
+<br>
+<div class="toMiddleButton">
+<center><button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal1">
+  View Solution
+</button></center>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Solution</font></h4>
+      </div>
+      <div class="modal-body">
+        <pre class="contained"><font color="black">
+public class LinearSearch {
+  public Scanner s = new Scanner(System.in);
+  
+  // Method to enter the content of the array
+  public void Register(int C[])
+  {
+    for(int i = 0; i < C.length; i++)
+    {
+      System.out.print("[" + i + "] Ccode?");
+      C[i] = s.nextInt();
+    }
+  }
+  
+  // Method to count the presence of a code
+  public void Search(int C[], int CS)
+  {
+    int Found = 0;
+    for(int I = 0; I < C.length; I++)
+      if(C[I] == CS)
+        Found ++;
+    System.out.print(CS + " is present ");
+    System.out.println(Found + " Time(s)");
+  }
+  
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    LinearSearch obj = new LinearSearch();
+    int CCode[] = new int[6]; 
+    int CCS;
+    System.out.println("Enter all the CityCodes: ");
+    obj.Register(CCode);
+    System.out.print("CityCode to be searched: ");
+    CCS = obj.s.nextInt();
+    obj.Search(CCode, CCS);
+
+  }
+
+}
+        </font></pre><br>
+        <p> <b>Note:</b> In the above solution, Search() function is to count the number of times a particular City Code (i.e. CS) is present in the array and so the loop continues till the last element. Every time, when the element matches with the City Code (i.e. CS) to be searched, Founds gets incremented.<br>
+Look at the condition I < C.length, the loop terminates only when the value of I becomes C.length.
+</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<br>
+
+
+<p class="one"> We'll break up with <b>Searching</b> for a while and have a look at <b>Sorting</b> first.
+
+<h1 class="one"><font color="black">Sorting Algorithms</font></h1>
+    <p class="one"><font color="black"><b>Sorting</b> is a logic using which the content/collection of items is arranged in Ascending/ Descending order.
+</font></p>
+<div>
+  
+
+
+
+
+  <h3 class="one"><font color="black"><u>Bubble Sort</u></font></h3>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+         I
+        </td>
+        <td class="alternate1">
+          A[0]
+        </td>
+         <td class="alternate1">
+          A[1]
+        </td>
+         <td class="alternate1">
+          A[2]
+          </td>
+          <td class="alternate1">
+          A[3]
+          </td>
+          <td class="alternate1">
+          A[4]
+          </td>
+      </tr>
+
+      <tr>
+        <td class="alternate2">
+          0
+        </td>
+        <td class="alternate2">
+          45
+        </td>
+        <td class="alternate2">
+          <strike>90</strike> 23
+        </td>
+         <td class="alternate2">
+          <strike>23</strike> <strike>90</strike> 34
+          </td>
+          <td class="alternate2">
+          <strike>34</strike> <strike>90</strike> 56
+          </td>
+          <td class="alternate2">
+          <strike>56</strike> <font color = "green">90</font>
+          </td>
+      </tr>
+
+      <tr>
+        <td class="alternate1">
+          1
+        </td>
+        <td class="alternate1">
+          <strike>45</strike> 23
+        </td>
+        <td class="alternate1">
+          <strike>23</strike> <strike>45</strike> 34
+        </td>
+         <td class="alternate1">
+          <strike>34</strike> 45
+          </td>
+          <td class="alternate1">
+             <font color = "green">56</font>
+          </td>
+          <td class="alternate1">
+          
+          </td>
+      </tr>
+
+     <tr>
+        <td class="alternate2">
+          2
+        </td>
+        <td class="alternate2">
+          23
+        </td>
+        <td class="alternate2">
+         34
+        </td>
+         <td class="alternate2">
+          <font color="green"> 45</font>
+          </td>
+          <td class="alternate2">
+            
+          </td>
+          <td class="alternate2">
+          
+          </td>
+      </tr>
+
+       <tr>
+        <td class="alternate1">
+          3
+        </td>
+        <td class="alternate1">
+          <font color = "green">23</font>
+        </td>
+        <td class="alternate1">
+         <font color = "green">34</font>
+        </td>
+         <td class="alternate1">
+          
+          </td>
+          <td class="alternate1">
+            
+          </td>
+          <td class="alternate1">
+          
+          </td>
+      </tr>
+    </font></tbody>
+  </font></table>
+</font></div>
+<br>
+
+<p class = "one">The <b>bubble sort algorithm</b> keeps comparing pairs of adjacent elements of the sequence. If the they are in the wrong order, the elements are swapped. This process is continued till there are no swappings to do.</p>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+    <thead>
+
+      <th  class="abstractClassHead"><font color="black">
+       Ascending Order using Bubble Sort
+      </font></th>
+      <th  class="abstractClassHead"><font color="black">
+     Descending Order using Bubble Sort
+      </font></th>
+    </thead>
+
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+          <pre class="contained">void BubbleA(int A[])
+{
+    for(int I = 0; I < A.length - 1; I++)
+  for(int J = 0; J < A.length - I - 1; J++)
+    if(A[J] > A[J + 1])
+    {
+      int T = A[J];
+      A[J] = A[J + 1];
+      A[J + 1] = T;
+    }
+}</pre>
+        </td>
+        <td class="alternate1">
+          <pre class = "contained">void BubbleD(int A[])
+{
+    for(int I = 0; I < A.length - 1; I++)
+  for(int J = 0; J < A.length - I - 1; J++)
+    if(A[J] < A[J + 1])
+    {
+      int T = A[J];
+      A[J] = A[J + 1];
+      A[J + 1] = T;
+    }
+}</pre>
+    </font></tbody>
+  </font></table>
+</font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+  <h3 class="one"><font color="black"><u>Selection Sort</u></font></h3>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+
+    <tbody><font color="black">
+    <col width="65">
+    <col width="130">
+    <col width="130">
+    <col width="130">
+    <col width="130">
+    <col width="130">
+      <tr>
+        <td class="alternate1">
+         I
+        </td>
+        <td class="alternate1">
+          A[0]
+        </td>
+         <td class="alternate1">
+          A[1]
+        </td>
+         <td class="alternate1">
+          A[2]
+          </td>
+          <td class="alternate1">
+          A[3]
+          </td>
+          <td class="alternate1">
+          A[4]
+          </td>
+      </tr>
+
+      <tr>
+        <td class="alternate2">
+          0
+        </td>
+        <td class="alternate2">
+          45<br><font size = "2">Small = <strike>0</strike> 4</font><br><font size = "1">So we swap the<br>positions 0 and 4</font>
+        </td>
+        <td class="alternate2">
+          90
+        </td>
+         <td class="alternate2">
+          55
+          </td>
+          <td class="alternate2">
+          63
+          </td>
+          <td class="alternate2">
+          28
+          </td>
+      </tr>
+
+      <tr>
+        <td class="alternate1">
+          1
+        </td>
+        <td class="alternate1">
+          <font color = "green">28</font>
+        </td>
+        <td class="alternate1">
+          90<br><font size = "2">Small = <strike>1</strike><strike> 2</strike> 4</font><br><font size = "1">So we swap the<br>positions 1 and 4</font>
+        </td>
+         <td class="alternate1">
+          55
+          </td>
+          <td class="alternate1">
+             63
+          </td>
+          <td class="alternate1">
+          45
+          </td>
+      </tr>
+
+     <tr>
+        <td class="alternate2">
+          2
+        </td>
+        <td class="alternate2">
+          
+        </td>
+        <td class="alternate2">
+         <font color = "green">45</font>
+        </td>
+         <td class="alternate2">
+          55<br><font size = "1">Small = 2</font><br><font size = "1">No change in small. So no<br>swapping of positions needed</font>
+          </td>
+          <td class="alternate2">
+            63
+          </td>
+          <td class="alternate2">
+          90
+          </td>
+      </tr>
+
+       <tr>
+        <td class="alternate1">
+          3
+        </td>
+        <td class="alternate1">
+          
+        </td>
+        <td class="alternate1">
+         
+        </td>
+         <td class="alternate1">
+          <font color="green">55</font>
+          </td>
+          <td class="alternate1">
+            63
+          </td>
+          <td class="alternate1">
+          90<br><font size = "1">Small = 3</font><br><font size = "1">No change in small. So no<br>swapping ofpositions needed</font>
+          </td>
+      </tr>
+    </font></tbody>
+  </font></table>
+</font></div>
+<br>
+
+<p class = "one">The <b>selection sort algorithm</b> keeps track of the smallest element from the ith element onwards in the array. Once iterated through the entire list of elements, it compares the smallest element with the ith element and switches their position in case the ith element is not the smallest element.</p>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+    <thead>
+
+      <th  class="abstractClassHead"><font color="black">
+       Ascending Order using Selection Sort
+      </font></th>
+      <th  class="abstractClassHead"><font color="black">
+     Descending Order using Selection Sort
+      </font></th>
+    </thead>
+
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+          <pre class="contained">void selectionA(int A[])
+{
+  for(int I = 0; I < A.length - 1; I++)
+  {
+    int Small = I;
+    for(int J = I + 1; J < A.length; J++)
+      if(A[Small] > A[J])
+        Small = J;
+    if(Small != I)
+    {
+      int T = A[Small];
+      A[Small] = A[I];
+      A[I] = T;
+    }
+  }
+}</pre>
+        </td>
+        <td class="alternate1">
+          <pre class = "contained">void selectionD(int A[])
+{
+  for(int I = 0; I < A.length - 1; I++)
+  {
+    int Big = I;
+    for(int J = I + 1; J < A.length; J++)
+      if(A[Big] < A[J])
+        Big = J;
+    if(Big != I)
+    {
+      int T = A[Big];
+      A[Big] = A[I];
+      A[I] = T;
+    }
+  }
+}</pre>
+    </font></tbody>
+  </font></table>
+</font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 class="one"><font color="black"><u>Insertion Sort</u></font></h3>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+         I
+        </td>
+        <td class="alternate1">
+          A[0]
+        </td>
+         <td class="alternate1">
+          A[1]
+        </td>
+         <td class="alternate1">
+          A[2]
+          </td>
+          <td class="alternate1">
+          A[3]
+          </td>
+          <td class="alternate1">
+          A[4]
+          </td>
+      </tr>
+
+      <tr>
+        <td class="alternate2">
+         
+        </td>
+        <td class="alternate2">
+          95<br>&nbsp;
+        </td>
+         <td class="alternate2">
+          90
+        </td>
+         <td class="alternate2">
+          55
+          </td>
+          <td class="alternate2">
+          63
+          </td>
+          <td class="alternate2">
+          28
+          </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td class="alternate1">
+          1
+        </td>
+        <td class="alternate1">
+          <strike>95</strike> <font color = "green">90</font>
+        </td>
+        <td class="alternate1">
+          <strike>90</strike> 95<br><font size = "1">Temp = A[1] = 90</font>
+        </td>
+         <td class="alternate1">
+          
+          </td>
+          <td class="alternate1">
+             
+          </td>
+          <td class="alternate1">
+          
+          </td>
+      </tr>
+
+     <tr>
+        <td class="alternate2">
+          2
+        </td>
+        <td class="alternate2">
+          <strike>90</strike><font color = "green"> 55</font>
+        </td>
+        <td class="alternate2">
+          <strike>95</strike> 90
+        </td>
+         <td class="alternate2">
+          <strike>55</strike> 95<br><font size = "1">Temp = A[2] = 55</font>
+          </td>
+          <td class="alternate2">
+            
+          </td>
+          <td class="alternate2">
+          
+          </td>
+      </tr>
+
+       <tr>
+        <td class="alternate1">
+          3
+        </td>
+        <td class="alternate1">
+          55
+        </td>
+        <td class="alternate1">
+         <strike>90</strike> <font color = "green">63</font>
+        </td>
+         <td class="alternate1">
+          <strike>95</strike> 90
+          </td>
+          <td class="alternate1">
+            <strike>63</strike> 95<br><font size = "1">Temp = A[3] = 63</font>
+          </td>
+          <td class="alternate1">
+          
+          </td>
+      </tr>
+
+<tr>
+        <td class="alternate2">
+          4
+        </td>
+        <td class="alternate2">
+          <strike>55</strike> <font color = "green">28</font>
+        </td>
+        <td class="alternate2">
+         <strike>63</strike> 55
+        </td>
+         <td class="alternate2">
+          <strike>90</strike> 63
+          </td>
+          <td class="alternate2">
+            <strike>95</strike> 90
+          </td>
+          <td class="alternate2">
+          <strike>28</strike> 95<br><font size = "1">Temp = A[4] = 28</font>
+          </td>
+      </tr>
+
+    </font></tbody>
+  </font></table>
+</font></div>
+<br>
+
+<p class = "one">The <b>insertion sort</b> divides the array into 2 portions: a sorted portion and an unsorted portion. At each step in the algorithm, a number is moved from the unsorted portion to the sorted portion till eventually the entire list is sorted. In the beginning, we assume that the first element is the start and end of the sorted portion and the rest of the list is part of the unsorted portion. In each iteration of the loop, the first element in the unsorted portion is moved to the sorted portion by finding its appropriate location in it and shifting/moving all the others elements accordingly.
+<br>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+    <thead>
+
+      <th  class="abstractClassHead"><font color="black">
+       Ascending Order using Insertion Sort
+      </font></th>
+      <th  class="abstractClassHead"><font color="black">
+     Descending Order using Insertion Sort
+      </font></th>
+    </thead>
+
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+          <pre class="contained">void insertionA(int A[])
+{
+  for(int I = 1; I < A.length; I++)
+  {
+    int Temp = A[I], J = I - 1;
+    while(J >= 0 && Temp < A[J])
+    {
+      A[J + 1] = A[J];
+      J--;
+    }
+    A[J + 1] = Temp;
+  }
+}</pre>
+        </td>
+        <td class="alternate1">
+          <pre class = "contained">void insertionD(int A[])
+{
+  for(int I = 1; I < A.length; I++)
+  {
+    int Temp = A[I], J = I - 1;
+    while(J >= 0 && Temp > A[J])
+    {
+      A[J + 1] = A[J];
+      J--;
+    }
+    A[J + 1] = Temp;
+  }
+}</pre>
+    </font></tbody>
+  </font></table>
+</font></div>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 class="one"><font color="black">Search Algorithms</font><font size = "2">contd..</font></h1>
+    <p class="one"><font color="black">Now we will have a look at another type of search algorithm called <b>Binary Search</b>.
+</font></p>
+</div>
+<br>
+<div>
+  <h3 class="one"><font color="black"><u>Binary Search</u></font></h3>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    It is an algorithm which starts by checking the value to be found with the middle element of the sorted array. <br><br>
+
+- If the target value and the middle element  are equal, then the search finishes.<br>
+
+ - If the target value is less than the middle element, then the search process is repeated on the left half of the array (or the right half if the array is sorted in descending order).<br>
+
+- If the target value is greater than the middle element, then the search process is repeated on the right half of the array (or the left half if the array is sorted in descending order). <br><br>
+
+This process continues, eliminating half of the elements on each iteration, and comparing the target value to the middle element of the remaining elements - until the target value is either found, or until the entire array has been searched.
+<br><br>
+<b>Prerequisite</b>: The array content should be sorted (Ascending/Descending).
+<br><br>
+Let us assume, an array A[10] is arranged in ascending order. The following are the steps to search for a value 85 from the array using Binary Search.
+
+  </font></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+  <col width="130">
+    <col width="130">
+    <col width="130">
+    <thead>
+
+      <th  class="abstractClassHead"><font color="black">
+        
+      </font></th>
+      <th  class="abstractClassHead"><font color="black">
+        <strong>A[10]</strong>
+      </font></th>
+      <th class="abstractClassHead"><font color="black">
+        <strong>Step</strong>
+      </font></th>
+      <th  class="abstractClassHead"><font color="black">
+        <strong>Data to be Searched</strong>
+      </font></th>
+    </thead>
+
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+          0
+        </td>
+        <td class="alternate1">
+          23
+        </td>
+         <td class="alternate1">
+          1
+        </td>
+         <td class="alternate1">
+          LB = 0; UB = 9; MID = (0 + 9) / 2 = 4; As (A[4] < 85) LB = MID + 1 = 5
+      </tr>
+
+      <tr>
+        <td class="alternate2">
+          1
+        </td>
+        <td class="alternate2">
+          45
+        </td>
+        <td class="alternate2">
+          2
+        </td>
+         <td class="alternate2">
+          LB = 5; UB = 9; MID = (5 + 9) / 2 = 7; As (A[7] > 85) UB = MID - 1 = 6
+        </td>
+      </tr>
+
+      <tr>
+        <td class="alternate1">
+          2
+        </td><td class="alternate1">
+          67
+        </td><td class="alternate1">
+          3
+        </td><td class="alternate1">
+          LB = 5; UB = 6; MID = (5 + 6) / 2 = 5; As (A[5] < 85) LB = MID + 1 = 6
+        </td>
+      </tr>
+
+      <tr>
+        <td class="alternate2">
+          3
+        </td>
+        <td class="alternate2">
+          69
+        </td>
+        <td class="alternate2">
+          4
+        </td>
+         <td class="alternate2">
+          LB = 6; UB = 6; MID = (6 + 6) / 2 = 6; As (A[6] == 85) <font color = "green">Data Found</font>
+        </td>
+      </tr>
+<tr>
+        <td class="alternate2">
+          4
+        </td>
+        <td class="alternate2">
+          73
+        </td>
+        <td class="alternate2">
+          
+        </td>
+         <td class="alternate2">
+          
+        </td>
+      </tr>
+<tr>
+        <td class="alternate2">
+          5
+        </td>
+        <td class="alternate2">
+          81
+        </td>
+        <td class="alternate2">
+          
+        </td>
+         <td class="alternate2">
+          
+        </td>
+      </tr>
+<tr>
+        <td class="alternate2">
+          6
+        </td>
+        <td class="alternate2">
+          85
+        </td>
+        <td class="alternate2">
+          
+        </td>
+         <td class="alternate2">
+          
+        </td>
+      </tr>
+<tr>
+        <td class="alternate2">
+          7
+        </td>
+        <td class="alternate2">
+          91
+        </td>
+        <td class="alternate2">
+          
+        </td>
+         <td class="alternate2">
+          
+        </td>
+      </tr>
+<tr>
+        <td class="alternate2">
+          8
+        </td>
+        <td class="alternate2">
+          95
+        </td>
+        <td class="alternate2">
+          
+        </td>
+         <td class="alternate2">
+          
+        </td>
+      </tr>
+<tr>
+        <td class="alternate2">
+          9
+        </td>
+        <td class="alternate2">
+          99
+        </td>
+        <td class="alternate2">
+          
+        </td>
+         <td class="alternate2">
+          
+        </td>
+      </tr>
+
+
+
+
+
+
+    </font></tbody>
+  </font></table>
+</font></div>
+
+
+
+<br>
+
+
+
+
+
+
+ <p class="one"><font color="black">Let us assume, an array A[10] is arranged in ascending order. The following are the steps to search for a value 79 from the array using Binary Search.</font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+  <col width="130">
+    <col width="130">
+    <col width="130">
+    <thead>
+
+      <th  class="abstractClassHead"><font color="black">
+        
+      </font></th>
+      <th  class="abstractClassHead"><font color="black">
+        <strong>A[10]</strong>
+      </font></th>
+      <th class="abstractClassHead"><font color="black">
+        <strong>Step</strong>
+      </font></th>
+      <th  class="abstractClassHead"><font color="black">
+        <strong>Data to be Searched</strong>
+      </font></th>
+    </thead>
+
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+          0
+        </td>
+        <td class="alternate1">
+          23
+        </td>
+         <td class="alternate1">
+          1
+        </td>
+         <td class="alternate1">
+          LB = 0; UB = 9; MID = (0 + 9) / 2 = 4; As (A[4] < 79) LB = MID + 1 = 5
+      </tr>
+
+      <tr>
+        <td class="alternate2">
+          1
+        </td>
+        <td class="alternate2">
+          45
+        </td>
+        <td class="alternate2">
+          2
+        </td>
+         <td class="alternate2">
+          LB = 5; UB = 9; MID = (5 + 9) / 2 = 7; As (A[7] > 79) UB = MID - 1 = 6
+        </td>
+      </tr>
+
+      <tr>
+        <td class="alternate1">
+          2
+        </td><td class="alternate1">
+          67
+        </td><td class="alternate1">
+          3
+        </td><td class="alternate1">
+          LB = 5; UB = 6; MID = (5 + 6) / 2 = 5; As (A[5] > 79) UB = MID - 1 = 4
+        </td>
+      </tr>
+
+      <tr>
+        <td class="alternate2">
+          3
+        </td>
+        <td class="alternate2">
+          69
+        </td>
+        <td class="alternate2">
+          4
+        </td>
+         <td class="alternate2">
+          LB = 6; UB = 4; As LB > UB, <font color = "red">Data Not Found</font>
+        </td>
+      </tr>
+<tr>
+        <td class="alternate2">
+          4
+        </td>
+        <td class="alternate2">
+          73
+        </td>
+        <td class="alternate2">
+          
+        </td>
+         <td class="alternate2">
+          
+        </td>
+      </tr>
+<tr>
+        <td class="alternate2">
+          5
+        </td>
+        <td class="alternate2">
+          81
+        </td>
+        <td class="alternate2">
+          
+        </td>
+         <td class="alternate2">
+          
+        </td>
+      </tr>
+<tr>
+        <td class="alternate2">
+          6
+        </td>
+        <td class="alternate2">
+          85
+        </td>
+        <td class="alternate2">
+          
+        </td>
+         <td class="alternate2">
+          
+        </td>
+      </tr>
+<tr>
+        <td class="alternate2">
+          7
+        </td>
+        <td class="alternate2">
+          91
+        </td>
+        <td class="alternate2">
+          
+        </td>
+         <td class="alternate2">
+          
+        </td>
+      </tr>
+<tr>
+        <td class="alternate2">
+          8
+        </td>
+        <td class="alternate2">
+          95
+        </td>
+        <td class="alternate2">
+          
+        </td>
+         <td class="alternate2">
+          
+        </td>
+      </tr>
+<tr>
+        <td class="alternate2">
+          9
+        </td>
+        <td class="alternate2">
+          99
+        </td>
+        <td class="alternate2">
+          
+        </td>
+         <td class="alternate2">
+          
+        </td>
+      </tr>
+
+
+
+
+
+
+    </font></tbody>
+  </font></table>
+</font></div>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+    <thead>
+
+      <th  class="abstractClassHead"><font color="black">
+       Searching for value in array arranged in <br>Ascending Order using Binary Search
+      </font></th>
+      <th  class="abstractClassHead"><font color="black">
+     Searching for value in array arranged in <br>Descending Order using Binary Search
+      </font></th>
+    </thead>
+
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+          <pre class="contained">boolean binarySearch(int A[], int Data)
+{
+  int LB = 0, UB = A.length - 1, MID;
+  boolean Found = false;  
+
+  while(LB <= UB && !Found)
+  {
+    MID = (LB + UB) / 2;
+    if(A[MID] > Data)
+      UB = MID - 1;
+    else if (A[MID] < Data)
+      LB = MID + 1;
+    else 
+      Found = true;
+  }
+  return Found;
+}</pre>
+        </td>
+        <td class="alternate1">
+          <pre class = "contained">boolean binarySearch(int A[], int Data)
+{
+  int LB = 0, UB = A.length - 1, MID;
+  boolean Found = false;
+  
+  while(LB <= UB && !Found)
+  {
+    MID = (LB + UB) / 2;
+    if(A[MID] > Data)
+      LB = MID + 1;
+    else if (A[MID] < Data)
+      UB = MID - 1;
+    else 
+      Found = true;
+  }
+  return Found;
+}</pre>
+    </font></tbody>
+  </font></table>
+</font></div>
+
+<br>
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+<h1 class="one"><font color="black">Merging</font></h1>
+    <p class="one"><font color="black">Like the name suggests, it is a logic used to merge two or more sorted arrays to produce a third sorted array with slight changes depending on whether the two array are sorted in an ascending order, descending order or one of each.
+</font></p>
+<div>
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+    <thead>
+
+      <th  class="abstractClassHead"><font color="black">
+    Java Function to
+MERGE two ascending order array
+      </font></th>
+      <th  class="abstractClassHead"><font color="black">
+     Input Array A
+      </font></th>
+
+      <th  class="abstractClassHead"><font color="black">
+     Input Array B
+      </font></th>
+
+
+      <th  class="abstractClassHead"><font color="black">
+     Output Array C
+      </font></th>
+
+
+    </thead>
+
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+          <pre class="contained">void Merge(int A[], int B[], int C[])
+{
+  int I = 0, J = 0, L = 0;
+  while(I < A.length && J < B.length)
+    if(A[I] < B[J])
+      C[L++] = A[I++];
+    else
+      C[L++] = B[J++];
+  while(I < A.length)
+    C[L++] = A[I++];
+  while(J < B.length)
+    C[L++] = B[J++];
+}</pre>
+        </td>
+        <td class="alternate1">
+          A[0] = 14<br>
+A[1] = 23<br>
+A[2] = 56</td>
+
+
+
+        <td class="alternate1">
+          B[0] = 13<br>
+B[1] = 23<br>
+B[2] = 59<br>
+B[3] = 65<br>
+B[4] = 78</td>
+
+
+
+ <td class="alternate1">
+          C[0] = 13<br>
+C[0] = 14<br>
+C[0] = 23<br>
+C[0] = 23<br>
+C[0] = 56<br>
+C[0] = 59<br>
+C[0] = 65<br>
+C[0] = 78</td>
+
+</tr>
+    </font></tbody>
+  </font></table>
+</font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+<br>
+<p class = "one"> <b>Note:</b> If we require an Ascending order Array A and a Descending Order Array B to produce an Ascending order Array C.<br>
+Initialisation of Merge function will be changed to [int I = 0, J = B.length - 1]<br>
+Conditions will be modified to [I < A.length && J >= 0]<br>
+Change in subscript of A will be same as I++ but B will be J--<br>
+
+</p>
+
+
+
+
+
+
+
+</font>
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="8.1.html">Previous</a></li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!--
+--><footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

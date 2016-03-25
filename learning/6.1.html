@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+
+  .superSubExample {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  ol {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 90px;
+    font-size: 14px;
+  }
+
+  ul {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 90px;
+    font-size: 14px;
+  }
+
+div.note {
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-left: -200px;
+    background: Beige;
+    border: 2px dashed Bisque;
+    width: 85%;
+    margin-left: 75px;
+}
+
+div .note pre {
+  margin-left: 75px;
+  width: 85%;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h2.one {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h3.one {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+.alternate1 {
+  color: black;
+  background-color: #ffe5ec;
+}
+
+.alternate2 {
+  color: black;
+  background-color: #f5eff5;
+}
+
+.abstractClassHead, .abstractMethodHead {
+  color: black;
+  background-color: #ffcccc;
+}
+
+  .contained {
+    width: 480px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+
+.containbtn {
+  margin: 0 auto;
+}
+
+table, th, td {
+  border: 2px solid gray;
+  border-collapse: collapse;
+  /*width: 20%;*/
+}
+
+.isAClasses {
+  margin: 0 auto;
+}
+
+.isACell {
+  margin: 0 auto;
+}
+
+.arrowCell {
+  margin: 0 auto;
+}
+
+.toMiddleButton {
+  margin-left: 42%;
+}
+
+.buttonMiddle {
+  width: 20%;
+  margin: auto;
+}
+.popover-title, .popover-content {
+  color: black;
+}
+
+  </style>
+
+  <script>
+  $(function () {
+  $('[data-toggle="popover"]').popover()
+})
+  </script>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+       <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>    
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Objects and Classes</h1>
+</div>
+<div>
+  <h1 class="one"><font color="black">Classes -> Objects</font></h1>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    As Java is an Object-Oriented programming language, learning to work with objects and classes is essential to improving your Java skills.
+  </font></p>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    <strong>Objects</strong> have states/attributes and behaviors/methods
+  </font></p>
+    <ul class="one"><font color="black">
+      <li>A DOG has a <strong>name, breed, age</strong> and <strong>barks, eats, walks</strong></li>
+      <li>A STUDENT has a <strong>name, e-mail address, school</strong> and <strong>studies, writes, submits homework</strong>.</li>
+    </font></ul>
+  <p class="one"><font color="black"><strong>Classes</strong> are the “cookie cutters” or “blue prints” with which objects are produced.</font></p>
+</div>
+
+<div>
+  <h2 class="one"><font color="black">Creation</font></h2>
+</div>
+
+<div>
+  <h3 class="one"><font color="black">Create A Class</font></h3>
+</div>
+
+<div>
+  <p class="one"><font color="black">This is an example of the basic structure of a class</font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+public class Computer 
+{
+  String name;
+  int yearCreated;
+  int massInKg;
+
+  public Computer (String name, int year, int mass) 
+  {
+    this.name = name;
+    this.yearCreated = year;
+    this.massInKg = mass;
+  }
+
+  void interpretInput() 
+  {
+    int count;
+    //method body
+  }
+
+  void calculate() 
+  {
+    //method body
+  }
+}
+</font></pre>
+</div>
+
+<div>
+  <p class="one"><font color="black">First, we have to give this class some attributes.  These variables will be initialized when an object of this class is created.</font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+String name;
+int yearCreated;
+int massInKg;
+</font></pre>
+</div>
+
+<div>
+  <p class="one"><font color="black">These variables are called <strong>instance variables</strong>. They are declared within the class but not inside any methods or constructors and can be accessed from anywhere within this class.</font></p>
+</div>  
+
+<div>
+  <p class="one"><font color="black">Now we need a way to initialize new objects of this class. Cue the constructors!</font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+public Computer (String name, int yearCreated, int mass) 
+{
+  this.name = name;
+  this.yearCreated = yearCreated;
+  massInKg = mass;  
+}
+</font></pre>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+This is a <strong>constructor</strong>. It takes parameters to create an instance of the class. Constructors have no return types and should have the same name as the class. They initialize the instance data of this object using the values given to them.
+Since each of the arguments to the constructor shadows one of the object’s fields, we use “this.” to initialize that value. For example,  “this.name” is the instance data and it is equal to the address coming in from the calling program, “name”.
+</font></p>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+In this example, interpretInput() and calculate() are methods. These are the actions that objects of this class can carry out. Variables declared within methods, like “count”, are called local variables.
+</font></p>
+</div>
+
+<div>
+  <h3 class="one"><font color="black">Create An Object</font></h3>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    All objects are instances of the class they belong to. In order to create a new object, we must instantiate a class using new and a constructor from the class
+  </font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+Computer eniac = new Computer(“ENIAC”, 1946, 27215);
+
+</font></pre>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    In this line, we declare a variable, eniac, of object type Computer, instantiate the object with “new” and initialize the object with the parameters inside the parentheses.
+  </font></p>
+</div>
+
+<!-- <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button> -->
+
+</br>
+
+<div class="buttonMiddle">
+<a type="button" role="button" tabindex="0" class="btn btn-lg btn-danger" data-toggle="popover" title="ENIAC" data-content="The Electronic Numerical Integrator And Computer was one of the first electronic general-purpose computers. It was designed and primarily used to calculate artillery firing tables.">Did you know? <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> </a>
+</div>
+
+<div>
+  <h2 class="one"><font color="black">Overloading</font></h2>
+</div>
+
+<div>
+  <h3 class="one"><font color="black">Overloading Methods</font></h3>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    We can define two or more methods with the same name, as long as their parameter declarations are different. When we invoke an <strong>overloaded method</strong>, Java uses the types and/or number of arguments to determine which version of the method to call.
+  </p>
+</font></div>
+
+<div>
+  <p class="one"><font color="black">
+    Overloaded methods MUST differ in type/number of parameters.
+  </p>
+</font></div>
+
+<div>
+  <pre class="contained"><font color="black">
+public class OverloadMethods
+{
+  void drawShape()
+  {
+      System.out.println("Not a shape");
+  }
+  void drawShape(int x, int y, int z)
+  {
+      System.out.println("Draw a triangle of perimeter " + (x+y+z));
+  }
+
+  void drawShape(int w, int  x, int y, int z)
+  {
+      System.out.println("Draw a rectangle of perimeter " + (w+x+y+z));
+  }
+}
+
+public class Overload {
+  public static void main (String[] args)
+  {
+      OverloadMethods overload = new OverloadMethods();
+      overload.drawShape();
+      overload.drawShape(2,3,2);
+      overload.drawShape(5,10,5,10);
+  }
+}
+  </font></pre>
+</div>
+
+</br>
+
+<div class="toMiddleButton">
+<button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal">
+  View Output
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Terminal Output</font></h4>
+      </div>
+      <div class="modal-body">
+        <pre class="contained"><font color="black">
+          Not a shape
+          Draw a triangle of perimeter 7
+          Draw a rectangle of perimeter 30
+        </font></pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div>
+<p class="one"><font color="black">
+  As we can see above, the drawShape method is overloaded three times, once without parameters, once with three parameters and once with four parameters. Java looks for a match between the parameters used to call the method then calls the matching method.
+</font></p>
+</div>
+
+<div>
+  <h3 class="one"><font color="black">Overloading Constructors</font></h3>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    In a similar way as overloading methods, you can overload constructors.
+  </font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+public class History{
+  String historicalEvent;
+  String location;
+  String startDate;
+  String endDate;
+
+  History (String event, String place, String start, String end)
+  {
+      historicalEvent = event;
+      location = place;
+      startDate = start;
+      endDate = end;
+      System.out.println(historicalEvent + " took place in " + location + " between " + startDate + " and " + endDate);
+  }
+
+  History (String event, String place, String start)
+  {
+      historicalEvent = event;
+      location = place;
+      startDate = start;
+      endDate = "-";
+      System.out.println(historicalEvent + " took place in " + location + " and started in " + startDate);
+  }
+
+  History (String event, String place)
+  {
+      historicalEvent = event;
+      location = place;
+      startDate = "unknown";
+      endDate = "unknown";
+      System.out.println(historicalEvent + " took place in " + location);
+  }
+
+}
+
+public class OverloadConstructor {
+  public static void main(String[] args) {
+      History event1 = new History("The English Civil War", "Kingdom of England", "1642", "1651");
+      History event2 = new History("Battle of Waterloo", "Waterloo", "1815");
+      History event3 = new History("Battle of Naseby", "Northamptonshire");
+  }
+}
+</font></pre>
+</div>
+
+</br>
+
+<div class="toMiddleButton">
+<button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal3">
+  View Output
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Terminal Output</font></h4>
+      </div>
+      <div class="modal-body">
+        <pre class="contained"><font color="black">
+The English Civil War took place in Kingdom of England between 1642 and 1651
+Battle of Waterloo took place in Waterloo and started in 1815
+Battle of Naseby took place in Northamptonshire
+        </font></pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+  An overloaded constructor is called by Java when it checks the parameters specified during instantiation of the object and matches it to an overloaded constructor in the class. Therefore, this program compiles without errors although we use different numbers of parameters to initialize objects of the same type.
+</font></p>
+</div>
+
+</br>
+
+<div>
+  <h2 class="one"><font color="black">Encapsulation</font></h2>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    <strong>Encapsulation</strong> forms a protective barrier to prevent outside access. With encapsulation, you can hide instance data definitions and protect the integrity of instance data. We can enforce data integrity by defining all instance variables in the class as private.
+  </font></p>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    To perform encapsulation
+  </font></p>
+    <ol class="one"><font color="black">
+      <li>Declare the class variables as private.</li>
+      <li>Make public setter methods, which allow other classes to set the value of the variables without giving them direct access to the variables.</li>
+      <li>Make public getter methods, which allow other classes to get instance values for use outside the class.</li>
+    </font></ol>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    Our goal: To make as few variables and methods public as possible! If other classes do not need to access them, they should be defined as private.
+  </font></p>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    Do you remember that Person class we looked at in the Inheritance section? We are going to create a similar class but, this time, we will use encapsulation.
+  </font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+public class Person {
+  private String name;
+  private int age;
+  private String email;
+
+  private void sayHello()
+  {
+    System.out.println("Hello, it's me!");
+  }
+
+  public String getName()
+  {
+    return name;
+  }
+
+  public int getAge()
+  {
+    return age;
+  }
+
+  public void setName (String name)
+  {
+    this.name = name;
+  }
+
+  public void setAge (int age)
+  {
+    this.age = age;
+  }
+
+  public void nameAndAge ()
+  {
+    sayHello();
+    System.out.println("My name is " + name + " and I am " + age);
+  }
+}
+
+public class TestEncapsulation {
+  public static void main (String[] args)
+  {
+    Person adele = new Person();
+    adele.setName("Adele");
+    adele.setAge(28);
+
+    adele.getName(); //returns "Adele"
+    adele.getAge(); // returns 28
+    adele.nameAndAge();
+  }
+}
+  </font></pre>
+</div>
+
+</br>
+
+<div class="toMiddleButton">
+<button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal2">
+  View Output
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Terminal Output</font></h4>
+      </div>
+      <div class="modal-body">
+        <pre class="contained"><font color="black">
+          Hello, it's me!
+          My name is Adele and I am 28
+        </font></pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div>
+  <p class="one"><font color="black">Notice that the method sayHello() is also private because we only need to use it within the Person class.</font></p>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    Why is encapsulation so important?
+  </font></p>
+  <ul class="one"><font color="black">
+    <li>To avoid misuse of classes and objects.</li>
+    <li>Gives the class more control over the variables stored in its fields.</li>
+    <li>A class can change the data type of a field and without other classes having to change any of their code.</li>
+  </font></ul>
+</div>
+
+<div>
+  <h2 class="one"><font color="black">Abstraction</font></h2>
+</div>
+
+<div>
+  <p class="one"><font color="black">Abstraction is used to separate the essential from the full detail of the class.</font></p>
+</div>
+
+<div>
+  <h3 class="one"><font color="black">Abstract Classes</font></h3>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    Abstraction hides implementation details from the user, displaying only functionalities. It provides a selective and simplified view of the concepts being represented as objects.
+  </font></p>
+</div>
+
+<div class="container"><font color="black">
+  <table class="table"><font color="black">
+    <thead>
+      <th colspan="2" class="abstractClassHead"><font color="black">
+        <strong>Properties of Abstract Classes</strong>
+      </font></th>
+    </thead>
+    <tbody><font color="black">
+      <tr>
+        <td class="alternate1">
+          IS DECLARED...
+        </td>
+        <td class="alternate1">
+          Using the "abstract" keyword like this:
+        </br>
+          <strong>public abstract class Scientist {
+            //class body
+          }</strong>
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate2">
+          MAY OR MAY NOT...
+        </td>
+        <td class="alternate2">
+          Contain abstract methods
+        </br>
+          - abstract methods are methods without a body of functions.
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate1">
+          CANNOT BE...
+        </td>
+        <td class="alternate1">
+          Instantiated
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate2">
+          CAN BE...
+        </td>
+        <td class="alternate2">
+          Inherited by a concrete class by using the same “extends” keyword and method as with concrete classes.
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate1">
+         HAS TO BE...
+        </td>
+        <td class="alternate1">
+          used
+        </td>
+      </tr>
+    </font></tbody>
+  </font></table>
+</font></div>
+
+<div>
+  <h3 class="one"><font color="black">Abstract Methods</font></h3>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    <strong>Abstract Methods</strong> are used if you want a class to have a method but you want its subclasses to determine the implementation of this method.
+  </font></p>
+</div>
+
+<div class="container"><font color="black">
+  <table class="table">
+    <thead>
+      <th colspan="2" class="abstractMethodHead">
+        <strong>Properties of Abstract Methods</strong>
+      </th>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="alternate1">
+          IS DECLARED...
+        </td>
+        <td class="alternate1">
+          Using the “abstract” keyword like this:
+        </br>
+          <strong>public abstract void setDifference();</strong>
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate2">
+          DOES NOT...
+        </td>
+        <td class="alternate2">
+          Contain a method body (only contains a method signature)
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate1">
+          HAS...
+        </td>
+        <td class="alternate1">
+          A semicolon at the end of declaration, instead of curly braces
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate2">
+          MUST BE...
+        </td>
+        <td class="alternate2">
+          Declared within an abstract class
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate1">
+         MUST BE...
+        </td>
+        <td class="alternate1">
+          Overridden by a concrete class that inherits the abstract class containing this abstract method
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</font></div>
+
+</br>
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="5.2.html">Previous</a></li>
+    <li class="next"><a href="6.2.html">Next</a></li>
+  </ul>
+</div>
+
+
+</div><!--
+--><footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/path/to/styles/default.css">
+
+  <script type="text/javascript" src="scripts/shCore.js"></script>
+  <script type="text/javascript" src="scripts/shBrushJava.js"></script>
+  <link href="styles/shCore.css" rel="stylesheet" type="text/css" />
+  <link href="styles/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script> -->
+<!-- Include required JS files -->
+<script type="text/javascript" src="js/shCore.js"></script>
+ 
+<!--
+    At least one brush, here we choose JS. You need to include a brush for every 
+    language you want to highlight
+-->
+<script type="text/javascript" src="css/shBrushJScript.js"></script>
+ 
+<!-- Include *at least* the core style and default theme -->
+<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+
+
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  h3 {
+    color: black;
+    padding-top: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  p, li {
+    font-size: 16px;
+    color: black;
+  }
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  p.one, li.one, ol.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 200px;
+    padding-left: 200px;
+    text-align: justify;
+}
+
+p.two, li.two, ol.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+    text-align: justify;
+}
+
+#navbar-example {
+  padding-right: 150px;
+  padding-left: 150px;
+  margin: 0 auto;
+}
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  .contained {
+    width: 480px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+h3.one{
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+body {
+  position: relative;
+}
+
+.buttonMiddle {
+  width: 20%;
+  margin: auto;
+}
+.popover-title, .popover-content {
+  color: black;
+}
+  </style>
+  
+  <script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
+<script>
+  $(function () {
+  $('[data-toggle="popover"]').popover()
+});
+  $('[data-spy="scroll"]').each(function () {
+  var $spy = $(this).scrollspy('refresh')
+});
+  $('#gcd a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+  $('#treasure a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+  $('#project a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+$('#myTabs a[href="#gcd"]').tab('show');
+$('#myTabs a[href="#treasure"]').tab('show');
+$('#myTabs a[href="#project"]').tab('show');
+$('body').scrollspy({ target: '#navbar-example' });
+$('[data-spy="scroll"]').each(function () {
+  var $spy = $(this).scrollspy('refresh')
+});
+  </script>
+
+</head>
+<body data-spy="scroll" data-target="#navbar-example">
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+       <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>      
+ 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Example Code &amp; Explanation</h1>
+  </div>
+  <div>
+    
+    <p class="one">In this example aswer for this project, we will take you through completing the program described in the video using three classes:
+      <ol class="one">
+        <li>GCD class
+          <ul> 
+            <li>calculates GCD</li>
+          </ul>
+        </li>
+        <li>Treasure class
+          <ul>
+            <li>allows treasure objects to be created </li>
+          </ul>
+        </li>
+        <li>GCDProject class
+          <ul>
+            <li>the main class</li>
+            <li>contains main method</li>
+          </ul>
+        </li>
+      </ol>
+    </p>
+    <p class="one">Although we use three classes in this specific way, don't worry if your code has a completely different structure! There are many ways to write a working program for this question.</p>
+
+</br>
+    <div id="navbar-example" role="navigation">
+      <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#gcd" aria-controls="gcd" role="tab" data-toggle="tab">GCD</a></li>
+      <li role="presentation"><a href="#treasure" aria-controls="treasure" role="tab" data-toggle="tab">Treasure</a></li>
+      <li role="presentation"><a href="#project" aria-controls="project" role="tab" data-toggle="tab">GCD Project</a></li>
+    </ul>
+
+    <div class="tab-content">
+
+<div role="tabpanel" class="tab-pane active" id="gcd">
+<h3 class="two">GCD Class</h3>
+
+<p class="two">Before writing any code for this class, we have to import ArrayList from the Java library to allow ArrayList to be used in the program.</p>
+<font size="3px"><pre class="contained brush: java">
+import java.util.ArrayList; 
+</pre></font>
+
+</br>
+<p class="two">Then, as we do before writing any Java program, create a class. Call this class GCD.</p>
+
+<font size="3px"><pre class="contained brush: java">
+public class GCD {
+
+}
+</pre></font>
+
+</br>
+<p class="two">Now, start writing the required attributes and methods into the class.</p>
+</br>
+
+<div class="buttonMiddle">
+<a type="button" role="button" tabindex="0" class="btn btn-lg btn-danger" data-toggle="popover" title="Hint" data-content="Throughout this guide, if you find that you need to refresh your memory on a particular concept or topic, use the hint buttons or links that we have included to make sure you understand every little detail of this example answer!">Hint <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> </a>
+</div>
+
+</br>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+private ArrayList&lt;Treasure&gt; treasureList;
+private ArrayList&lt;Integer&gt; quantities;
+private int listLength;
+</pre></font>
+<p class="two">As every object of this class will have its own list of treasures and will make a list of the quantity of each treasure, to be used in its methods to calculate GCD, we write these as instance variables in the class. We also have an integer listLength, which will store the length of treasureList, so the length does not have to be calculated multiple times.</p>
+</br>
+
+<div class="buttonMiddle">
+<a type="button" role="button" tabindex="0" class="btn btn-lg btn-danger" data-toggle="popover" title="ArrayList" data-content="Instead of using the conventional array, try something new and use an ArrayList! An ArrayList is a data structure and is similar to a dynamic array (an array that does not have a fixed size)">Challenge Yourself! <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> </a>
+</div>
+
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+GCD (ArrayList&lt;Treasure&gt; treasureList)
+{
+  this.treasureList = treasureList;
+  listLength = treasureList.size();
+  quantities = new ArrayList&lt;Integer&gt;();
+}
+</pre></font>
+<p class="two">This is the <a href="../learning/6.2.html">constructor</a> for this class. Whenever we want to create an instance of this class, we will use this constructor. Our constructor also creates a new ArrayList for the "quantities" ArrayList for every instance of the class.</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+public ArrayList&lt;Treasure&gt; getTreasureList()
+{
+  return treasureList;
+}
+</pre></font>
+<p class="two">This is our getter <a href="../learning/4.2.html">method</a> for the private treasureList attribute. Recall that, to implement <a href="../learning/6.1.html">encapsulation</a>, we have to make our attributes private and only accessible through public getter and setter methods.</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+private void addQuantities()
+{
+  for (Treasure treasure : this.getTreasureList())
+  {
+      quantities.add(treasure.getQuantity());
+  }
+}
+</pre></font>
+<p class="two">As the quantities array list that we have created in the constructor is initially empty, we have to populate it using this addQuantities method, which loops through the treasure list to collect all the quantity values and add them to the quantities list.</p>
+
+<p class="two"><span class="glyphicon glyphicon-info-sign" style="color:black" aria-hidden="true"></span><font size="2px" color="gray"> The add method adds the element to the next index of the array list. We could have also used add with an index, quantities.add(index, value), allowing us to add a value to any specific location in the ArrayList. However, ArrayLists can only be used with class types, not primitive types. Still confused about ArrayLists? Check out this </font><a href="http://www.tutorialspoint.com/java/java_arraylist_class.htm"><font size="2px">tutorial</font></a> <font size="2px" color="gray">on ArrayLists!</font></p>
+
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+public int getGCD()
+{
+  this.addQuantities();
+  int firstQuantity = quantities.get(0);
+  int remainder;
+  for (int i=1; i&lt;listLength; i++)
+  {
+    int secondQuantity = quantities.get(i);
+    if (secondQuantity&gt;firstQuantity)
+    {
+      int quantityTemp = firstQuantity;
+      firstQuantity = secondQuantity;
+      secondQuantity = quantityTemp;
+    }
+    remainder = firstQuantity%secondQuantity;
+    while (remainder&gt;0)
+    {
+      firstQuantity = secondQuantity;
+      secondQuantity = remainder;
+      remainder = firstQuantity%secondQuantity;
+    }
+    firstQuantity = secondQuantity;
+  }
+  return firstQuantity;
+}
+</pre></font>
+<p class="two">This is an important method in the GCD class because it uses the other methods to calculate the GCD of the quantity values (the main goal of this project). Here, we are implementing Euclid's Algorithm, the algorithm that we explained in the video in the previous section.</p>
+
+
+<div class="buttonMiddle">
+<a type="button" role="button" tabindex="0" class="btn btn-lg btn-danger" data-toggle="popover" title="Recursion" data-content="Notice that you could have also done this using recursion! Write another version of this method using recursion, compare their efficiency and speed, and use the better method!">Challenge Yourself! <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> </a>
+</div>
+</br>
+</div>
+
+<div role="tabpanel" class="tab-pane" id="treasure">
+
+  <h3 class="two">Treasure</h3>
+  <p class="two">Like before, let's start by creating our outer class! All our code for this class goes into this block.</p>
+
+  <font size="3px"><pre class="contained brush: java">
+public class Treasure {
+
+}
+</pre></font>
+</br>
+<p class="two">Now, we insert our <a href="../learning/6.1.html">instance variables</a> and methods.</p>
+
+<font size="3px"><pre class="contained brush: java">
+private String type;
+private int quantity;
+</pre></font>
+<p class="two">These are the two attributes that a treasure must have. Its type allows users to differentiate the types of treasure they are including and the quantity value will be used in our calculations.</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+Treasure (String type, int quantity)
+{
+  this.type = type;
+  this.quantity = quantity;
+}
+</pre></font>
+<p class="two">This is a Treasure's constructor. We use this to create any type of treasure!</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+public String getType ()
+{
+  return type;
+}
+</pre></font>
+<p class="two">getType is our <strong>getter method</strong> for the private <strong>type instance variable</strong>.</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+public int getQuantity ()
+{
+  return quantity;
+}
+</pre></font>
+<p class="two">getQuantity is the <strong>getter method</strong> for the private <strong>quantity instance variable</strong></p>
+</br>
+</div>
+
+
+
+<div role="tabpanel" class="tab-pane" id="project">
+  <h3 class="two">GCD Project Class</h3>
+  <p class="two">All these classes are given arbitrary names, you can change them to any name. However, the main class, ProjectGCD, should be given the <strong>same name as the file</strong> of the project.</p>
+
+
+  <div class="buttonMiddle">
+<a type="button" role="button" tabindex="0" class="btn btn-lg btn-danger" data-toggle="popover" title="Hint" data-content="By convention, the class containing the main method is named after the project/file. This is not strictly enforced in IDEs like IntelliJIdea, but is required if we use the terminal/commandline." aria-hidden="true"></span>Hint <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+</div>
+
+</br>
+  <p class="two">Before starting anything else, we need to create our GCD Project class.</p>
+</br>
+  <font size="3px"><pre class="contained brush: java">
+public class GCDProject {
+  
+}
+  </pre></font>
+<p class="two">Everything else in this class' section goes within this class</p>
+<p class="two">Now, we focus on creating methods to allow the user to use this program.</p>
+</br>
+  <font size="3px"><pre class="contained brush: java">
+private String getString(String string)
+{
+  System.out.print(string);
+  Scanner inString = new Scanner(System.in);
+  return inString.nextLine();
+}
+
+private int getInt(String string)
+{
+  System.out.print(string);
+  try {
+    Scanner inInt = new Scanner(System.in);
+    return inInt.nextInt();
+  }catch(InputMismatchException e) {
+    System.err.println("Please enter an integer");
+    return -1;
+  }
+}
+</pre></font>
+<p class="two">Both of these methods deal with user input. getString takes and returns a string input while getInt takes and returns an integer input. The string argument is passed into both methods is the question that is printed out to prompt the user for an input. The <strong>"try and catch"</strong> block prevents the program from terminating when the input received is not an integer. It catches that error and returns a "-1" instead of terminating. This means we are able to write code to give the reader another chance to type an integer in.</p>
+<p class="two"><span class="glyphicon glyphicon-info-sign" style="color:black" aria-hidden="true"></span><a href="http://www.tutorialspoint.com/java/java_exceptions.htm"><font size="2px"> Exception Handling</font></a> <font size="2px" color="gray">is a very important part of Java programming, especially for longer and more complex programs, as they either prevent the program from terminating or allow the program to terminate gracefully and, more importantly, tell us where the error is so we can fx it.</font></p>
+</br>
+<font size="3px"><pre class="contained brush: java">
+import java.util.InputMismatchException;
+import java.util.Scanner;
+</pre></font>
+<p class="two">As we are using the InputMismatchException type to catch the error object and the Scanner to take user input, we should insert these "import" commands at <strong>the top of the file</strong>, uunderneath the package statement.</p>
+
+<p class="two"><span class="glyphicon glyphicon-info-sign" style="color:black" aria-hidden="true"></span><a href="https://docs.oracle.com/javase/7/docs/api/java/util/InputMismatchException.html"><font size="2px"> Input Mismatch Exception</font></a> <font size="2px" color="gray">is thrown by a scanner when the scanned item does not match the pattern for the expected type.</font></p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+private final static int ADD_TREASURE = 1;
+private final static int GET_NUM_TREASURE = 2;
+private final static int GET_NUM_PEOPLE = 3;
+private final static int QUIT = 4;
+  </pre></font>
+<p class="two">Add these constants <strong>above the getString function</strong>. We will use these functions in several methods in our class. Although we could have used the numbers "1,2,3,4" instead, having constants allow us to associate these numbers with their corresponding options more easily.</p>
+
+<div class="buttonMiddle">
+<a type="button" role="button" tabindex="0" class="btn btn-lg btn-danger" data-toggle="popover" title="Challenge" data-content=" Variables declared 'final' cannot be assigned a new value after they are assigned a value once. Besides variables, methods and classes can also be declared final! What does it mean when classes and methods have the final keyword?" aria-hidden="true"></span>Challenge Yourself! <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+</div>
+
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+private int printOptions()
+{
+  System.out.println(ADD_TREASURE + ". Add a type of Treasure");
+  System.out.println(GET_NUM_TREASURE + ". Get number of each treasure per person");
+  System.out.println(GET_NUM_PEOPLE + ". Get maximum number of people");
+  System.out.println(QUIT + ". Quit");
+  return getInt(">> ");
+}
+</pre></font>
+<p class="two">This method prints the <strong>options menu</strong> to the console for the user to pick their option by submitting the corresponding numbers.</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+private void getOptions()
+{
+  int option = ADD_TREASURE;
+  while (option&lt;QUIT &amp;&amp; option&gt;=ADD_TREASURE) {
+    option = printOptions();
+    switch (option) {
+      case ADD_TREASURE:
+        //allow user to add treasure here
+        break;
+      case GET_NUM_TREASURE:
+        //tell the user the amount of treasure each person can get
+        break;
+      case GET_NUM_PEOPLE:
+        //tell the user the maximum number of people Dr Java can distribute the trasure to
+        break;
+      case QUIT:
+        break;
+      default:
+        System.out.println("Invalid input. Please try again.");
+        option = 1; //to allow the user to enter an option again (repeats the loop)
+        break;
+    }
+  }
+}
+</pre></font>
+<p class="two">The getOptions method calls printOptions, takes the value returned by printOptions (the user input) and uses this value in a <a href="../learning/5.1.html">switch statement</a> to decide which methods to call next. Right now the blocks within the first three statements are just filled with comments. Let's write some methods that we can use when users choose these options.</p>
+</br>
+
+<p class="two">In order to keep a record of the treasure that the user has created, add an <strong>ArrayList</strong> (above all the methods but within the class) that is <a href="../learning/2.2.html">accessible by the whole class</a>.</p>
+
+<font size="3px"><pre class="contained brush: java">
+ArrayList&lt;Treasure&gt; treasuresList = new ArrayList&lt;Treasure&gt;();
+</pre></font>
+</br>
+<p class="two">Then, create a method to add treasure into this list:</p>
+<font size="3px"><pre class="contained brush: java">
+private void addTreasure()
+{
+  String type = getString("Enter type: ");
+  int quantity = getInt("Enter quantity: ");
+  if (quantity&lt;0)
+  {
+    System.out.println("Try again");
+    getOptions();
+    return;
+  }
+  Treasure treasure = new Treasure(type, quantity);
+
+  treasuresList.add(treasure);
+
+}
+</pre></font>
+<p class="two">This method creates new treasure based on the user's input by <a href="../learning/6.1.html">instantiating</a> objects of the treasure class with the user's input as parameters to the constructor. The method also does not allow the user to enter a quantity less than zero because it does not make sense to have a negative amount of treasure.</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+private void getOptions()
+{
+  int option = ADD_TREASURE;
+  while (option&lt;QUIT &amp;&amp; option&gt;=ADD_TREASURE) {
+    option = printOptions();
+    switch (option) {
+      case ADD_TREASURE:
+        addTreasure();
+        break;
+      case GET_NUM_TREASURE:
+        //tell the user the amount of treasure each person can get
+        break;
+      case GET_NUM_PEOPLE:
+        //tell the user the maximum number of people Dr Java can distribute the trasure to
+        break;
+      case QUIT:
+        break;
+      default:
+        System.out.println("Invalid input. Please try again.");
+        option = 1; //to allow the user to enter an option again (repeats the loop)
+        break;
+    }
+  }
+}
+</pre></font>
+<p class="two">Now, we can call getOptions in the switch statement as shown.</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+private int calculateGCD()
+{
+  GCD gcd = new GCD(treasuresList);
+  return gcd.getGCD();
+}
+</pre></font>
+<p class="two">The calculateGCD method simply creates a new gcd object, passing the current list of treasure into its constructor, and calls its method to calculate the GCD of the quantities of all the treasure. This method is used in several other methods.</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+private void getTreasureCollection()
+{
+  int divisor = calculateGCD();
+  System.out.println("Treasure combination for each person:");
+  for (Treasure currentTreasure : treasuresList)
+  {
+    int treasureQuantity = currentTreasure.getQuantity();
+    int perPerson = treasureQuantity/divisor;
+    System.out.println(currentTreasure.getType() + " = " + perPerson);
+  }
+}
+</pre></font>
+<p class="two">This method is used for the second option. It finds the GCD by calling calculateGCD then loops through the current list of treasure to get the amount of each treasure that each person should get. It also prints the result to the console.</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+private void getOptions()
+{
+  int option = ADD_TREASURE;
+  while (option&lt;QUIT &amp;&amp; option&gt;=ADD_TREASURE) {
+    option = printOptions();
+    switch (option) {
+      case ADD_TREASURE:
+        addTreasure();
+        break;
+      case GET_NUM_TREASURE:
+        getTreasureCollection();
+        break;
+      case GET_NUM_PEOPLE:
+        //tell the user the maximum number of people Dr Java can distribute the trasure to
+        break;
+      case QUIT:
+        break;
+      default:
+        System.out.println("Invalid input. Please try again.");
+        option = 1; //to allow the user to enter an option again (repeats the loop)
+        break;
+    }
+  }
+}
+</pre></font>
+<p class="two">We can now call getTreasureCollection in the second case.</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+private void getNumPeople()
+{
+  int people = calculateGCD();
+  System.out.println("Dr Java can distribute the treasure evenly to a maximum of " + people + " people");
+}
+</pre></font>
+<p class="two">This getNumPeople method also uses the calculateGCD method to get the GCD then returns the number of people Dr Java can distribute the treasure to, which is actually the GCD value. This method prints out the result to the console.</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+private void getOptions()
+{
+  int option = ADD_TREASURE;
+  while (option&lt;QUIT &amp;&amp; option&gt;=ADD_TREASURE) {
+    option = printOptions();
+    switch (option) {
+      case ADD_TREASURE:
+        addTreasure();
+        break;
+      case GET_NUM_TREASURE:
+        getTreasureCollection();
+        break;
+      case GET_NUM_PEOPLE:
+        getNumPeople();
+        break;
+      case QUIT:
+        break;
+      default:
+        System.out.println("Invalid input. Please try again.");
+        option = 1; //to allow the user to enter an option again (repeats the loop)
+        break;
+    }
+  }
+}
+</pre></font>
+<p class="two">We can finally complete the switch statement in the getOptions method by calling getNumPeople in the third case. To complete this class, we have to insert a main method to make the class executable.</p>
+</br>
+
+<font size="3px"><pre class="contained brush: java">
+public static void main (String[] args)
+{
+  GCDProject gcdProject = new GCDProject();
+  gcdProject.getOptions();
+}
+</pre></font>
+<p class="two">Our main class creates a new instance of the main class, GCDProject, and calls getOptions on it. Notice that we didn't have to call all the other methods here because getOptions does that for us!</p>
+</br>
+<p class="two"><span class="glyphicon glyphicon-info-sign" style="color:black" aria-hidden="true"></span><font size="2px" color="gray">Here, we don't call the methods directly, since main methods are always static. Instead, we create an instance of this class in this main method before calling other methods.</font></p>
+
+<div class="buttonMiddle">
+<a type="button" role="button" tabindex="0" class="btn btn-lg btn-danger" data-toggle="popover" title="Hint" data-content="When variables or methods are declared as static, only one copy exists for the whole class. This means that all objects share the same variable or method. This is the opposite to being an instance variable or method, where an instance of it is created for every object created from that class." aria-hidden="true"></span>Hint <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a>
+</div>
+
+</br>
+</br>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="GCDIntroVideo.html">Previous</a></li>
+    <li class="next"><a href="Hanoi.html">Next</a></li>
+  </ul>
+</div>
+
+
+<!--
+--><footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

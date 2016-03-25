@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 18px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p { font: 18px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: black;
+  }
+  p {
+    text-align: justify;
+   }
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 250px;
+    padding-left: 250px;
+}
+
+ul{
+  padding-top: 15px;
+    padding-right: 250px;
+    padding-left: 250px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 250px;
+    padding-left: 250px;
+    color: black;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+.contained {
+    width: 480px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>    
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Basic Controls</h1>
+  <div>
+  
+  </div>
+</div>
+
+<div>
+  <h1 class="one">UI elements</h1>
+  <p class="one">UI elements refers to the visual elements that the user will see onscreen and interact with. There are a huge range of common elements to choose from which you will encoutner during this project.</p>
+
+  <h1 class="one">Layouts</h1>
+  <p class="one">Layouts define how the UI elements will be organised on the screen and help to provide the final look and feel of the GUI.</p>
+  
+  <h1 class="one">Behaviour</h1>
+  <p class="one">This desribes what happens when the user interacts with the UI elements- such as a button click.</p>
+
+  <h1 class="one">Component -> Container -> JContainer</h1>
+  <p class="one">A component is the abstract base class for the non menu UI controls of Swing. Compenet is the object with a graphical representation. A container is then a component that can contain other swing components. A JComponent is a base class for all swing UI components.</p>
+
+  <h1 class="one">How to compile and run Swing Programs</h1>
+  <p class="one">We are going to be executing Swing programs from the command line in the next project section- so we will teach you how to do that here. However, before we get to that make sure that you have installed the latest version of the Java SE platform. Whenever we want to run a program, we will first creat the program that will utilise the swing components, compile the program and then run it.</p>
+
+  <p class="one"> Firstly once you have written a java program, save it as a .java file.</p>
+  <p class="one">Then open up your command line terminal and go to the directory where it is saved. You can use cd + the directory name to navigate up to the place you have saved the java file. Now type in "javac filename.java" in order to compile the code. If there are no errors, it means your Java code has compiled successfully.</p>
+
+  <pre class="contained">javac filename.java</pre>
+
+  <p class="one">Now to run the Java code, you must type in "java filename". This will execute the program and a little window should pop up where your code has run- the GUI. </p>
+
+  <pre class="contained">java filename</pre>
+
+  <p class="one"> In the exercises after the "Hello World" part, we will be using the NetBeans IDE, this is much better than using a simple text editor, much the same way we had used the IntelliJ IDE earlier. So make sure you have installed NetBeans before starting.</p>
+
+</div>
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="ProjectWelcome.html">Previous</a></li>
+    <li class="next"><a href="Lesson2.html">Next</a></li>
+  </ul>
+</div>
+
+
+</div><!--
+--><footer class="container-fluid bg-4 text-center">
+  Website made by Sachchit Shanice Keshav Ashu 
+</footer>
+
+</body>
+</html>

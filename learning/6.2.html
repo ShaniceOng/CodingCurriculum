@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/path/to/styles/default.css">
+<script src="/path/to/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .superSubExample {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  ol {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 90px;
+    font-size: 14px;
+  }
+
+div.note {
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-left: -200px;
+    background: FloralWhite;
+    border: 2px dashed BlanchedAlmond;
+    width: 85%;
+    margin-left: 75px;
+}
+
+div .note pre {
+  margin-left: 75px;
+  width: 85%;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h3.one {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h2.one {
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+  .contained {
+    width: 480px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+
+.containbtn {
+  margin: 0 auto;
+}
+
+table, th, td {
+  border: 2px solid gray;
+  border-collapse: collapse;
+  /*width: 20%;*/
+}
+
+.isAClasses {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #e5f2ff;
+}
+
+.isACell {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #e5f9ff;
+}
+
+.arrowCell {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #ccffff;
+}
+
+.interfaceHead, .classHead {
+  background-color: #ffcccc;
+}
+
+.alternate1 {
+  background-color: SeaShell;
+  /*background-color: #fff2e5;*/
+}
+
+.alternate2 {
+  background-color: OldLace;
+  /*background-color: #f9ffe5;*/
+}
+
+.toMiddleButton {
+  margin-left: 42%;
+}
+
+.swapMe div { -webkit-transition: all 1s ease-in-out; -moz-transition: all 1s ease-in-out; -ms-transition: all 1s ease-in-out; -o-transition: all 1s ease-in-out; transition: all 1s ease-in-out; } .swap1, .swapMe:hover .swap2 { -webkit-opacity: 1; -moz-opacity: 1; opacity: 1; } .swapMe:hover .swap1, .swap2 { -webkit-opacity: 0; -moz-opacity: 0; opacity: 0; }
+        
+#superClass {
+    width: 70%;
+    margin: 0 auto;
+}
+.swap1{
+    width: 70%;
+    /*margin-left: 50px;*/
+    margin: 0 auto;
+}
+
+.swap2{
+    width: 60%;
+    margin-left: 150px;
+    /*margin: 0 auto;*/
+    height:37%;
+}
+
+.buttonMiddle {
+  width: 20%;
+  margin: auto;
+}
+
+.popover-title, .popover-content {
+  color: black;
+}
+
+  </style>
+<script>
+  $(function () {
+  $('[data-toggle="popover"]').popover()
+})
+  </script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>       
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Objects and Classes</h1>
+</div>
+<div>
+  <h1 class="one"><font color="black">Inheritance</font></h1>
+</div>
+<div> 
+  <p class="one"><font color="black">When class A inherits from class B, class A acquires the properties of class B.
+</font></p>
+  <p class="one"><font color="black">The <strong>subclass</strong> is the class that inherits the properties of another class.
+</font></p>
+  <p class="one"><font color="black">The <strong>superclass</strong> is the class whose properties are inherited by another class.</font></p>
+</div>
+<div>
+  <h1 class="one"><font color="black">Extends</font></h1>
+</div>
+<div>
+  <p class="one"><font color="black">We use the <strong>extends</strong> keyword to inherit the properties of a class.</font></p>
+<p class="one"><font color="black">Below is an example of how the extends keyword is used (where Super is the name of the superclass and Sub is the name of the subclass).
+
+</font></p>
+</div>
+</br>
+
+
+<pre class="contained">
+<font color="black">
+class Super {
+//instance variables and methods here
+}
+
+class Sub extends Super {
+//instance variables and methods here
+}
+</font>
+</pre>
+</br>
+
+<div>
+  <p class="one"><font color="black">When should extends be used? </font></p>
+</div>
+<div>
+  <p class="one"><font color="black">When the two classes have an <strong>IS-A</strong> relationship. </font></p>
+  
+  <div class="container"><font color="black">
+  <table class="table">
+    <tbody>
+      <tr>
+        <td class="isAClasses">Student</td>
+        <td rowspan="2" class="isACell">IS-A</td>
+        <td class="isAClasses">Person</td>
+        <td class="arrowCell"><span class="glyphicon glyphicon-arrow-right"></span></td>
+          <td class="isAClasses">Person</td>
+          <td rowspan="2" class="isACell">IS A </br> Superclass </br> of</td>
+          <td class="isAClasses">Student</td>
+        </tr>
+
+        <tr>
+        <td class="isAClasses">Metalloid</td>
+        <td class="isAClasses">Chemical </br> Element</td>
+        <td class="arrowCell"><span class="glyphicon glyphicon-arrow-right"></span></td>
+          <td class="isAClasses">Chemical </br> Element</td>
+          <td class="isAClasses">Metalloid</td>
+        </tr>
+      </tbody>
+  </table>
+</font>
+</div>
+
+</br>
+
+<div class="superSubExample">
+<div id="superClass">
+        <pre class="contained">
+public class Person {
+    String name;
+    int age;
+    String email;
+
+    public void sayHello(){
+        System.out.println("Hello! My name is " + this.name);
+    }
+}
+        </pre>
+    </div>
+    <br/>
+    
+    <div class="swapMe">
+        
+    <div class="swap2" style="position: absolute;">
+    <br/>
+    <pre><code class="java">
+public class Student extends Person {
+  String studentID;
+  String grade;
+  public void attendClass() {
+  }
+}
+        </code></pre></div>
+        
+    <div class="swap1">   <pre> 
+public class Student {
+  String name;
+  int age;
+  String email;
+  String studentID;
+  String grade;
+  public void sayHello(){
+      System.out.println("Hello! My name is " + this.name);
+  }
+  public void attendClass() {
+  }
+}
+        </pre></div>
+        
+</div>
+</div>
+
+<div>
+  <p class="one"><font color="black">Hover over the Student class to see what happens when you use “extends” on the Student class to inherit the Person class. In this example, we would instantiate a new object of the Student class like we normally do
+</font></p>
+</div>
+
+<div>
+  <pre class="contained">
+    <font color="black">
+Student student1 = new Student();
+</font>
+</pre>
+</div>
+</br>
+<div class="note">
+  <div>
+  <p class="one"><font color="black">
+    Note: We can also instantiate the object in this manner
+  </div>
+    <pre class="one">
+Person student1 = new Student();
+    </pre>
+<div>
+  <p class="one"><font color="black">
+    However, this method will not allow us to call the attendClass() method and the studentID and grade instance variables, as these belong to the Student class.
+  </font></p>
+</font></p>
+</div>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    Inheritance is useful as it reduces data redundancy, making our code neater and more concise.
+</font></p>
+</div>
+
+<div>
+  <h1 class="one"><font color="black">Contructors In Inheritance</font></h1>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    A subclass can call a constructor defined by its superclass by using the following form of super:
+  </font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+super(arg-list);
+  </font></pre>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    where arg-list specifies any arguments needed from the constructor in the superclass. super() must always be the first executed in a subclass’ constructor.
+  </font></p>
+</div>
+
+<!-- insert constructors section -->
+
+<div>
+  <h1 class="one"><font color="black">Overriding</font></h1>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    <strong>Overriding</strong> allows a subclass to implement a superclass’ method based on its requirements. It is the process of creating a modified version of an existing method.
+  </font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+class Animal 
+{
+    public void saySomething()
+    {
+        System.out.println("I can talk!");
+    }
+}
+
+class Cat extends Animal 
+{
+    public void saySomething()
+    {
+        System.out.println("Meow!");
+    }
+}
+
+class Dog extends Animal 
+{
+    public void saySomething()
+    {
+        System.out.println("Bark!");
+    }
+}
+
+public class TestOverriding
+{
+    public static void main (String[] args)
+    {
+        Animal animal = new Animal();
+        Animal cat = new Cat();
+        Dog dog = new Dog();
+
+        animal.saySomething(); 
+        cat.saySomething(); 
+        dog.saySomething();
+    }
+}
+</font></pre>
+</div>
+</br>
+<div class="toMiddleButton">
+<button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal">
+  View Output
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Terminal Output</font></h4>
+      </div>
+      <div class="modal-body">
+        <pre class="contained"><font color="black">
+          I can talk!
+          Meow!
+          Bark!
+        </font></pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</br>
+
+<div>
+<p class="one"><font color="black">
+In this example, we can see that both the Cat and Dog class inherit from the Animal class. However, both their saySomething() methods have been overridden to fit the specific requirements of each animal. This allows the objects “animal”, “cat” and “dog” to call their own versions of saySomething(). Notice that, although “cat” is declared with reference type Animal, the method that belongs to the Cat object is run when called on cat. This is because “cat” is declared as a Cat object and because the Animal class recognizes the saySomething() method too.
+</font></p>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+  Overriding is very useful when many classes are inheriting from a superclass and a few of them require modifications to their properties. You could override those that need overriding instead of re-writing the method for every class.
+  </font></p>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    IMPORTANT! Rules to follow when overriding methods:
+  </font></p>
+  <ol class-"one"><font color="black">
+    <li>Its return type should be the same or a subtype of the return type of the original method.</li>
+    <li>If the superclass method is public, this class’ method stays public.</li>
+    <li>If a method has been declared final, you can’t override it. No buts!</li>
+    <li>If both superclass and subclass belong to the same package, the subclass can override any of the superclass’ non-private, non-final methods.</li>
+    <li>A subclass can override methods of a superclass from a different package if they are non-final and either public or protected.</li>
+    <li>You can only override a method if it is inherited by that subclass.</li>
+  </font></ol>
+</div>
+
+<div>
+  <h3 class="one"><font color="black">Super Overriding</font></h3>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    The super keyword allows us to have methods and attributes of the same name in the superclass and subclass and still call them as different attributes and methods.
+  </font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+public class Super {
+    String name = "superclass";
+
+    public void describe() {
+        System.out.println("This is the super class’ describe method");
+    }
+}
+
+public class Subclass extends Super {
+    String name = "subclass";
+    String superName = super.name;
+
+    public void describe() 
+    {
+      System.out.println("This is the subclass’ describe method");
+    }
+
+    public void superDescribe()
+    {
+      super.describe();
+    }
+
+    public static void main (String[] args) 
+    {
+      Subclass subclass = new Subclass();
+      String x = subclass.name; 
+      System.out.println(x);
+      String y = subclass.superName;
+      System.out.println(y);
+      subclass.describe();
+      subclass.superDescribe();
+    }
+}
+  </font></pre>
+</div>
+</br>
+
+<div class="toMiddleButton">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+  View Output
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Terminal Output</font></h4>
+      </div>
+      <div class="modal-body">
+        <pre class="contained"><font color="black">
+          subclass
+          superclass
+          This is the subclass’ describe method
+          This is the super class’ describe method
+        </font></pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div>
+<h1 class="one"><font color="black">Interfaces</font></h1>
+</div>
+
+<div>
+<p class="one"><font color="black"><strong>Interfaces</strong> are similar to classes but contain abstract methods and are, themselves, implicitly abstract.</font></p>
+</div>
+
+<div class="container"><font color="black">
+  <table class="table">
+    <thead>
+      <th class="classHead">CLASS</th>
+      <th class="interfaceHead">INTERFACE</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="alternate1">
+          Describes attributes and behaviors of an object
+        </td>
+        <td class="alternate1">
+          Contains behaviors that a class implements
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate2">
+          <strong>CAN</strong> be instantiated
+        </td>
+        <td class="alternate2">
+          <strong>CANNOT</strong> be instantiated
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate1">
+          <strong>MAY</strong> contain constructors
+        </td>
+        <td class="alternate1">
+          <strong>DOES NOT</strong> contain constructors
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate2">
+          <strong>CAN</strong> contain instance fields
+        </td>
+        <td class="alternate2">
+          <strong>CANNOT</strong> contain instance fields
+(only <strong>static</strong>, <strong>final</strong> fields)
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate1">
+          Class <strong>extends</strong> extends Class
+        </td>
+        <td class="alternate1">
+          Class <strong>implements</strong> interface
+        </td>
+      </tr>
+      <tr>
+        <td class="alternate2">
+          Class can extend one clas
+        </td>
+        <td class="alternate2">
+          Interface can extend multiple interfaces
+        </br>
+          Class can implement multiple interfaces
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</font></div>
+
+</br>
+
+<div>
+  <pre class="contained"><font color="black">
+public interface Halogen 
+{
+  public void reactAlkaliMetal (ChemicalElement alkaliMetal);
+}
+</font></pre>
+</div>
+
+</br>
+
+<div>
+  <p class="one"><font color="black">
+    To implement interfaces, use the implements keyword, like we did before. Observe that interface methods cannot have method bodies. When a class implements an interface, it is signing a contract to implement every method in that interface. The consequence of breaking this contract is that the program won’t compile!
+  </font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+public class Nitrogen implements Halogen 
+{
+  public void reactAlkaliMetal (ChemicalElement element)
+  {
+     //method body 
+  }
+}
+</font></pre>
+</div>
+
+</br>
+
+<div class="buttonMiddle">
+<a type="button" role="button" tabindex="0" class="btn btn-lg btn-danger" data-toggle="popover" title="Chemistry Development Kit (CDK)" data-content="The CDK is an open-source Java library for Chemoinformatics and Bioinformatics. It gives access to all things Chemistry through our favorite programming language!">Did you know? <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> </a>
+</div>
+
+<div>
+  <p class="one"><font color="black">
+    The method to extend other interfaces from an interface is similar. The only additional rule is that when one interface extends multiple interfaces, these interfaces are declared after the “extends” keyword and are separated by commas.
+  </font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+public interface IndustrialRevolution extends HistoricalEvent, Industrialisation 
+{
+  //methods
+}
+</font></pre>
+</div>
+
+</br>
+
+<div>
+<h2 class="one"><font color="black">Polymorphism</font></h2>
+</div>
+
+<div>
+<p class="one"><font color="black">
+  A <strong>polymorphic</strong> object has the ability to take many forms. How do we know if an object is polymorphic? Objects are polymorphic if they have IS-A relationships with more than one class. We can say that all objects in Java are polymorphic, since they have an IS-A relationship with their own type and with the Object class.
+</font></p>
+</div>
+
+<div>
+<p class="one"><font color="black">
+Every object has to be declared with a reference variable. This reference variable cannot be changed once assigned.
+</font></p>
+</div>
+
+<div>
+<p class="one"><font color="black">
+NOTE: Although we can, for example, change a variable “x” from integer to string using the Integer.toString(x) method, we are not actually changing the reference variable of x, but making a String copy of x.
+</font></p>
+</div>
+
+<div>
+<p class="one"><font color="black">
+Since polymorphic objects can take many types, we can declare them with the reference variable of any of the classes it inherits, as shown in the example below.
+</font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+public interface Halogen 
+{
+  //abstract methods
+}
+
+public class ChemicalElement 
+{
+  //class body
+}
+
+public class Nitrogen extends ChemicalElement implements Halogen 
+{
+  //class body
+}
+</font></pre>
+</div>
+
+<div>
+<p class="one"><font color="black">
+Here, Nitrogen is polymorphic because it inherits three classes, Halogen, ChemicalElement and Object.
+</font></p>
+</div>
+
+<div>
+<p class="one"><font color="black">
+Since Nitrogen is polymorphic, we can do this
+</font></p>
+</div>
+
+<div>
+  <pre class="contained"><font color="black">
+public static void main(String[] args)  
+{
+  Chlorine cl = new Nitrogen();
+
+  //All objects below refer to the n2 declared above
+  Halogen halogen = n2;
+  ChemicalElement element = n2;
+  Object object = n2;
+}
+</font></pre>
+</div>
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="6.1.html">Previous</a></li>
+    <li class="next"><a href="8.1.html">Next</a></li>
+  </ul>
+</div>
+
+<footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;
+    }
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+  .contained {
+    width: 680px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+       <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>     
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Booleans</h1>
+</div>
+
+<div>
+  <h1 class="one"><font color="black">Booleans Data Type</font></h1>
+</div>
+<div>
+  <p class="one"><font color="black">The boolean data type is used for logical values. The boolean data type can only have two possible values, true or false. It can be used in order in logical statements to determine whether they are true or false.</font></p>
+  <p class="one"><font color="black">Below you can see how we might initialise different boolean values:</font></p>
+</div>
+</br>
+
+<pre class="contained">
+<font color="blue">boolean</font> b1 = <font color="green">true</font>; //initialising a variable b1 which is assigned a value of true
+<font color="blue">boolean</font> b2 = <font color="green">false</font>; //initialising a variable b1 which is assigned a value of false
+</pre>
+</br>
+
+<p class="one"><font color="black">Now you might be wondering how we can use booleans in logical statements and why they are so important. The following examples below should make this clearer.</font></p>
+
+<p class="one"><font color="black">Below we firstly initialise booleans and give them the values "true" or "false". In the bit after we are using the "==" operator which checks whether the two variables are equal or not, if they are equal it returns "true" if not, it returns "false"</font></p>
+
+
+<pre class="contained">
+<font color="orange">public class</font> Booleans {
+    <font color="orange">public static void</font> <font color="gold">main</font>(String[] args) {
+
+        <font color="orange">boolean</font> w = <font color="orange">true</font>;
+        <font color="orange">boolean</font> x = <font color="orange">false</font>;
+        <font color="orange">boolean</font> y = <font color="orange">false</font>;
+        <font color="orange">boolean</font> z = <font color="orange">true</font>;
+
+        System.<font color="purple">out</font>.println(w == z);
+        System.<font color="purple">out</font>.println(x == y);
+        System.<font color="purple">out</font>.println(w == x);
+    }
+
+}
+
+</pre>
+
+<p class="one"><font color="black">This is what your terminal should output:</font></p>
+
+<pre class="contained">
+true
+true
+false
+</pre>
+
+<p class="one"><font color="black">Below we show you another way you can compare values. This is not really to do with booleans but is to do with operators and checking things that can be true or false. For example, below we have initialised some numbers and are checking whether one is bigger, smaller or equal to the other. If the condition for the operator is true, it returns "true" else it returns "false" is the condition is not met.</font></p>
+
+<pre class="contained">
+<font color="orange">public class</font> Compare {
+    <font color="orange">public static void</font> <font color="gold">main</font>(String[] args) {
+
+       <font color="orange">int</font> a = <font color="blue">5</font>;
+       <font color="orange">int</font> b = <font color="blue">10</font>;
+       <font color="orange">int</font> c = <font color="blue">100</font>;
+       <font color="orange">int</font> d = <font color="blue">100</font>;
+
+        System.<font color="purple">out</font>.println(a > b);
+        System.<font color="purple">out</font>.println(a < c);
+        System.<font color="purple">out</font>.println(c == d);
+    }
+
+}
+
+</pre>
+
+<p class="one"><font color="black">This is what your terminal should output:</font></p>
+
+<pre class="contained">
+false
+true
+true
+</pre>
+
+</br>
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="3.4.html">Previous</a></li>
+    <li class="next"><a href="3.7.html">Next</a></li>
+  </ul>
+</div>
+
+
+<footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

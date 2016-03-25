@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="learning.html">Learn</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="pdf.html">Downloads</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>    
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Your journey learning Java starts here!</h1>
+  <div>
+  <p align="center">Here we are going to cover all of the basic of programming and Java you need to get started!</p>
+  </div>
+</div>
+
+<div id="accordion" role="tablist" aria-multiselectable="true">
+
+  <div id="colour" class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+  
+    <h2 class="list-group-item-heading">
+      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Getting Underway
+      </a>
+    </h2>
+    <p class="list-group-item-text">Before you can get up and ready with programming in Java, you need to set up some things</p>
+  
+    </div>
+  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+     <a href="learning/1.1.html" class="list-group-item" >
+      <h3 class="list-group-item-heading">What to download</h3>
+    </a>
+
+    <a href="learning/1.2.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Setting up your system</h3>
+    </a>
+
+  </div>
+</div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+  
+    <h2 class="list-group-item-heading"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">Basic Rules</a></h2>
+    <p class="list-group-item-text">Learn some of the conventions of programming and Java</p>
+    </div>
+  <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <a href="learning/2.1.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Comments</h3>
+    </a>
+    <a href="learning/2.2.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Scope</h3>
+    </a>
+    <!--<a href="learning/2.3.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Uppercase and Lowercase</h3>
+    </a>-->
+    <a href="learning/2.4.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Operators</h3>
+    </a>
+  </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+
+
+    <h2 class="list-group-item-heading"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">Data Types</a></h2>
+    <p class="list-group-item-text">Integers, Variables, Floats, what are they?</p>
+ </div>
+  <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <a href="learning/3.1.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Characters</h3>
+    </a>
+    <a href="learning/3.2.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Integers</h3>
+    </a>
+    <a href="learning/3.3.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Floats</h3>
+    </a>
+    <a href="learning/3.4.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Double</h3>
+    </a>
+    <!--<a href="learning/3.5.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Void</h3>
+    </a>-->
+    <a href="learning/3.6.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Booleans</h3>
+    </a>
+    <a href="learning/3.7.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Type Conversions</h3>
+      </a>
+  </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+
+ 
+    <h2 class="list-group-item-heading"><a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseOne">"Hello World!"</a></h2>
+    <p class="list-group-item-text">Now you can write your very first proper Java program!</p>
+</div>
+  <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <a href="learning/4.1.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Hello World!</h3>
+    </a>
+    <a href="learning/4.2.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Methods</h3>
+    </a>
+  </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+
+  
+    <h2 class="list-group-item-heading"><a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseOne">Control Structures</a></h2>
+    <p class="list-group-item-text">If, while and for loops, you need some control over your code!</p>
+</div>
+  <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <a href="learning/5.1.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Branching</h3>
+    </a>
+    <a href="learning/5.2.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Loops</h3>
+    </a>
+    <!--<a href="learning/5.3.html" class="list-group-item">
+      <h3 class="list-group-item-heading">While statements</h3>
+    </a>
+    <a href="learning/5.4.html" class="list-group-item">
+      <h3 class="list-group-item-heading">For statements</h3>
+    </a>-->
+  </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+  
+    <h2 class="list-group-item-heading"><a data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">Objects and Classes</a></h2>
+    <p class="list-group-item-text">The most important concepts that you need to understand in Object Oriented Programming</p>
+</div>
+  <div id="collapseSix" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <a href="learning/6.1.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Objects and Classes</h3>
+    </a>
+    <a href="learning/6.2.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Inheritance</h3>
+    </a>
+  </div>
+</div>
+
+<!--    <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+ 
+<h2 class="list-group-item-heading"><a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">Data Structures</a></h2>
+    <p class="list-group-item-text">Some of the more complex ways to manipulate data</p>
+</div>
+  <div  id="collapseSeven" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <a href="learning/7.1.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Arrays</h3>
+    </a>
+    <a href="learning/7.2.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Stack</h3>
+    </a>
+    <a href="learning/7.3.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Heap</h3>
+    </a>
+    <a href="learning/7.4.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Trees</h3>
+    </a>
+  </div>
+</div>-->
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+  
+    <h2 class="list-group-item-heading"><a data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="true" aria-controls="collapseEight">Algorithms</a></h2>
+    <p class="list-group-item-text">Different ways to efficiently solve problems</p>
+</div>
+  <div id="collapseSix" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <a href="learning/8.1.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Recursion</h3>
+    </a>
+    <a href="learning/8.2.html" class="list-group-item">
+      <h3 class="list-group-item-heading">Searching, Sorting and Merging</h3>
+    </a>
+  </div>
+</div>
+
+</div>
+
+</div><!--
+--><footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu Danish</p> 
+</footer>
+
+</body>
+</html>

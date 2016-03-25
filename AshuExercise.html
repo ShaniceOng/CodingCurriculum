@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="learning.html">Learn</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="project.html">Project</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Data Input/Output Questions!</h1>
+  <div>
+  
+  </div>
+</div>
+
+
+<div class="container">   
+<font color = "black">
+  <h4> <!-- is this heading needed --> </h4> 
+  <ol>
+    <li>
+      <p> Explain the difference between the 3 print functions: print, println and printf. </p>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
+      Show Answer
+      </button>
+    </li>
+
+    <li> 
+      <p> There exists a theory that states that computers are going to replace humans, in everything they do.  This form of a computer system is usually referred to as Artificial Intelligence (AI). AI systems can act like a human being and they usually use features of human nature to perform certain tasks.  Your task is to work on an AI system that can do certain things. 
+      Write up a program that asks a user for their name, and the system should respond by greeting the person using the following statement: “hello ‘name’, my name is Gordon, it is nice to meet you.”
+      </p>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+      Show Answer
+      </button>
+
+      <a type="button" role="button" tabindex="0" class="btn btn-lg btn-danger" data-toggle="popover" title="Fun Fact" data-content="Artifical Intelligence can act like humans, and learn many new things. For example, Northwestern University created a program that would be able to write an article about an earthquake just using numbers like distance and strength. ">Did you know? <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> </a>
+
+      <script>
+        $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+      </script>
+
+    </li>
+
+    <li>
+      <p> While you’re busy creating this AI system, you also have homework to do. During your chemistry class, you’re studying the periodic table and the different elements in the period table. You’ve been given homework by your teacher; you have the find the element symbols for the following chemicals: Sodium, Gold and Carbon. You end up doing the homework, but you’re not sure whether the answer is right. Why not use your AI system to help you? The AI system is a very strict marker so when you’re wrong, the system will tell you that you are wrong very many times. Write a program that does this. Hint(you cannot compare strings using ==, is there another way you can do this?).
+      </p>
+
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3">
+      Show Answer
+      </button>
+
+      <a type="button" role="button" tabindex="0" class="btn btn-lg btn-danger" data-toggle="popover" title="Fun Fact" data-content="The element Antimony, was used as a laxitive in families in the 20th century. ">Did you know? <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> </a>
+    </li>
+
+    <li> 
+      <p> Congratulations, your AI has helped you with your homework. But you know what, you can make your AI system do smarter things. How about it helps you calculate how long it takes you to get to your next Holiday Destination? First you need to find the average speed of how you’re travelling; this could be a plane/car/alien space ship. For your AI system to be super accurate, you need to get many speeds and use the average. After that you need to find the distance from where you are to a certain holiday location. Using these steps, write a program to calculate the distance. At the end, get your AI system to tell you how long it takes to get there. Do you know how to calculate the time (the internet is a good place to start). 
+      </p>
+
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal4">
+      Show Answer
+      </button>
+
+</div>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel2"><font color="black">Answer To Question 1 </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <p class="text-left"><br>
+                    The print statement is used to print to the console, however it will not start on a new line, but continue on the pre-existing line. The println statement will specifically start on a new line every time the command is executed. The printf statement, like its name suggests, is used to print to the console, however it provides more focus on what type of data is printed. For example, it is used to specify what type of data is printed e.g. strings, integers, doubles and can also provide formatting options to certain types of data like number of decimal places
+                    </p>
+                    <br>
+                    <br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel2"><font color="black">Answer To Question 2 </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <h4> The Code For The Program </h4>
+                    <pre class="text-left"> <br>
+import java.util.Scanner;
+
+public class exercise1 {
+
+  public static void main(String[] args) 
+  {
+    String name; //declaring a variable to hold your name
+    Scanner in = new Scanner(System.in); //opening a new input stream
+    System.out.println("please enter your name");
+    name = in.nextLine(); //asking for input fromt the user, this is where their name is stored
+    in.close(); //closing the input stream
+    
+    System.out.println("Hello " + name + ", my name is gordon, it is nice to meet you");
+                        
+                    </pre>
+                    <br>
+                    <h4> How the program works </h4>
+                    <p class = "text-left"><br>
+                      Notice the first line of the program. This import statement is used to refer to external functions that are not part of the normal java library. This means that the input function we want to use is not part of the normal functions in the program, so we have to get the function from somewhere else. 
+                    </p>
+
+                    <p class = "text-left"><br>
+                      The rest of the program is written in the main method. The users name is stored in a variable called string. Here the scanner class is what is actually used to get input from the user. You are created a variable called in, which is used to initially store input from the user. The users input is stored in the name variable. The in.nextLine() function is used to show that a string is being entered by the user. It is stored here, before it is passed onto the the name function. Finally, the in.close() is used to ensure that no more data is being input by the user. At the end, the program prints the sentence to the console.
+
+                    </p>
+                    <br>
+                    <br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel3"><font color="black">Answer To Question 3 </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <h4> The Code For The Program </h4>
+                    <pre class="text-left"> <br>
+import java.util.Scanner;
+
+public class exercise3 {
+
+  public static void main(String[] args) 
+  {
+    String gold;
+    String carbon; 
+    String sodium;
+    
+    Scanner in = new Scanner(System.in);
+    
+    
+    System.out.println("enter the chemical symbol for sodium");
+    sodium = in.nextLine();
+    boolean s = sodium.equals("Na");
+    
+    if(s == true)
+    {
+      System.out.println("this is the correct symbol for sodium");
+      
+    }
+    
+    else
+    {
+      for(int i = 0; i &lt; 4; i++)
+      {
+        System.out.println("this is the incorrect answer");
+      }
+    }
+    
+    System.out.println("enter the chemical symbol for carbon");
+    carbon = in.nextLine();
+    boolean c = carbon.equals("C");
+    
+    if(c != true)
+    {
+      for(int i = 0; i &lt; 4; i++)
+      {
+        System.out.println("this is the incorrect answer");
+      }
+    }
+    
+    else
+    {
+      System.out.println("this is the correct symbol for carbon");
+    }
+    
+    System.out.println("enter the chemical symbol for gold");
+    gold = in.nextLine();
+    boolean g = gold.equals("Au");
+    
+    if(g != true)
+    {
+      for(int i = 0; i &lt; 4; i++)
+      {
+        System.out.println("this is the incorrect answer");
+      }
+    }
+    
+    else
+    {
+      System.out.println("this is the correct symbol for gold");
+    }
+    
+    in.close();
+    
+    
+    
+
+  }
+
+}
+                        
+</pre>
+<br>
+<h4> How the program works </h4>
+<p class = "text-left"><br>
+This program has similar elements to the previous programs. The same import statement is used to ensure that we are allowed to use the scanner class to get input from the user. Additionally, a new variable in of the type scanner is created. This is used to store the users input. Other than that, the first three variables are used to store the symbols entered by the user.
+</p>
+
+<p class = "text-left"><br>
+After the user enters the symbol of the chemical formula, a special function is used to compare it to the correct answer. The equals function compares the original string to the string in brackets, in this case if it is carbon.equals("C") means it compares the string entered by the user to the string in the brackets. If they are the same, it returns true, and if it is different, it returns false. This is the reason is it stored in a boolean(can only store two values i.e. either true or false, yes or no, etc). After which, there are multiple if statements that are used to display the right answer depending on what the user enters. 
+
+</p>
+<br>
+<br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="myModalLabel4"><font color="black">Answer To Question 4 </font></h1>
+      </div>
+      <div class="modal-body"><font color="black">
+                    <center>
+                    <h4> The Code For The Program </h4>
+                    <pre class="text-left"> <br>
+import java.util.Scanner;
+    double distance = 0; 
+    double time = 0; 
+    double avgSpeed = 0;
+    double[] speed = new double[5];
+    Scanner in = new Scanner(System.in);
+    
+    System.out.println("enter 5 different average speeds");
+    for(int i = 0; i < 5; i++)
+    {
+      speed[i] = in.nextDouble();
+    }
+    
+    for(int i = 0; i < speed.length; i++)
+    {
+      avgSpeed += speed[i];
+    }
+    
+    avgSpeed = avgSpeed / speed.length;
+    
+    System.out.println("enter distance taken to fly to destination");
+    distance = in.nextDouble();
+    
+    time = distance / avgSpeed;
+    
+    System.out.println("the time taken to get to your holiday is:" + time);
+        
+                        
+                    </pre>
+                    <br>
+                    <h4> How the program works </h4>
+                    <p class = "text-left"><br>
+                      Yet again, this has similar elements to the previour programs because the scanner class is required. The first few variables are declared normally, however any array is created to store the averages speeds. After the in variable of the scanner class is created, a for loop is used to add input values to the array. The for loop after that is used to add up all the speeds, after which the speed is divided by the number of elements in the array. The next lines just involve calculations and print statements. 
+                    </p>
+                    <br>
+                    <br>
+                    </center>
+                </font></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</font>
+</div>
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="exercise/SachEx.html">Previous</a></li>
+    <li class="next"><a href="Exercise/jquery/ClassExercises.html">Next</a></li>
+  </ul>
+</div>
+<footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu</p> 
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaJava Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;
+    }
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #F5F5F5; /* White */
+      color: #ffffff;
+  }
+  .contained {
+    width: 580px;
+    overflow: auto;
+    margin: 0 auto;
+  }
+  .bg-2 { 
+      background-color: #008B8B; /* Red */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #8B0000; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  p.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h1.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+h3.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+h4.one {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+  p.two {
+    /*border: 1px solid red;*/
+    /*background-color: yellow;*/
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+}
+
+  .contained {
+    width: 550px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+ 
+  .contained2 {
+    width: 800px;
+    overflow: auto;
+    margin: 0 auto; 
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container-fluider">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../Home.html">JavaJava</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+       <li><a href="../learning.html">Learn</a></li>
+        <li><a href="../exercises.html">Exercises</a></li>
+        <li><a href="../project.html">Project</a></li>
+        <li><a href="../pdf.html">Downloads</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>       
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h1 class="margin">Methods!</h1>
+  </div>
+  <div>
+  <div><font color="black">
+  
+  <h3 class="one">What is a method?</h3>
+  <p class="one">
+    Java method is a group of statements that are grouped together, thus forming an operation – it can be considered analogous to what is called a ‘function’ in C. When we call the <font face = "courier"> System.out.println </font> method, the system, in the background, carries out many statements in the background to print data on the console terminal. </p>
+
+    <br></br>
+    <p class="one">
+    Each method is defined by a set of properties i.e. it can have a  <i> return type </i> or no <i> return type </i>, it can take <i> parameters </i> or <i> no parameters </i>, <i> invoke </i> a method in the parent class by either <i> overriding </i> or <i> overloading </i> another method.  </p>
+
+  <h3 class="one">Syntax of declaring a method</h3>
+
+  <p class="one"> Below is an example of how a method is to be defined. </p>
+
+   <pre class="contained">
+    modifier returnType MethodName (Parameters) 
+    {
+    // method body
+    }
+  </pre>
+
+  <p class="one">The method definition consists of <i> two </i> components: <i> the header </i>, containing the <i> modifier </i>, the <i> return type </i>, <i>name</i> of Method, and the <i>parameters</i>. The second part consists of the <i> method body </i>, the set of statements which constitutes the operation of the method. </p>
+  
+<p class="one"> Here is an example to explain the syntax of the method: </p>
+<pre class="contained">
+  public static void method(int a, int b) 
+{
+  // body
+}
+</pre>
+
+<p class="one"> In this case, the <i> ‘public static’ </i> is the modifier, <i>‘void’</i> is the return type, <i>‘method’</i> is the name of the method, <i> a </i> and <i>b</i> are  <i>formal parameters </i>, and <i> int a </i>, <i> int b </i> are the <i> formal parameters </i> with their respective types (int). </p>
+
+<p class="one"> <b>Method:</b> It defines the <i> access type </i> of the method, and helps when using object-oriented tools like <i> inheritance, overloading, overriding, polymorphism, </i> and <i> interfaces. </i> </p>
+
+<p class="one"> <b> Return Type: </b> It specifies the return type (i.e. <i> int, String, bool </i>), or in some situations, <i> no return value </i> (void). </p>
+
+<p class="one"> <b> Method Name: </b> Method name identifies a <i> method </i>, however, there might <u> more than one methods </u> having the same name in the case of <i> overriding. </i> </p>
+
+<p class="one"> <b> Parameter List: </b> The list of <i> parameters </i>, the <i>types</i>, the <i>order</i>, and <i>number of parameters</i>. These are optional however, as the method may have <i>zero</i> parameters. Parameters can be thought of as <i>inputs</i>, or <i>arguments</i>. </p> 
+
+<p class="one"> <b>Method body: </b> The method body is the set of statements and syntax which defines the <i>function</i> of the method. It determines what operation the method will carry out. </p>
+
+<p class="one"><b>Example 1: </b> Below is a function that takes two intergers as parameters and returns the sum as the output. </p>
+
+<pre class="contained">
+   public static int minFunction(int n1, int n2) 
+   {
+      int sum;
+      sum = num1 + num2;
+      return sum; 
+   }
+</pre>
+
+<p class="one"><b>Example 2: </b> Below is method that takes an array and sorts it in (increasing) ascending order using the Insertion Sort Algorithm. </p>
+
+<pre class="contained">
+   public static void InsertionSort( int [ ] array)
+    {
+         int j;                     // the number of items sorted so far
+         int key;                // the item to be inserted
+         int i;  
+
+         for (j = 1; j < array.length; j++)    // Start with 1 (not 0)
+        {
+               key = array[ j ];
+               for(i = j - 1; (i >= 0) && (array [ i ] < key); i--)   // Smaller values are moving up
+              {
+                     array[ i+1 ] = array[ i ];
+              }
+             array[ i+1 ] = key;    // Put the key in its proper location
+         }
+    }
+</pre>
+
+<p class="one"><b>Example 3: </b> Below is a method that takes an integer n and returns the factorial of the integers. There is another way to compute this factorial which uses recursion, which will be explained in <i> recursion </i>. </p>
+<pre class="contained">
+  public static int factorial(int n) 
+    {
+        int fact = 1; // this  will be the result
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        return fact;
+    }
+
+</pre>
+
+
+<p class="one"><b>Example 4: </b> Below is a method that computes the GCD (Greatest Common Divisor) of two numbers using the <i> Euclidean Algorithm. </i> There, again, is a recursive method of defining this method which will be explained in <i> recursion </i>. </p>
+<pre class="contained">
+  public static int euclid(int a, int b) 
+    {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+</pre>
+
+
+  
+  </font></div>
+</div>
+
+
+<div class="container">             
+  <ul class="pager">
+    <li class="previous"><a href="4.1.html">Previous</a></li>
+    <li class="next"><a href="5.1.html">Next</a></li>
+  </ul>
+</div>
+
+</div><!--
+--><footer class="container-fluid bg-4 text-center">
+  <p>Website made by Sachchit Shanice Keshav Ashu Danish</p> 
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>This Game!</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <title>jQuery UI Accordion - Default functionality</title>
+  <link rel="stylesheet" href="jquery-ui.min.css">
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.min.js"></script>
+  <script>
+  $(function() {
+    $( "#accordion" ).accordion();
+    $(".modal #accordion").accordion();
+  });
+  $(function() {
+    $( "#accordion2" ).accordion();
+    $(".modal #accordion2").accordion();
+  });
+
+  $(function () {
+  $("#pop").popover()
+})
+  </script>
+
+  <style>
+  p {
+    text-align: justify;
+  }
+  .opening {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #accordion, #accordion2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .modal #accordion {
+    height: 600px;
+  }
+  .modal #accordion div {
+    height: 350px;
+  }
+  .toMiddleButton {
+    margin: 0 auto;
+  }
+  .toMiddleButton {
+    width: 20%;
+    margin: 0 auto;
+  }
+  </style>
+
+  
+</head>
+
+<body>
+  <div class="opening">
+    <p>Medium Question
+</p>
+</div>
+
+</br>
+
+<div id="accordion">
+
+<h3>Shape Interface</h3>
+  <div>
+    <p>
+    ...
+
+    </p>
+  </div>
+
+<h3>Circle Class</h3>
+<div>
+  <p>
+    ...
+
+  </p>
+</div>
+
+<h3>Square Class</h3>
+  <div>
+    <p>
+    ...
+    </p>
+  </div>
+
+<h3>Triangle Class</h3>
+<div>
+  <p>
+    ...
+
+  </p>
+</div>
+
+<h3>ShapesExercise Class</h3>
+<div>
+  <p>
+    ...
+
+  </p>
+</div>
+
+
+</div>
+
+</br>
+
+<div class="toMiddleButton">
+<button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal">
+  Check Answer
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Example Answer</font></h4>
+      </div>
+      <div class="modal-body">
+        <div><p>Again, there are many ways to answer this question. This is one way to answer it. Go ahead, copy it into your editor, test it and try to understand how it works!
+        </p></div>
+
+<div id="accordion">
+
+<h3>Shape Interface</h3>
+  <div>
+    <pre class="contained"><font color="black">
+public interface Shape 
+{
+  public void drawShape();
+  public void scaleShape(int scale);
+  public void printInformation();
+}
+</font></pre>
+  </div>
+
+<h3>Circle Class</h3>
+<div>
+  <pre class="contained"><font color="black">
+public class Circle implements Shape
+{
+  int radius;
+  double area;
+
+  public Circle (int r)
+  {
+    radius = r;
+    findArea();
+  }
+
+  public void drawShape ()
+  {
+    System.out.println("This is a circle of radius " + radius);
+  }
+
+  private void findArea ()
+  {
+    this.area = Math.PI*Math.pow(radius, 2.0);
+  }
+
+  public void scaleShape (int scale)
+  {
+    if (scale>0)
+    {
+        this.radius = radius*scale;
+    }
+    else
+    {
+        System.out.println("invalid scale option");
+    }
+  }
+
+  public void printInformation ()
+  {
+    System.out.println("Shape: Circle");
+
+    System.out.println("Radius = " + radius);
+    System.out.println("Area = " + area);
+  }
+}
+</font></pre>
+</div>
+
+<h3>Square Class</h3>
+  <div>
+    <pre class="contained"><font color="black">
+public class Square implements Shape {
+  int length;
+  int width;
+  int area;
+
+  public Square (int x, int y)
+  {
+    length = x;
+    width = y;
+    findArea();
+  }
+
+  public void drawShape()
+  {
+    System.out.println("A square of length " + length + " and width " + width);
+  }
+
+  public void scaleShape(int scale)
+  {
+    <!-- if (0<scale) -->
+    {
+        length = length*scale;
+        width = width*scale;
+    }
+    <!-- else if (scale<0) -->
+    {
+        System.out.println("invalid scale option");
+    }
+  }
+
+  private void findArea ()
+  {
+    int area = (length*width);
+    this.area = area;
+  }
+
+  public boolean checkShape()
+  {
+    if (length==width)
+    {
+        return true;
+    }
+    return false;
+  }
+
+  public void printInformation()
+  {
+    System.out.println("Shape: Square");
+    System.out.println("Lengths = " + length + " and " + width);
+    System.out.println("Area = " + area);
+  }
+}
+</font></pre>
+</div>
+
+<h3>Triangle Class</h3>
+<div>
+  <pre class="contained"><font color="black">
+public class Triangle implements Shape{
+  int a;
+  int b;
+  int c;
+  double angle;
+  int area;
+
+  public Triangle(int a, int b, int c, double angle)
+  {
+    this.a = a;
+    this.b = b;
+    this.c = c;
+    this.angle = angle;
+    findArea();
+  }
+
+  public Triangle(int a, int b, double angle)
+  {
+    this.a = a;
+    this.b = b;
+    this.angle = angle;
+    pythagorasTheorem();
+    findArea();
+  }
+
+  public void drawShape ()
+  {
+    System.out.println("A triangle with sides of lengths " + a + ", " + b + " and " + c);
+  }
+
+  public void scaleShape(int scale)
+  {
+    if (scale>0)
+    {
+        a = a*scale;
+        b = b*scale;
+        c = c*scale;
+    }
+    else
+    {
+        System.out.println("invalid scale option");
+    }
+  }
+
+  public void pythagorasTheorem ()
+  {
+    if (this.angle == 90)
+    {
+        double sum = Math.pow(a, 2.0) + Math.pow(b, 2.0);
+        c = (int) Math.sqrt(sum);
+    }
+
+    else
+    {
+        double length = Math.sqrt(Math.pow(a,2.0) + Math.pow(b, 2.0) + (a*b*Math.cos(Math.toRadians(angle))));
+        c = (int) length;
+    }
+  }
+
+  private void findArea()
+  {
+    double length = (double) c;
+    double area = 0.5*(a*b*Math.sin(Math.toRadians(angle)));
+    this.area = (int) area;
+
+  }
+
+  public boolean checkShape()
+  {
+    if ((a+b)>c && (b+c)>a && (a+c)>b)
+    {
+        return true;
+    }
+    return false;
+  }
+
+  public void printInformation()
+  {
+    System.out.println("Shape: Triangle");
+    System.out.println("Lengths = " + a + ", " + b + " and " + c);
+    System.out.println("Area = " + area);
+  }
+}
+</font></pre>
+</div>
+
+<h3>ShapesExercise Class</h3>
+<div>
+  <pre class="contained"><font color="black">
+import java.util.Scanner;
+
+public class ShapesExercise {
+  private String getStringInput (String question)
+  {
+    System.out.println(question);
+    Scanner scan = new Scanner(System.in);
+    return scan.nextLine();
+  }
+
+  private int getIntInput(String question)
+  {
+    System.out.println(question);
+    Scanner in = new Scanner(System.in);
+    return in.nextInt();
+  }
+
+  private int shapeMainMenu ()
+  {
+    System.out.println("1. Create a shape");
+    System.out.println("2. Create and scale a shape");
+    System.out.println("3. Quit");
+    return getIntInput("Enter Option:");
+  }
+
+  private void userOption (int n)
+  {
+    switch (n)
+    {
+        case 1:
+            createShape(shapeMenu()).printInformation();
+            break;
+        case 2:
+            createAndScale(shapeMenu()).printInformation();
+            break;
+        default:
+            break;
+    }
+  }
+  private int shapeMenu ()
+  {
+    System.out.print("Choose a shape: ");
+    System.out.println("1. Square");
+    System.out.println("2. Triangle");
+    System.out.println("3. Circle");
+    int choice = getIntInput("Enter Option:");
+    return choice;
+  }
+
+  private Shape createShape(int choice)
+  {
+    if (choice == 1)
+    {
+        int x = getIntInput("Square length:");
+        int y = getIntInput("Square width:");
+        Square square = new Square(x,y);
+        return square;
+    }
+    else if (choice==2)
+    {
+        System.out.println("Two known lengths or three known lengths?");
+        int input = getIntInput("Enter 2 or 3:");
+        if (input==2) {
+            int a = getIntInput("Length a:");
+            int b = getIntInput("Length b:");
+            int angle = getIntInput("Angle between a and b:");
+            Triangle triangle = new Triangle(a,b,angle);
+            return triangle;
+        }
+        else if (input == 3)
+        {
+            int a = getIntInput("Length a:");
+            int b = getIntInput("Length b:");
+            int c = getIntInput("Length c:");
+            int angle = getIntInput("Angle opposite c:");
+            Triangle triangle2 = new Triangle(a,b,c,angle);
+            return triangle2;
+        }
+    }
+
+    int radius = getIntInput("Radius:");
+    Circle circle = new Circle(radius);
+    return circle;
+  }
+
+  private Shape createAndScale (int choice)
+  {
+    Shape shape = createShape(choice);
+    int scale = getIntInput("Enter scale factor: ");
+    shape.scaleShape(scale);
+    return shape;
+  }
+
+  public static void main (String[] args)
+  {
+    ShapesExercise shapes = new ShapesExercise();
+    shapes.userOption(shapes.shapeMainMenu());
+  }
+}
+</font></pre>
+</div>
+
+</div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</br>
+
+<div class="opening">
+    <p>Dr Java has just shown chemist Antoine Lavoisier our Periodic Table of Elements and he was very impressed! He is exploring new ways to store the data of each element and Dr Java thinks you could help him by using classes and objects (and a few other tricks) to create a Chemical Elements Record in Java!
+    </br>
+    Make a program that would allow Lavoisier to enter each element's name, mass number and category (metal, metalloid, non-metal). This program should also update the atomic number of each element whenever another element is added to the record.
+</p>
+</div>
+
+<div id="accordion2">
+
+<h3>ChemicalElement</h3>
+  <div>
+    <p>
+    This class has the attributes of an element and setter and getter methods to give other classes access to this information. Use constructor overloading to allow the user to put an element into the record without knowing its category.
+
+    </p>
+  </div>
+
+<h3>ChemicalElementsExercise</h3>
+<div>
+  <p>
+    This class will hold the main method and carry out the input and output methods.  It calls the methods of the other classes and determines the flow between them.
+
+  </p>
+</div>
+
+<h3>ChemicalElementRecord</h3>
+  <div>
+    <p>
+    The record class stores the current collection of elements and handles the addition and removal of elements.
+    </p>
+  </div>
+
+<h3>ElementProperty</h3>
+<div>
+  <p>
+    ElementProperty has instance variables for Chemical Properties and a method to print these attributes.  This class is created to be inherited by the property classes. 
+
+  </p>
+</div>
+
+<h3>ElementSorter</h3>
+<div>
+  <p>
+    Dr Java wants this program to sort the elements according to mass number then assign atomic numbers. This would update the list every time a newly-discovered element is added.  Use this a method to sort the elements according to mass number then assign atomic numbers according to this arrangement.
+
+  </p>
+</div>
+
+<h3>MetalloidProperty</h3>
+<div>
+  <p>
+    This class inherits the ElementProperty class and has attributes specific to metalloids.
+
+  </p>
+</div>
+
+<h3>MetalProperty</h3>
+<div>
+  <p>
+    This class inherits the ElementProperty class and has attributes specific to metals.
+
+  </p>
+</div>
+
+<h3>NonMetalProperty</h3>
+<div>
+  <p>
+    This class inherits the ElementProperty class and has attributes specific to non-metals.
+
+  </p>
+</div>
+
+</div>
+
+<div>
+<a tabindex="0" id="pop" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+</div>
+
+</br>
+
+<div class="toMiddleButton">
+<button type="button" class="btn btn-primary btn-lg containbtn" data-toggle="modal" data-target="#myModal2">
+  Check Answer
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color="black">Example Answer</font></h4>
+      </div>
+      <div class="modal-body">
+        <div><p>Again, there are many ways to answer this question. This is one way to answer it. Go ahead, copy it into your editor, test it and try to understand how it works!
+        </p></div>
+
+<div id="accordion">
+
+<h3>ChemicalElement</h3>
+  <div>
+    <pre class="contained"><font color="black">
+public class ChemicalElement
+{
+  private String name;
+  private int massNumber;
+  private int atomicNumber;
+  private ElementProperty category;
+
+  public ChemicalElement (String name, int massNumber)
+  {
+      this.name = name;
+      this.massNumber = massNumber;
+      this.category = new ElementProperty();
+  }
+
+  public ChemicalElement (String name, int massNumber, String category)
+  {
+      this.name = name;
+      this.massNumber = massNumber;
+
+      if (category.compareToIgnoreCase("metal")==0)
+      {
+          this.category = new MetalProperty();
+      }
+
+      else if (category.compareToIgnoreCase("metalloid")==0)
+      {
+          this.category = new MetalloidProperty();
+      }
+
+      else if (category.compareToIgnoreCase("non-metal")==0)
+      {
+          this.category = new NonMetalProperty();
+      }
+  }
+
+  public void setAtomicNumber(int atomNum)
+  {
+      atomicNumber = atomNum;
+  }
+
+  public String getName()
+  {
+      return this.name;
+  }
+
+  public int getMassNumber()
+  {
+      return massNumber;
+  }
+
+  public int getAtomicNumber()
+  {
+      return atomicNumber;
+  }
+
+  public ElementProperty getCategory()
+  {
+      return category;
+  }
+}
+
+        </font></pre>
+  </div>
+
+<h3>ChemicalElementsExercise</h3>
+<div>
+  <pre class="contained"><font color="black">
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ChemicalElementsExample {
+
+  private static final int ADD_NEW_ELEMENT = 1;
+  private static final int REMOVE_ELEMENT = 2;
+  private static final int VIEW_ALL_ELEMENTS = 3;
+  private static final int SEARCH_AN_ELEMENT = 4;
+  private static final int QUIT = 5;
+
+  private int getNumInput (String question)
+  {
+      System.out.print(question);
+      Scanner scan = new Scanner(System.in);
+      return scan.nextInt();
+  }
+
+  private String getStringInput (String question)
+  {
+      System.out.print(question);
+      Scanner in = new Scanner(System.in);
+      return in.nextLine();
+  }
+
+  private void printMenu ()
+  {
+      System.out.println("Choose an option: ");
+      System.out.println(ADD_NEW_ELEMENT + ". Add a new Chemical Element");
+      System.out.println(REMOVE_ELEMENT + ". Remove a Chemical Element");
+      System.out.println(VIEW_ALL_ELEMENTS + ". View All Elements");
+      System.out.println(SEARCH_AN_ELEMENT + ". Search an Element");
+      System.out.println(QUIT + ". Quit");
+
+  }
+
+  private ChemicalElementsRecord createNewRecord ()
+  {
+      return new ChemicalElementsRecord();
+  }
+
+  private void sortAtomicNumber (ChemicalElementsRecord elementsRecord)
+  {
+      ElementSorter sorter = new ElementSorter(elementsRecord.getElementList());
+      elementsRecord.setElementsList(sorter.getSortedElements());
+  }
+
+  private void userResponse (int option, ChemicalElementsRecord elementsRecord)
+  {
+      switch (option)
+      {
+          case ADD_NEW_ELEMENT:
+              addAnElement(elementsRecord);
+              sortAtomicNumber(elementsRecord);
+              break;
+          case REMOVE_ELEMENT:
+              removeAnElement(elementsRecord);
+              sortAtomicNumber(elementsRecord);
+              break;
+          case VIEW_ALL_ELEMENTS:
+              printAllElements(elementsRecord);
+              break;
+          case SEARCH_AN_ELEMENT:
+              searchAnElement(elementsRecord);
+              break;
+          default:
+              System.out.println("Invalid option. Please try again.");
+      }
+  }
+
+  private void getUserOption (ChemicalElementsRecord elementsRecord)
+  {
+      while (true)
+      {
+          printMenu();
+          int option = getNumInput("Enter option: ");
+          if (option==QUIT)
+          {
+              break;
+          }
+          userResponse(option, elementsRecord);
+      }
+  }
+
+  private ChemicalElement createAnElement ()
+  {
+      String elementName = getElementName();
+      int massNumber = getMassNumber();
+      String category = getCategory();
+      System.out.println(category);
+
+      if (category.compareToIgnoreCase("unknown")!=0)
+      {
+          ChemicalElement element = new ChemicalElement(elementName, massNumber, category);
+          return element;
+      }
+      else
+      {
+          ChemicalElement element = new ChemicalElement(elementName, massNumber);
+
+          return element;
+      }
+  }
+
+  private void addAnElement (ChemicalElementsRecord elementsRecord)
+  {
+      elementsRecord.addElement(createAnElement());
+      System.out.println("Element has been added");
+  }
+
+  private String getElementName ()
+  {
+      return getStringInput("Enter the element's name: ");
+  }
+
+  private int getMassNumber ()
+  {
+      return getNumInput("Enter the element's mass number: ");
+  }
+
+  private String getCategory ()
+  {
+      System.out.println("Enter the element's category");
+      System.out.println("1. Metal");
+      System.out.println("2. Metalloid");
+      System.out.println("3. Non-Metal");
+
+      int userOption = getNumInput("Enter category option: ");
+
+      switch (userOption)
+      {
+          case 1:
+              return "metal";
+          case 2:
+              return "metalloid";
+          case 3:
+              return "non-metal";
+          default:
+              return "unknown";
+      }
+  }
+
+  private void removeAnElement (ChemicalElementsRecord elementsRecord)
+  {
+      elementsRecord.removeElement(getElementName());
+  }
+
+  private void printAllElements (ChemicalElementsRecord elementsRecord)
+  {
+      ArrayList "&lt;"ChemicalElement "&gt;" elementsList = elementsRecord.getElementList();
+
+      for (ChemicalElement element: elementsList)
+      {
+        System.out.println("Chemical Element: " + element.getName());
+        System.out.println("\tAtomic Number: " + element.getAtomicNumber());
+        System.out.println("\tMass Number: " + element.getMassNumber());
+      }
+  }
+
+  private void searchAnElement (ChemicalElementsRecord elementsRecord)
+  {
+      if (elementsRecord.getElement(getElementName())!=null) {
+          ChemicalElement searchElement = elementsRecord.getElement(getElementName());
+          System.out.println(searchElement.getName());
+          System.out.println("\tAtomic Number: " + searchElement.getAtomicNumber());
+          System.out.println("\tMass Number: " + searchElement.getMassNumber());
+          searchElement.getCategory().properties();
+      }
+      else
+      {
+          System.out.println("Element not found!");
+      }
+  }
+
+  public static void main(String[] args)
+  {
+      ChemicalElementsExample challenge = new ChemicalElementsExample();
+      ChemicalElementsRecord elementsRecord = challenge.createNewRecord();
+      challenge.getUserOption(elementsRecord);
+
+  }
+}
+  </font></pre>
+</div>
+
+<h3>ChemicalElementsRecord</h3>
+  <div>
+    <pre class="contained"><font color="black">
+import java.util.ArrayList;
+
+public class ChemicalElementsRecord {
+  private ArrayList<ChemicalElement> elementsList;
+
+  public ChemicalElementsRecord ()
+  {
+      this.elementsList = new ArrayList<ChemicalElement>();
+  }
+  private ChemicalElement searchElement (String elementName)
+  {
+      for (ChemicalElement element : elementsList)
+      {
+          if (elementName.compareToIgnoreCase(element.getName())==0)
+          {
+              return element;
+          }
+      }
+      return null;
+  }
+
+  public ChemicalElement getElement (String name)
+  {
+      return searchElement(name);
+  }
+
+  public ArrayList "&lt;"ChemicalElement "&gt;" getElementList ()
+  {
+      return elementsList;
+  }
+
+  public void setElementsList(ArrayList "&lt;"ChemicalElement "&gt;" newList)
+  {
+      this.elementsList = newList;
+  }
+
+  public void removeElement (String elementName)
+  {
+      elementsList.remove(this.searchElement(elementName));
+  }
+
+  public void addElement (ChemicalElement newElement)
+  {
+      elementsList.add(newElement);
+  }
+}
+    </font></pre>
+  </div>
+
+<h3>ElementProperty</h3>
+<div>
+  <pre class="contained"><font color="black">
+public class ElementProperty {
+  private String category = "Category: Metal/Metalloid/Non-Metal";
+  private String appearance = "unknown";
+  private String conductor = "unknown";
+  private String meltingPoint = "unknown";
+  private String changeShape = "unknown";
+
+  public void properties ()
+  {
+    System.out.println("\tProperties: ");
+    System.out.println("\t" + category);
+    System.out.println("\t" + appearance);
+    System.out.println("\t" + conductor);
+    System.out.println("\t" + meltingPoint);
+    System.out.println("\t" + changeShape);
+  }
+} 
+
+    </font></pre>
+</div>
+
+<h3>ElementSorter</h3>
+<div>
+  <pre class="contained"><font color="black">
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class ElementSorter {
+  private ArrayList "&lt;"ChemicalElement "&gt;" listOfElements;
+
+  public ElementSorter (ArrayList "&lt;"ChemicalElement "&gt;" inputList)
+  {
+      listOfElements = new ArrayList<>();
+      this.listOfElements = inputList;
+      sortElements();
+  }
+
+  public void sortElements ()
+  {
+      for (int i=1; i "&lt;"listOfElements.size(); i++)
+      {
+          ChemicalElement tempElement = listOfElements.get(i);
+          int massNumTemp = tempElement.getMassNumber();
+          int j = i-1;
+          while (massNumTemp "&lt;"listOfElements.get(j).getMassNumber() && j "&gt;"=0)
+          {
+              listOfElements.set(j+1, listOfElements.get(j));
+              j--;
+          }
+          listOfElements.set(j+1, tempElement);
+
+      }
+
+      int atomNum = 1;
+
+      for (ChemicalElement element: listOfElements)
+      {
+          element.setAtomicNumber(atomNum);
+          atomNum++;
+      }
+}
+
+public ArrayList "&lt;"ChemicalElement "&lt;" getSortedElements ()
+{
+    return listOfElements;
+}
+}
+    </font></pre>
+</div>
+
+<h3>MetalloidProperty</h3>
+<div>
+  <pre class="contained"><font color="black">
+public class MetalloidProperty extends ElementProperty {
+
+  private String category = "Category: Metalloid";
+  private String appearance = "Appearance: dull or shiny";
+  private String conductor = "Good semiconductors";
+  private String meltingPoint = "Melting Point: High";
+  private String changeShape = "Often ductile and malleable";
+
+  private String getCategory()
+  {
+      return category;
+  }
+
+  private String appearance ()
+  {
+      return appearance;
+  }
+
+  private String conduct ()
+  {
+      return conductor;
+  }
+
+  private String meltingPoint ()
+  {
+      return meltingPoint;
+  }
+
+  private String changeShape()
+  {
+      return changeShape;
+  }
+
+  public void properties ()
+  {
+      System.out.println(this.appearance());
+      System.out.println(this.conduct());
+      System.out.println(this.meltingPoint());
+      System.out.println(this.changeShape());
+  }
+}
+    </font></pre>
+</div>
+
+  <h3>MetalProperty</h3>
+<div>
+  <pre class="contained"><font color="black">
+public class MetalProperty extends ElementProperty {
+
+  private String category = "Category: Metal";
+  private String appearance = "Appearance: shiny";
+  private String conductor = "Good conductors of heat and electricity";
+  private String meltingPoint = "Melting Point: High";
+  private String changeShape = "Ductile and Malleable";
+
+  private String getCategory()
+  {
+      return category;
+  }
+
+  private String appearance ()
+  {
+      return appearance;
+  }
+
+  private String conduct ()
+  {
+      return conductor;
+  }
+
+  private String meltingPoint ()
+  {
+      return meltingPoint;
+  }
+
+  private String changeShape()
+  {
+      return changeShape;
+  }
+
+  public void properties ()
+  {
+      System.out.println(this.appearance());
+      System.out.println(this.conduct());
+      System.out.println(this.meltingPoint());
+      System.out.println(this.changeShape());
+  }
+}
+    </font></pre>
+</div>
+
+     <h3>NonMetalProperty</h3>
+<div>
+  <pre class="contained"><font color="black">
+public class NonMetalProperty extends ElementProperty{
+
+  private String category = "Category: Non-Metal";
+  private String appearance = "Appearance: dull";
+  private String conductor= "Poor conductors of heat and electricity";
+  private String meltingPoint = "Melthing point: low";
+  private String changeShape = "Usually brittle";
+
+  private String getCategory()
+  {
+      return category;
+  }
+
+  private String appearance ()
+  {
+      return appearance;
+  }
+
+  private String conduct ()
+  {
+      return conductor;
+  }
+
+  private String meltingPoint ()
+  {
+      return meltingPoint;
+  }
+
+  private String changeShape()
+  {
+      return changeShape;
+  }
+
+  public void properties ()
+  {
+      System.out.println(this.appearance());
+      System.out.println(this.conduct());
+      System.out.println(this.meltingPoint());
+      System.out.println(this.changeShape());
+  }
+}
+    </font></pre>
+</div>
+  </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
+

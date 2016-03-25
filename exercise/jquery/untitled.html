@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="utf-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <style>
+
+    .question {
+        width: 75%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    /*.wAnswer {
+        border: 2px solid black;
+        margin: 0 auto;
+    }
+
+    .rAnswer {
+        border: 2px solid black;
+        margin: 0 auto;
+    }*/
+
+    button {
+        font-size: 13px;
+        border-radius: 5px;
+        float: right;
+    }
+
+    .answerOne {
+        background-color: #e5ffff;
+        width: 75%;
+        height: 25px;
+    }
+
+    .answerTwo {
+        background-color: #b3ffff;
+        width: 75%;
+        height: 25px;
+    }
+
+    .answerThree {
+        background-color: #e5ffff;
+        width: 75%;
+        height: 25px;
+    }
+
+    .correct {
+        background-color: #a0ff80;
+        width: 15%;
+        height: 25px;
+        text-align: center;
+        font-size: 15px;
+        margin: 0 auto;
+        display: none;
+    }
+
+    .wrong {
+        background-color: #ff8080;
+        width: 15%;
+        height: 25px;
+        text-align: center;
+        font-size: 15px;
+        margin: 0 auto;
+        display: none;
+    }
+
+    .questions {
+        margin: 0 auto;
+    }
+    </style>
+
+    <script>
+    $(function(){
+        $(".rAnswer").click(function() {
+            $(".wrong").hide();
+            $(".correct").show();
+
+        });
+        $(".wAnswer").click(function() {
+            $(".correct").hide();
+            $(".wrong").show();
+        });
+    });
+
+    </script>
+
+</head>
+
+    <body>
+        <div class="questions">
+        <div class="question">
+            <p>This is a question about classes and objects</p>
+        </div>
+
+        <div class="wAnswer answerOne">
+            <button type="button">Wrong Answer</button>
+        </div>
+
+        <div class="rAnswer answerTwo">
+            <button type="button">Correct Answer</button>
+        </div>
+
+        <div class="wAnswer answerThree">
+            <button type="button">Wrong Answer</button>
+        </div>
+    </div>
+</br>
+
+        <div class="correct">
+            <p><strong>CORRECT!</strong></p>
+        </div>
+
+        <div class="wrong">
+            <p><strong>TRY AGAIN!</strong></p>
+        </div>
+
+    </body>
+
+    </html>
